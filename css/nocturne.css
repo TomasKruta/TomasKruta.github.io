@@ -1,0 +1,352 @@
+/* ============================================================================
+   nocturne — design-system layer
+   ----------------------------------------------------------------------------
+   RECONSTRUCTED. The original lives at
+   _ds/nocturne-f35114d2-22c9-4ea3-912f-24690027e34e/styles.css and was not
+   available when this was built, so every token and component class below was
+   derived from how Portfolio.dc.html actually uses them.
+
+   Two values are lifted verbatim from the design and are NOT guesses:
+     - --color-bg            (html { background: #161826 })
+     - the .tag / chip specs (from the chip() method in the design's logic)
+
+   To adopt the real design system, replace this file wholesale. Nothing in
+   portfolio.css or portfolio.js depends on the values here, only on the names.
+   ========================================================================== */
+
+:root {
+  /* ---- surface ---------------------------------------------------------- */
+  --color-bg: #161826;
+  --color-section: #11131f;
+  --color-section-glow: color-mix(in srgb, var(--color-accent) 12%, #1c2035);
+  --color-divider: #2a2e42;
+
+  /* ---- text ------------------------------------------------------------- */
+  /* Contrast against --color-bg (measured, WCAG 2.1):
+       text        #eceef5  14.4:1
+       neutral-300 #c3c8d8  10.5:1   body copy
+       neutral-400 #a2a9c0   7.5:1   small labels, dates, meta
+     The earlier 5.2:1 on neutral-400 passed AA but read washed out at 11-12px,
+     which is exactly where it was used most. */
+  --color-text: #eceef5;
+  --color-neutral-300: #c3c8d8;
+  --color-neutral-400: #a2a9c0;
+
+  /* ---- accent ----------------------------------------------------------- */
+  /* One hue, one chroma family; lightness steps only. Lower number = lighter,
+     which is what the design assumes (a:hover lightens base -> 300). */
+  --color-accent: oklch(0.76 0.135 62);
+  --color-accent-300: oklch(0.82 0.11 65);
+  --color-accent-200: oklch(0.88 0.085 68);
+
+  /* ---- type ------------------------------------------------------------- */
+  --font-heading: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif;
+  /* Machine voice: section indices, stack tags, dates, table figures. Plex Mono
+     is the metric sibling of the body face, so the two sit together without
+     looking like two unrelated fonts. */
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+
+  /* ---- radii ------------------------------------------------------------ */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+}
+
+/* ============================================================================
+   nav
+   ========================================================================== */
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--color-bg);
+  padding: 14px clamp(20px, 5vw, 56px);
+  border-bottom: 1px solid var(--color-divider);
+}
+
+/* The design put padding straight on <nav>, which left the brand flush to the
+   window while page content stops at 1120px. This inner wrapper keeps the bar
+   full-bleed but aligns its contents with the page. */
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(14px, 2vw, 26px);
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.nav-brand {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: clamp(14px, 2vw, 26px);
+  align-items: center;
+}
+
+.nav-links a {
+  position: relative;
+  font-size: 14px;
+  color: var(--color-neutral-300);
+  text-decoration: none;
+  padding-block: 4px;
+  transition: color 180ms ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: var(--color-accent-200);
+}
+
+/* Scroll spy: the section you are actually reading. */
+.nav-links a.is-active { color: var(--color-accent-200); }
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 1.5px;
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 260ms cubic-bezier(.2, .7, .2, 1);
+}
+
+.nav-links a.is-active::after { transform: scaleX(1); }
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-links a::after { transition: none; }
+}
+
+/* Reading progress, sitting on the nav's bottom edge. */
+.nav__progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 1.5px;
+  pointer-events: none;
+}
+
+.nav__progress span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(to right,
+    color-mix(in srgb, var(--color-accent) 45%, transparent),
+    var(--color-accent));
+  transform-origin: left;
+}
+
+/* Phones: the two-row nav takes ~12% of the screen, so it slides away while
+   reading downward and returns on the first upward scroll. */
+.nav { transition: transform 260ms cubic-bezier(.2, .7, .2, 1); }
+
+@media (max-width: 680px) {
+  .nav.nav--hidden { transform: translateY(-100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav { transition: none; }
+}
+
+@media (max-width: 680px) {
+  .nav-inner { flex-wrap: wrap; row-gap: 12px; }
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    gap: 6px;
+  }
+  .nav-links a { font-size: 13px; }
+}
+
+/* ============================================================================
+   buttons
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: #161826;
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-300);
+  color: #161826;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-text);
+  border-color: var(--color-divider);
+}
+
+.btn-secondary:hover {
+  color: var(--color-accent-200);
+  border-color: color-mix(in srgb, var(--color-accent) 45%, transparent);
+}
+
+/* The nav language toggle reads as chrome, not a page action. */
+.nav .btn {
+  min-height: 36px;
+  padding: 0 14px;
+  font-size: 13px;
+}
+
+/* ============================================================================
+   tags + filter chips
+   ----------------------------------------------------------------------------
+   Values here are exact: the design's chip(active) method spells out padding,
+   radius, size, tracking, transition and both colour states.
+   ========================================================================== */
+
+.tag,
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 11px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  transition: background 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+/* Stack tags name real identifiers — ROS2 Foxy, unitree_sdk2, ESP32-S3 — so
+   they are set in the mono face. Filter chips carry prose labels and stay in
+   the body face. */
+.tag { font-family: var(--font-mono); letter-spacing: 0; }
+
+/* SVG sprite icon. Colour comes from `color` (inline brand hex, or inherited). */
+.icon {
+  width: 1em;
+  height: 1em;
+  flex: none;
+  fill: currentColor;
+}
+
+.chip { font-family: var(--font-body); }
+
+.tag-neutral,
+.chip {
+  background: transparent;
+  color: var(--color-neutral-300);
+  border: 1px solid var(--color-divider);
+}
+
+.tag-accent,
+.chip[aria-pressed='true'] {
+  background: color-mix(in srgb, var(--color-accent) 20%, transparent);
+  color: var(--color-accent-200);
+  border: 1px solid color-mix(in srgb, var(--color-accent) 45%, transparent);
+}
+
+.chip {
+  cursor: pointer;
+}
+
+.chip:hover:not([aria-pressed='true']) {
+  color: var(--color-text);
+  border-color: color-mix(in srgb, var(--color-accent) 30%, var(--color-divider));
+}
+
+.chip:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ============================================================================
+   table
+   ========================================================================== */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table th {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-neutral-400);
+  white-space: nowrap;
+  padding: 0 18px 12px 0;
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.table td {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-neutral-300);
+  padding: 13px 18px 13px 0;
+  border-bottom: 1px solid var(--color-divider);
+}
+
+/* Year, round and placing are figures — mono keeps the columns in register. */
+.table td:nth-child(2),
+.table td:last-child {
+  font-family: var(--font-mono);
+}
+
+.table th:last-child,
+.table td:last-child {
+  padding-right: 0;
+}
+
+.table td:first-child {
+  color: var(--color-text);
+}
+
+.table td:last-child {
+  color: var(--color-accent-200);
+  white-space: nowrap;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ============================================================================
+   surfaces
+   ========================================================================== */
+
+/* A lifted panel for imagery — keeps a dark-edged photo from merging into the
+   page background. */
+.lighten {
+  background: color-mix(in srgb, var(--color-text) 6%, var(--color-bg));
+  border: 1px solid var(--color-divider);
+}
