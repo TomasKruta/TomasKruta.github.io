@@ -28,6 +28,7 @@
       const next = el.dataset[lang];
       if (next != null) el.textContent = next;
     }
+    syncHeroCyclerLang();
     const toggle = document.getElementById('lang-toggle');
     toggle.textContent = lang === 'en' ? 'CS' : 'EN';
     toggle.setAttribute('aria-label', lang === 'en' ? 'Přepnout do češtiny' : 'Switch to English');
@@ -35,6 +36,110 @@
     renderChips();
     for (const reset of copyResetters) reset();
   };
+
+  /* ==========================================================================
+     1b. hero headline cycler
+     --------------------------------------------------------------------------
+     Autoplay-only: types/deletes between a short list of phrases, keeping any
+     prefix shared with the previous one on screen instead of clearing and
+     retyping it. Ordered most-distinctive-first; a language switch jumps
+     straight to the translated phrase at the same index.
+     ========================================================================== */
+
+  const HERO_PHRASES = {
+    cs: [
+      'Programuji roboty.',
+      'Programuji hry.',
+      'Programuji nástroje.',
+      'Modeluji díly pro 3D tisk.',
+      'Propojuji hardware se softwarem.',
+    ],
+    en: [
+      'I build robots.',
+      'I build games.',
+      'I build tools.',
+      'I model parts for 3D printing.',
+      'I connect hardware and software.',
+    ],
+  };
+
+  let heroPhraseIndex = 0;
+  let syncHeroCyclerLang = () => {};
+
+  function setupHeroCycler() {
+    const h1 = document.getElementById('hero-h1');
+    const textEl = h1 && h1.querySelector('[data-hero-text]');
+    if (!h1 || !textEl) return;
+
+    let charTimer = null;
+    let autoplayTimer = null;
+
+    const clearTimers = () => {
+      clearTimeout(charTimer);
+      clearTimeout(autoplayTimer);
+    };
+
+    const scheduleAutoplay = () => {
+      if (reduceMotion) return;
+      clearTimeout(autoplayTimer);
+      autoplayTimer = setTimeout(advance, 2400);
+    };
+
+    // Deletes down to the prefix current and target have in common, then
+    // types the rest of target — so a shared start (e.g. "Programuji ") is
+    // never cleared and retyped.
+    const setText = (target, done) => {
+      if (reduceMotion) {
+        textEl.textContent = target;
+        done && done();
+        return;
+      }
+      const current = textEl.textContent;
+      let common = 0;
+      const max = Math.min(current.length, target.length);
+      while (common < max && current[common] === target[common]) common++;
+      let pos = current.length;
+
+      // Two separate phases rather than one combined check — once typing
+      // passes `common` again, pos > common is true too, so a single check
+      // would flip back into deleting forever.
+      const deleteStep = () => {
+        if (pos > common) {
+          pos--;
+          textEl.textContent = current.slice(0, pos);
+          charTimer = setTimeout(deleteStep, 26);
+          return;
+        }
+        typeStep();
+      };
+      const typeStep = () => {
+        if (pos < target.length) {
+          pos++;
+          textEl.textContent = target.slice(0, pos);
+          charTimer = setTimeout(typeStep, 42);
+          return;
+        }
+        done && done();
+      };
+      deleteStep();
+    };
+
+    function advance() {
+      clearTimers();
+      const list = HERO_PHRASES[lang] || HERO_PHRASES.cs;
+      heroPhraseIndex = (heroPhraseIndex + 1) % list.length;
+      setText(list[heroPhraseIndex], scheduleAutoplay);
+    }
+
+    syncHeroCyclerLang = () => {
+      clearTimers();
+      h1.setAttribute('aria-label', h1.dataset[lang === 'en' ? 'ariaEn' : 'ariaCs']);
+      const list = HERO_PHRASES[lang] || HERO_PHRASES.cs;
+      setText(list[heroPhraseIndex] ?? list[0], scheduleAutoplay);
+    };
+
+    scheduleAutoplay();
+  }
 
   document.getElementById('lang-toggle').addEventListener('click', () => {
     lang = lang === 'en' ? 'cs' : 'en';
@@ -588,4 +693,5 @@
   setupScrollSpy();
   setupCopy();
   setupNavAutoHide();
+  setupHeroCycler();
 })();

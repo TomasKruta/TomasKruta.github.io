@@ -83,9 +83,16 @@
 <section class="hero">
   <div class="hero__inner">
     <div class="hero__main">
-      <h1
-        data-cs="Programuji roboty, hry a nástroje."
-        data-en="I build robots, games and tools.">Programuji roboty, hry a nástroje.</h1>
+      <div class="hero__titlewrap">
+        <img id="hero-photo" class="hero-photo" src="assets/Portrait.png" alt="Tomáš Krůta" width="861" height="861">
+        <h1
+          id="hero-h1"
+          class="hero__cycler"
+          aria-label="Programuji roboty, nástroje, aplikace a hry. Modeluji assety a díly pro 3D tisk. Propojuji hardware se softwarem."
+          data-aria-cs="Programuji roboty, nástroje, aplikace a hry. Modeluji assety a díly pro 3D tisk. Propojuji hardware se softwarem."
+          data-aria-en="I build robots, tools, apps and games. I model assets and parts for 3D printing. I connect hardware and software."
+        ><span data-hero-text aria-hidden="true">Programuji roboty.</span><span class="hero__caret" aria-hidden="true"></span></h1>
+      </div>
       <p
         data-cs="Student Mikulášského gymnázia v Plzni. Většina mých projektů spojuje software s hardwarem — od SLAM navigace čtyřnohého robota po vlastní robotickou ruku."
         data-en="Student at Mikulášské gymnázium in Plzeň. Most of my projects put software next to hardware — from SLAM navigation on a quadruped robot to a robotic arm of my own design.">Student Mikulášského gymnázia v Plzni. Většina mých projektů spojuje software s hardwarem — od SLAM navigace čtyřnohého robota po vlastní robotickou ruku.</p>
@@ -302,20 +309,11 @@
         data-cs="Studuji na Mikulášském gymnáziu v Plzni. Většina mých projektů spojuje software s hardwarem — počítačové vidění, robotika, mikrokontrolery. Na robotických projektech spolupracuji s GTL na Fakultě aplikovaných věd ZČU a s plzeňskými prostory SitPort, TechTower a PilsLab."
         data-en="I study at Mikulášské gymnázium in Plzeň. Most of my projects put software next to hardware — computer vision, robotics, microcontrollers. On the robotics work I collaborate with GTL at the Faculty of Applied Sciences, University of West Bohemia, and with the Plzeň spaces SitPort, TechTower and PilsLab.">Studuji na Mikulášském gymnáziu v Plzni. Většina mých projektů spojuje software s hardwarem — počítačové vidění, robotika, mikrokontrolery. Na robotických projektech spolupracuji s GTL na Fakultě aplikovaných věd ZČU a s plzeňskými prostory SitPort, TechTower a PilsLab.</p>
     </div>
-    <!-- No portrait yet. Re-enable once assets/portrait.jpg exists — with only
-         one child left in the grid, #o-mne currently collapses to one column
-         (auto-fit), so the text block fills the row on its own; uncomment
-         this and it goes back to the two-column layout automatically.
     <figure class="about__figure">
-      <div class="lighten portrait" id="portrait">
-        <img src="assets/portrait.jpg" alt="Tomáš Krůta" width="800" height="1000"
-             onerror="document.getElementById('portrait').classList.add('portrait--empty'); this.remove();">
-        <span class="portrait__hint"
-          data-cs="Sem patří portrét — ulož fotku jako assets/portrait.jpg (nejlépe na tmavém pozadí)"
-          data-en="Portrait goes here — save a photo as assets/portrait.jpg (a dark background works best)">Sem patří portrét — ulož fotku jako assets/portrait.jpg (nejlépe na tmavém pozadí)</span>
+      <div class="lighten portrait">
+        <img src="assets/Portrait.png" alt="Tomáš Krůta" width="861" height="861">
       </div>
     </figure>
-    -->
   </section>
 
   <!-- ==================== experience ==================== -->

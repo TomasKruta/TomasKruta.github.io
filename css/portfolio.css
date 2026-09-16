@@ -103,7 +103,7 @@ a:hover {
 /* ---- shared ------------------------------------------------------------- */
 
 .container {
-  max-width: 1120px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 clamp(20px, 5vw, 56px);
 }
@@ -239,7 +239,7 @@ a:hover {
   grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
   gap: 48px clamp(32px, 5vw, 80px);
   align-items: start;
-  max-width: 1120px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 clamp(20px, 5vw, 56px);
 }
@@ -274,6 +274,32 @@ a:hover {
   mask-image: linear-gradient(to bottom, #000 0%, rgba(0,0,0,.45) 52%, transparent 88%);
 }
 
+/* ============================================================================
+   hero portrait
+   ----------------------------------------------------------------------------
+   Round photo beside the (shrunk) headline, sized a touch taller than the
+   three-line heading next to it rather than matched to it exactly.
+   ========================================================================== */
+
+.hero__titlewrap {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 3vw, 28px);
+  margin-bottom: 4px;
+}
+
+.hero-photo {
+  display: block;
+  object-fit: cover;
+  object-position: 50% 15%;
+  border-radius: 50%;
+  flex: none;
+  width: clamp(110px, 15vw, 210px);
+  height: clamp(110px, 15vw, 210px);
+}
+
+.hero__titlewrap h1 { font-size: clamp(30px, 4.6vw, 56px); }
+
 .hero h1 {
   font-family: var(--font-heading);
   font-weight: 500;
@@ -282,6 +308,31 @@ a:hover {
   letter-spacing: -0.025em;
   margin: 0;
   max-width: 20ch;
+  /* Safety net for the cycling phrases below — a long one on a narrow
+     viewport breaks mid-word rather than overflowing the column. */
+  overflow-wrap: anywhere;
+}
+
+/* ============================================================================
+   hero headline cycler
+   ----------------------------------------------------------------------------
+   portfolio.js types/deletes between a short list of phrases, keeping any
+   shared prefix on screen instead of clearing and retyping it — autoplay
+   only, no click interaction.
+   ========================================================================== */
+
+.hero__caret {
+  display: inline-block;
+  width: 3px;
+  height: 0.74em;
+  margin-left: 5px;
+  vertical-align: -0.06em;
+  background: var(--color-accent);
+  animation: nocturne-blink 1s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__caret { animation: none; opacity: 0.6; }
 }
 
 .hero p {
@@ -600,36 +651,25 @@ a:hover {
 
 .about__figure { margin: 0; }
 
+/* Shows the whole photo, uncropped — the panel gives a transparent-background
+   portrait an edge to sit against instead of floating on the page. */
 .portrait {
-  position: relative;
   border-radius: var(--radius-md);
-  overflow: hidden;
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
+  padding: clamp(16px, 3vw, 32px);
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .portrait img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
-
-.portrait__hint {
-  display: none;
-  position: absolute;
-  inset: 0;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  box-sizing: border-box;
-  text-align: center;
-  font-size: 13px;
-  line-height: 1.5;
-  color: var(--color-neutral-400);
-}
-
-.portrait--empty .portrait__hint { display: flex; }
 
 /* ============================================================================
    experience
@@ -837,7 +877,7 @@ a:hover {
 }
 
 .contact__inner {
-  max-width: 1120px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 80px clamp(20px, 5vw, 56px);
 }

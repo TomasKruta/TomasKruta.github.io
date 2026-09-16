@@ -73,15 +73,15 @@
   align-items: center;
   justify-content: space-between;
   gap: clamp(14px, 2vw, 26px);
-  max-width: 1120px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
 .nav-brand {
   font-family: var(--font-heading);
-  font-weight: 500;
-  font-size: 15px;
-  letter-spacing: -0.01em;
+  font-weight: 600;
+  font-size: 21px;
+  letter-spacing: -0.015em;
   color: var(--color-text);
   white-space: nowrap;
 }
