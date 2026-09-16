@@ -487,7 +487,152 @@
             <th data-cs="Výsledek" data-en="Result">Výsledek</th>
           </tr>
         </thead>
-        <tbody id="competitions-body"></tbody>
+        <tbody id="competitions-body">
+          <!-- Static fallback for no-JS/crawlers — mirrors js/portfolio.js
+               renderCompetitions() output for the full COMPETITIONS array
+               (unfiltered). JS replaces this on load and re-renders it on
+               every filter change; keep both in sync when editing data. -->
+          <tr>
+            <td><span class="compcell"><img class="complogo" src="assets/competitions/programujsi.png" alt="" width="96" height="96" loading="lazy">Programuj.si</span></td>
+            <td>2025/26</td>
+            <td>žáci</td>
+            <td>krajské kolo</td>
+            <td>1.</td>
+          </tr>
+          <tr>
+            <td><span class="compcell"><img class="complogo" src="assets/competitions/programujsi.png" alt="" width="96" height="96" loading="lazy">Programuj.si</span></td>
+            <td>2025/26</td>
+            <td>žáci</td>
+            <td>ústřední kolo</td>
+            <td>13.</td>
+          </tr>
+          <tr>
+            <td><span class="compcell"><img class="complogo" src="assets/competitions/aiolympiada.png" alt="" width="96" height="96" loading="lazy">AI olympiáda</span></td>
+            <td>2025/26</td>
+            <td>AI tech</td>
+            <td>krajské kolo</td>
+            <td>2.</td>
+          </tr>
+          <tr>
+            <td><span class="compcell"><img class="complogo" src="assets/competitions/technickaolympiada-zcu.svg" alt="" width="96" height="96" loading="lazy">Technická olympiáda</span></td>
+            <td>2025/26</td>
+            <td>NeuroRace</td>
+            <td>—</td>
+            <td>3. místo ve skupině</td>
+          </tr>
+          <tr>
+            <td><span class="compcell"><img class="complogo" src="assets/competitions/naboj.svg" alt="" width="96" height="96" loading="lazy">Náboj Junior</span></td>
+            <td>2025/26</td>
+            <td>—</td>
+            <td>kraj</td>
+            <td>1.</td>
+          </tr>
+          <tr>
+            <td><span class="compcell"><img class="complogo" src="assets/competitions/naboj.svg" alt="" width="96" height="96" loading="lazy">Náboj Junior</span></td>
+            <td>2025/26</td>
+            <td>—</td>
+            <td>celorepublikově</td>
+            <td>7.</td>
+          </tr>
+          <tr>
+            <td><span class="compcell"><img class="complogo" src="assets/competitions/naboj.svg" alt="" width="96" height="96" loading="lazy">Náboj Junior</span></td>
+            <td>2025/26</td>
+            <td>—</td>
+            <td>mezinárodně</td>
+            <td>18.</td>
+          </tr>
+          <tr>
+            <td><span class="compcell"><img class="complogo" src="assets/competitions/maso.png" alt="" width="96" height="96" loading="lazy">MaSO</span></td>
+            <td>2025/26</td>
+            <td>—</td>
+            <td>jaro, kraj</td>
+            <td>1.</td>
+          </tr>
+          <tr>
+            <td><span class="compcell"><img class="complogo" src="assets/competitions/maso.png" alt="" width="96" height="96" loading="lazy">MaSO</span></td>
+            <td>2025/26</td>
+            <td>—</td>
+            <td>jaro, celostátně</td>
+            <td>31.</td>
+          </tr>
+          <tr>
+            <td><span class="compcell"><img class="complogo" src="assets/competitions/matematickaolympiada.svg" alt="" width="96" height="96" loading="lazy">Matematická olympiáda</span></td>
+            <td>2025/26</td>
+            <td>P</td>
+            <td>krajské kolo</td>
+            <td>2.–3.</td>
+          </tr>
+          <tr>
+            <td><span class="compcell"><img class="complogo" src="assets/competitions/matematickaolympiada.svg" alt="" width="96" height="96" loading="lazy">Matematická olympiáda</span></td>
+            <td>2025/26</td>
+            <td>Z9</td>
+            <td>okresní kolo</td>
+            <td>3.</td>
+          </tr>
+          <tr>
+            <td><span class="compcell"><img class="complogo" src="assets/competitions/matematickaolympiada.svg" alt="" width="96" height="96" loading="lazy">Matematická olympiáda</span></td>
+            <td>2025/26</td>
+            <td>Z9</td>
+            <td>krajské kolo</td>
+            <td>10.–13.</td>
+          </tr>
+          <tr>
+            <td><span class="compcell"><img class="complogo complogo--fo" src="assets/competitions/fyzikalniolympiada-galaxy.png" alt="" width="96" height="96" loading="lazy">Fyzikální olympiáda</span></td>
+            <td>2025/26</td>
+            <td>E</td>
+            <td>okresní kolo</td>
+            <td>2.</td>
+          </tr>
+          <tr>
+            <td><span class="compcell"><img class="complogo complogo--fo" src="assets/competitions/fyzikalniolympiada-galaxy.png" alt="" width="96" height="96" loading="lazy">Fyzikální olympiáda</span></td>
+            <td>2025/26</td>
+            <td>E</td>
+            <td>krajské kolo</td>
+            <td>12.</td>
+          </tr>
+          <tr>
+            <td><span class="compcell"><img class="complogo" src="assets/competitions/maso.png" alt="" width="96" height="96" loading="lazy">MaSO</span></td>
+            <td>2024/25</td>
+            <td>—</td>
+            <td>jaro, kraj</td>
+            <td>6.</td>
+          </tr>
+          <tr>
+            <td><span class="compcell"><img class="complogo" src="assets/competitions/matematickaolympiada.svg" alt="" width="96" height="96" loading="lazy">Matematická olympiáda</span></td>
+            <td>2024/25</td>
+            <td>Z8</td>
+            <td>okresní kolo</td>
+            <td>3.–6.</td>
+          </tr>
+          <tr>
+            <td><span class="compcell"><img class="complogo complogo--fo" src="assets/competitions/fyzikalniolympiada-galaxy.png" alt="" width="96" height="96" loading="lazy">Fyzikální olympiáda</span></td>
+            <td>2024/25</td>
+            <td>F</td>
+            <td>okresní kolo</td>
+            <td>5.</td>
+          </tr>
+          <tr>
+            <td><span class="compcell"><img class="complogo" src="assets/competitions/matematickaolympiada.svg" alt="" width="96" height="96" loading="lazy">Matematická olympiáda</span></td>
+            <td>2023/24</td>
+            <td>Z7</td>
+            <td>okresní kolo</td>
+            <td>2.</td>
+          </tr>
+          <tr>
+            <td><span class="compcell"><img class="complogo complogo--fo" src="assets/competitions/fyzikalniolympiada-galaxy.png" alt="" width="96" height="96" loading="lazy">Fyzikální olympiáda</span></td>
+            <td>2023/24</td>
+            <td>G</td>
+            <td>okresní kolo</td>
+            <td>3.</td>
+          </tr>
+          <tr>
+            <td><span class="compcell"><img class="complogo" src="assets/competitions/matematickaolympiada.svg" alt="" width="96" height="96" loading="lazy">Matematická olympiáda</span></td>
+            <td>2022/23</td>
+            <td>Z6</td>
+            <td>okresní kolo</td>
+            <td>3.</td>
+          </tr>
+        </tbody>
       </table>
     </div>
     <p class="table-empty" id="competitions-empty" hidden
