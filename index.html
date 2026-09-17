@@ -5,11 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tomáš Krůta — roboti, hry a nástroje</title>
 <meta name="description" content="Student Mikulášského gymnázia v Plzni. 1. místo Aimtec Hackathon 2026. Projekty spojující software s hardwarem — SLAM navigace, robotická ruka, počítačové vidění.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="css/fonts.css">
 <link rel="stylesheet" href="css/nocturne.css">
 <link rel="stylesheet" href="css/portfolio.css">
+<link rel="preload" as="image" href="assets/Portrait.webp" fetchpriority="high">
 </head>
 <body id="top">
 <!-- Icon sprite. Brand marks from Simple Icons (CC0) and Devicon (MIT), set
@@ -77,6 +76,7 @@
   <div class="nav__progress" aria-hidden="true"><span id="nav-progress"></span></div>
 </nav>
 
+<main>
 <!-- ==================== hero ====================
      Full-bleed: the drafting grid and the bloom run edge to edge, so the
      section is NOT inside .container — hero__inner holds the measure. -->
@@ -84,7 +84,7 @@
   <div class="hero__inner">
     <div class="hero__main">
       <div class="hero__titlewrap">
-        <img id="hero-photo" class="hero-photo" src="assets/Portrait.png" alt="Tomáš Krůta" width="861" height="861">
+        <img id="hero-photo" class="hero-photo" src="assets/Portrait.webp" alt="Tomáš Krůta" width="861" height="861" fetchpriority="high">
         <h1
           id="hero-h1"
           class="hero__cycler"
@@ -110,7 +110,7 @@
 
       <a class="creds__lead" href="https://dveresezaviraji.cz/" target="_blank" rel="noopener">
         <span class="creds__lead-place">1.</span>
-        <img class="complogo complogo--lead" src="assets/competitions/aimtec.png" alt="" width="96" height="96" loading="lazy">
+        <img class="complogo complogo--lead" src="assets/competitions/aimtec.webp" alt="" width="96" height="96" loading="lazy">
         <span class="creds__lead-text">
           <span class="creds__event">Aimtec Hackathon 2026</span>
           <span class="creds__meta">
@@ -123,12 +123,12 @@
       <ul class="creds__list">
         <li>
           <span class="creds__place">1.</span>
-          <img class="complogo" src="assets/competitions/programujsi.png" alt="" width="96" height="96" loading="lazy">
+          <img class="complogo" src="assets/competitions/programujsi.webp" alt="" width="96" height="96" loading="lazy">
           <span data-cs="Programuj.si — krajské kolo" data-en="Programuj.si — regional round">Programuj.si — krajské kolo</span>
         </li>
         <li>
           <span class="creds__place">2.</span>
-          <img class="complogo" src="assets/competitions/aiolympiada.png" alt="" width="96" height="96" loading="lazy">
+          <img class="complogo" src="assets/competitions/aiolympiada.webp" alt="" width="96" height="96" loading="lazy">
           <span data-cs="AI olympiáda — krajské kolo" data-en="AI Olympiad — regional round">AI olympiáda — krajské kolo</span>
         </li>
         <li>
@@ -311,7 +311,7 @@
     </div>
     <figure class="about__figure">
       <div class="lighten portrait">
-        <img src="assets/Portrait.png" alt="Tomáš Krůta" width="861" height="861">
+        <img src="assets/Portrait.webp" alt="Tomáš Krůta" width="861" height="861">
       </div>
     </figure>
   </section>
@@ -371,7 +371,7 @@
             <li class="stackitem"><svg class="icon stackitem__icon" style="color:#896FE2" aria-hidden="true"><use href="#i-dotnet"></use></svg><span>.NET</span></li>
             <li class="stackitem"><svg class="icon stackitem__icon" style="color:#FFFFFF" aria-hidden="true"><use href="#i-unity"></use></svg><span>Unity</span></li>
             <li class="stackitem"><svg class="icon stackitem__icon" style="color:#478CBF" aria-hidden="true"><use href="#i-godotengine"></use></svg><span>Godot</span></li>
-            <li class="stackitem"><img class="stackitem__icon stackitem__icon--img" src="assets/icons/pygame.png" alt="" width="60" height="60"><span>PyGame</span></li>
+            <li class="stackitem"><img class="stackitem__icon stackitem__icon--img" src="assets/icons/pygame.webp" alt="" width="60" height="60"><span>PyGame</span></li>
             <li class="stackitem"><svg class="icon stackitem__icon" style="color:#E87D0D" aria-hidden="true"><use href="#i-blender"></use></svg><span>Blender</span></li>
           </ul>
         </div>
@@ -435,7 +435,7 @@
         <span class="award__place-label" data-cs="místo" data-en="place">místo</span>
       </p>
       <div class="award__head">
-        <p class="award__title"><img class="complogo complogo--award" src="assets/competitions/aimtec.png" alt="" width="96" height="96" loading="lazy">Aimtec Hackathon 2026</p>
+        <p class="award__title"><img class="complogo complogo--award" src="assets/competitions/aimtec.webp" alt="" width="96" height="96" loading="lazy">Aimtec Hackathon 2026</p>
         <p class="award__date">20.–22. 3. 2026</p>
       </div>
       <div class="award__body">
@@ -448,7 +448,7 @@
 
     <div class="row row--baseline rule-both">
       <div class="row__head">
-        <p class="row__title row__title--logo"><img class="complogo complogo--row" src="assets/competitions/campfire.png" alt="" width="96" height="96" loading="lazy">Campfire GameJam</p>
+        <p class="row__title row__title--logo"><img class="complogo complogo--row" src="assets/competitions/campfire.webp" alt="" width="96" height="96" loading="lazy">Campfire GameJam</p>
         <p class="row__date">28. 2.–1. 3. 2026</p>
       </div>
       <div class="row__body">
@@ -491,21 +491,21 @@
                (unfiltered). JS replaces this on load and re-renders it on
                every filter change; keep both in sync when editing data. -->
           <tr>
-            <td><span class="compcell"><img class="complogo" src="assets/competitions/programujsi.png" alt="" width="96" height="96" loading="lazy">Programuj.si</span></td>
+            <td><span class="compcell"><img class="complogo" src="assets/competitions/programujsi.webp" alt="" width="96" height="96" loading="lazy">Programuj.si</span></td>
             <td>2025/26</td>
             <td>žáci</td>
             <td>krajské kolo</td>
             <td>1.</td>
           </tr>
           <tr>
-            <td><span class="compcell"><img class="complogo" src="assets/competitions/programujsi.png" alt="" width="96" height="96" loading="lazy">Programuj.si</span></td>
+            <td><span class="compcell"><img class="complogo" src="assets/competitions/programujsi.webp" alt="" width="96" height="96" loading="lazy">Programuj.si</span></td>
             <td>2025/26</td>
             <td>žáci</td>
             <td>ústřední kolo</td>
             <td>13.</td>
           </tr>
           <tr>
-            <td><span class="compcell"><img class="complogo" src="assets/competitions/aiolympiada.png" alt="" width="96" height="96" loading="lazy">AI olympiáda</span></td>
+            <td><span class="compcell"><img class="complogo" src="assets/competitions/aiolympiada.webp" alt="" width="96" height="96" loading="lazy">AI olympiáda</span></td>
             <td>2025/26</td>
             <td>AI tech</td>
             <td>krajské kolo</td>
@@ -540,14 +540,14 @@
             <td>18.</td>
           </tr>
           <tr>
-            <td><span class="compcell"><img class="complogo" src="assets/competitions/maso.png" alt="" width="96" height="96" loading="lazy">MaSO</span></td>
+            <td><span class="compcell"><img class="complogo" src="assets/competitions/maso.webp" alt="" width="96" height="96" loading="lazy">MaSO</span></td>
             <td>2025/26</td>
             <td>—</td>
             <td>jaro, kraj</td>
             <td>1.</td>
           </tr>
           <tr>
-            <td><span class="compcell"><img class="complogo" src="assets/competitions/maso.png" alt="" width="96" height="96" loading="lazy">MaSO</span></td>
+            <td><span class="compcell"><img class="complogo" src="assets/competitions/maso.webp" alt="" width="96" height="96" loading="lazy">MaSO</span></td>
             <td>2025/26</td>
             <td>—</td>
             <td>jaro, celostátně</td>
@@ -575,21 +575,21 @@
             <td>10.–13.</td>
           </tr>
           <tr>
-            <td><span class="compcell"><img class="complogo complogo--fo" src="assets/competitions/fyzikalniolympiada-galaxy.png" alt="" width="96" height="96" loading="lazy">Fyzikální olympiáda</span></td>
+            <td><span class="compcell"><img class="complogo complogo--fo" src="assets/competitions/fyzikalniolympiada-galaxy.webp" alt="" width="96" height="96" loading="lazy">Fyzikální olympiáda</span></td>
             <td>2025/26</td>
             <td>E</td>
             <td>okresní kolo</td>
             <td>2.</td>
           </tr>
           <tr>
-            <td><span class="compcell"><img class="complogo complogo--fo" src="assets/competitions/fyzikalniolympiada-galaxy.png" alt="" width="96" height="96" loading="lazy">Fyzikální olympiáda</span></td>
+            <td><span class="compcell"><img class="complogo complogo--fo" src="assets/competitions/fyzikalniolympiada-galaxy.webp" alt="" width="96" height="96" loading="lazy">Fyzikální olympiáda</span></td>
             <td>2025/26</td>
             <td>E</td>
             <td>krajské kolo</td>
             <td>12.</td>
           </tr>
           <tr>
-            <td><span class="compcell"><img class="complogo" src="assets/competitions/maso.png" alt="" width="96" height="96" loading="lazy">MaSO</span></td>
+            <td><span class="compcell"><img class="complogo" src="assets/competitions/maso.webp" alt="" width="96" height="96" loading="lazy">MaSO</span></td>
             <td>2024/25</td>
             <td>—</td>
             <td>jaro, kraj</td>
@@ -603,7 +603,7 @@
             <td>3.–6.</td>
           </tr>
           <tr>
-            <td><span class="compcell"><img class="complogo complogo--fo" src="assets/competitions/fyzikalniolympiada-galaxy.png" alt="" width="96" height="96" loading="lazy">Fyzikální olympiáda</span></td>
+            <td><span class="compcell"><img class="complogo complogo--fo" src="assets/competitions/fyzikalniolympiada-galaxy.webp" alt="" width="96" height="96" loading="lazy">Fyzikální olympiáda</span></td>
             <td>2024/25</td>
             <td>F</td>
             <td>okresní kolo</td>
@@ -617,7 +617,7 @@
             <td>2.</td>
           </tr>
           <tr>
-            <td><span class="compcell"><img class="complogo complogo--fo" src="assets/competitions/fyzikalniolympiada-galaxy.png" alt="" width="96" height="96" loading="lazy">Fyzikální olympiáda</span></td>
+            <td><span class="compcell"><img class="complogo complogo--fo" src="assets/competitions/fyzikalniolympiada-galaxy.webp" alt="" width="96" height="96" loading="lazy">Fyzikální olympiáda</span></td>
             <td>2023/24</td>
             <td>G</td>
             <td>okresní kolo</td>
@@ -689,6 +689,7 @@
       </div>
   </div>
 </section>
+</main>
 
 <div class="container">
   <footer class="footer">
