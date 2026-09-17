@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>404 — Tomáš Krůta</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/nocturne.css">
+<link rel="stylesheet" href="css/portfolio.css">
+<style>
+  .lost {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    gap: 18px;
+  }
+  .lost__code {
+    font-family: var(--font-mono);
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    color: var(--color-accent-200);
+  }
+  .lost__title {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: clamp(32px, 6vw, 56px);
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+  .lost__desc {
+    max-width: 42ch;
+    color: var(--color-neutral-300);
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+  }
+  .lost__log {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--color-neutral-400);
+    margin: 6px 0 0;
+  }
+</style>
+</head>
+<body>
+  <main class="lost">
+    <p class="lost__code">404 · NAVIGATION</p>
+    <h1 class="lost__title">Relokalizace se nezdařila.</h1>
+    <p class="lost__desc">Tahle cesta není na mapě. Bod, který hledáš, buď nikdy neexistoval, nebo se přesunul.</p>
+    <p class="lost__log">no match in point cloud — returning to base</p>
+    <a class="btn btn-primary" href="/">Zpátky na hlavní stránku</a>
+  </main>
+</body>
+</html>

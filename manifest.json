@@ -1,0 +1,12 @@
+{
+  "name": "Tomáš Krůta",
+  "short_name": "Tomáš Krůta",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#161826",
+  "theme_color": "#161826",
+  "icons": [
+    { "src": "assets/favicon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/favicon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

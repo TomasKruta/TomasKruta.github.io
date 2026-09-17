@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tomaskruta.github.io/sitemap.xml
+Sitemap: https://tomaskruta.dev/sitemap.xml
