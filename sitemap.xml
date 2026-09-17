@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://tomaskruta.github.io/</loc>
+    <loc>https://tomaskruta.dev/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://tomaskruta.github.io/#projekty</loc>
+    <loc>https://tomaskruta.dev/#projekty</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tomaskruta.github.io/#o-mne</loc>
+    <loc>https://tomaskruta.dev/#o-mne</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://tomaskruta.github.io/#cv</loc>
+    <loc>https://tomaskruta.dev/#cv</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://tomaskruta.github.io/#uspechy</loc>
+    <loc>https://tomaskruta.dev/#uspechy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://tomaskruta.github.io/#kontakt</loc>
+    <loc>https://tomaskruta.dev/#kontakt</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
 </urlset>
