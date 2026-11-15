@@ -2,32 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tomaskruta.dev/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-11-14</lastmod>
   </url>
   <url>
-    <loc>https://tomaskruta.dev/#projekty</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tomaskruta.dev/#o-mne</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://tomaskruta.dev/#cv</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://tomaskruta.dev/#uspechy</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://tomaskruta.dev/#kontakt</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://tomaskruta.dev/projects/aimtec-hackathon-2026/</loc>
+    <lastmod>2026-11-14</lastmod>
   </url>
 </urlset>

@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tomáš Krůta — vývojář, roboti a hry</title>
-<meta name="description" content="Student propojující software s hardwarem — SLAM navigace, robotická ruka, počítačové vidění, roboti a hry.">
+<title>Tomáš Krůta | student a programátor z Plzně</title>
+<meta name="description" content="Tomáš Krůta, student Mikulášského gymnázia v Plzni. Programuji roboty, hry a weby. Projekty, výsledky z hackathonů a olympiád a kontakt.">
+<meta name="author" content="Tomáš Krůta">
 <link rel="canonical" href="https://tomaskruta.dev/">
 
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -17,13 +18,13 @@
 <meta property="og:url" content="https://tomaskruta.dev/">
 <meta property="og:site_name" content="Tomáš Krůta">
 <meta property="og:locale" content="cs_CZ">
-<meta property="og:title" content="Tomáš Krůta — vývojář, roboti a hry">
-<meta property="og:description" content="Student propojující software s hardwarem — SLAM navigace, robotická ruka, počítačové vidění, roboti a hry.">
+<meta property="og:title" content="Tomáš Krůta | student a programátor z Plzně">
+<meta property="og:description" content="Tomáš Krůta, student Mikulášského gymnázia v Plzni. Programuji roboty, hry a weby. Projekty, výsledky z hackathonů a olympiád a kontakt.">
 <meta property="og:image" content="https://tomaskruta.dev/assets/Portrait.webp">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Tomáš Krůta — vývojář, roboti a hry">
-<meta name="twitter:description" content="Student propojující software s hardwarem — SLAM navigace, robotická ruka, počítačové vidění, roboti a hry.">
+<meta name="twitter:title" content="Tomáš Krůta | student a programátor z Plzně">
+<meta name="twitter:description" content="Tomáš Krůta, student Mikulášského gymnázia v Plzni. Programuji roboty, hry a weby. Projekty, výsledky z hackathonů a olympiád a kontakt.">
 <meta name="twitter:image" content="https://tomaskruta.dev/assets/Portrait.webp">
 
 <link rel="stylesheet" href="css/fonts.css">
@@ -33,22 +34,62 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Tomáš Krůta",
-  "url": "https://tomaskruta.dev/",
-  "image": "https://tomaskruta.dev/assets/Portrait.webp",
-  "jobTitle": "Vývojář",
-  "affiliation": {
-    "@type": "EducationalOrganization",
-    "name": "Mikulášské gymnázium"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Plzeň",
-    "addressCountry": "CZ"
-  },
-  "sameAs": [
-    "https://github.com/tomaskruta"
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://tomaskruta.dev/#website",
+      "url": "https://tomaskruta.dev/",
+      "name": "Tomáš Krůta",
+      "alternateName": "tomaskruta.dev",
+      "inLanguage": "cs",
+      "publisher": { "@id": "https://tomaskruta.dev/#person" }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://tomaskruta.dev/#profile",
+      "url": "https://tomaskruta.dev/",
+      "name": "Tomáš Krůta | student a programátor z Plzně",
+      "isPartOf": { "@id": "https://tomaskruta.dev/#website" },
+      "mainEntity": { "@id": "https://tomaskruta.dev/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://tomaskruta.dev/#person",
+      "name": "Tomáš Krůta",
+      "alternateName": "Tomas Kruta",
+      "givenName": "Tomáš",
+      "familyName": "Krůta",
+      "url": "https://tomaskruta.dev/",
+      "image": "https://tomaskruta.dev/assets/Portrait.webp",
+      "description": "Student Mikulášského gymnázia v Plzni. Programuje roboty, hry a weby, účastní se hackathonů a olympiád.",
+      "jobTitle": "Student",
+      "affiliation": {
+        "@type": "EducationalOrganization",
+        "name": "Mikulášské gymnázium v Plzni",
+        "url": "https://www.mikulasske.cz/"
+      },
+      "homeLocation": {
+        "@type": "Place",
+        "name": "Plzeň",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Plzeň",
+          "addressCountry": "CZ"
+        }
+      },
+      "knowsAbout": ["Robotika", "ROS2", "Počítačové vidění", "Python", "C++", "C#", "Unity", "Vývoj webů", "3D tisk"],
+      "award": [
+        "1. místo a cena publika, Aimtec Hackathon 2026",
+        "2. místo, EPIC Tower Hackathon 2026",
+        "2. místo, Technika má zlaté dno 2026 (kategorie gymnázií)",
+        "1. místo, Programuj.si, krajské kolo 2025/26",
+        "1. místo, Náboj Junior, krajské kolo 2025/26"
+      ],
+      "sameAs": [
+        "https://github.com/tomaskruta",
+        "https://www.instagram.com/kruta_tomas/"
+      ]
+    }
   ]
 }
 </script>
@@ -130,43 +171,39 @@
 <main>
 <!-- ==================== hero ====================
      Full-bleed: the drafting grid and the bloom run edge to edge, so the
-     section is NOT inside .container — hero__inner holds the measure. -->
+     section is NOT inside .container; hero__inner holds the measure. -->
 <section class="hero">
   <div class="hero__inner">
     <div class="hero__main">
       <div class="hero__titlewrap">
         <img id="hero-photo" class="hero-photo" src="assets/Portrait.webp" srcset="assets/Portrait-300.webp 300w, assets/Portrait-600.webp 600w, assets/Portrait.webp 861w" sizes="210px" alt="Tomáš Krůta" width="861" height="861" fetchpriority="high">
-        <h1
-          id="hero-h1"
-          class="hero__cycler"
-          aria-label="Programuji roboty, nástroje, aplikace a hry. Tvořím weby. Modeluji assety a díly pro 3D tisk. Propojuji hardware se softwarem."
-          data-aria-cs="Programuji roboty, nástroje, aplikace a hry. Tvořím weby. Modeluji assety a díly pro 3D tisk. Propojuji hardware se softwarem."
-          data-aria-en="I build robots, tools, apps and games. I build websites. I model assets and parts for 3D printing. I connect hardware and software."
-        ><span data-hero-text aria-hidden="true">Programuji roboty.</span><span class="hero__caret" aria-hidden="true"></span></h1>
+        <div class="hero__heading">
+          <h1 class="hero__name">Tomáš Krůta</h1>
+          <p id="hero-h1" class="hero__cycler"><span class="sr-only"
+            data-cs="Programuji roboty, hry a nástroje. Tvořím weby. Modeluji díly pro 3D tisk. Propojuji hardware se softwarem."
+            data-en="I build robots, games and tools. I build websites. I model parts for 3D printing. I connect hardware and software.">Programuji roboty, hry a nástroje. Tvořím weby. Modeluji díly pro 3D tisk. Propojuji hardware se softwarem.</span><span data-hero-text aria-hidden="true">Programuji roboty.</span><span class="hero__caret" aria-hidden="true"></span></p>
+        </div>
       </div>
       <p
-        data-cs="Student Mikulášského gymnázia v Plzni. Většina mých projektů spojuje software s hardwarem — od SLAM navigace čtyřnohého robota po vlastní robotickou ruku."
-        data-en="Student at Mikulášské gymnázium in Plzeň. Most of my projects put software next to hardware — from SLAM navigation on a quadruped robot to a robotic arm of my own design.">Student Mikulášského gymnázia v Plzni. Většina mých projektů spojuje software s hardwarem — od SLAM navigace čtyřnohého robota po vlastní robotickou ruku.</p>
+        data-cs="Studuji na Mikulášském gymnáziu v Plzni. Nejvíc mě baví projekty, kde se software potkává s hardwarem: SLAM navigace na čtyřnohém robotovi nebo robotická ruka, kterou jsem si sám navrhl."
+        data-en="I'm a student at Mikulášské gymnázium in Plzeň. I like projects where software meets hardware most: SLAM navigation on a quadruped robot, or a robotic arm I designed myself.">Studuji na Mikulášském gymnáziu v Plzni. Nejvíc mě baví projekty, kde se software potkává s hardwarem: SLAM navigace na čtyřnohém robotovi nebo robotická ruka, kterou jsem si sám navrhl.</p>
       <div class="hero__actions">
         <a class="btn btn-primary" href="#projekty" data-cs="Projekty" data-en="See the work">Projekty</a>
         <a class="btn btn-secondary" href="https://github.com/tomaskruta" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
 
-    <!-- Credentials. Ruled, not boxed — the fading hairline is this page's own
-         separator language, so the panel belongs to the design rather than
-         sitting on top of it. -->
     <aside class="creds">
       <p class="creds__label" data-cs="Vybraná ocenění" data-en="Selected awards">Vybraná ocenění</p>
 
-      <a class="creds__lead" href="https://dveresezaviraji.cz/" target="_blank" rel="noopener">
+      <a class="creds__lead" href="projects/aimtec-hackathon-2026/">
         <span class="creds__lead-place">1.</span>
         <img class="complogo complogo--lead" src="assets/competitions/aimtec.webp" alt="" width="96" height="96" loading="lazy">
         <span class="creds__lead-text">
           <span class="creds__event">Aimtec Hackathon 2026</span>
           <span class="creds__meta">
-            <span data-cs="20.–22. 3. 2026" data-en="20–22 Mar 2026">20.–22. 3. 2026</span>
-            <span class="creds__go">dveresezaviraji.cz ↗</span>
+            <span data-cs="20. - 22. 3. 2026" data-en="20 - 22 Mar 2026">20. - 22. 3. 2026</span>
+            <span class="creds__go" data-cs="detail projektu →" data-en="project details →">detail projektu →</span>
           </span>
         </span>
       </a>
@@ -175,22 +212,22 @@
         <li>
           <span class="creds__place">1.</span>
           <img class="complogo" src="assets/competitions/programujsi.webp" alt="" width="96" height="96" loading="lazy">
-          <span data-cs="Programuj.si — krajské kolo" data-en="Programuj.si — regional round">Programuj.si — krajské kolo</span>
+          <span data-cs="Programuj.si, krajské kolo" data-en="Programuj.si, regional round">Programuj.si, krajské kolo</span>
+        </li>
+        <li>
+          <span class="creds__place">2.</span>
+          <img class="complogo" src="assets/competitions/sitport.png" alt="" width="64" height="64" loading="lazy">
+          <span>EPIC Tower Hackathon 2026</span>
         </li>
         <li>
           <span class="creds__place">2.</span>
           <img class="complogo" src="assets/competitions/aiolympiada.webp" alt="" width="96" height="96" loading="lazy">
-          <span data-cs="AI olympiáda — krajské kolo" data-en="AI Olympiad — regional round">AI olympiáda — krajské kolo</span>
+          <span data-cs="AI olympiáda, krajské kolo" data-en="AI Olympiad, regional round">AI olympiáda, krajské kolo</span>
         </li>
         <li>
           <span class="creds__place">1.</span>
           <img class="complogo" src="assets/competitions/naboj.svg" alt="" width="96" height="96" loading="lazy">
-          <span data-cs="Náboj Junior — krajské kolo" data-en="Náboj Junior — regional round">Náboj Junior — krajské kolo</span>
-        </li>
-        <li>
-          <span class="creds__place">18.</span>
-          <img class="complogo" src="assets/competitions/naboj.svg" alt="" width="96" height="96" loading="lazy">
-          <span data-cs="Náboj Junior — mezinárodně" data-en="Náboj Junior — international">Náboj Junior — mezinárodně</span>
+          <span data-cs="Náboj Junior, krajské kolo" data-en="Náboj Junior, regional round">Náboj Junior, krajské kolo</span>
         </li>
       </ul>
 
@@ -200,10 +237,10 @@
 
   <div class="hero__pitch">
     <div class="hero__pitch-text">
-      <p class="hero__pitch-lead" data-cs="Napište mi." data-en="Write to me.">Napište mi.</p>
+      <p class="hero__pitch-lead" data-cs="Udělám vám web, aplikaci nebo 3D model." data-en="I can build you a website, an app or a 3D model.">Udělám vám web, aplikaci nebo 3D model.</p>
       <p
-        data-cs="Jsem otevřený hackathonům, soutěžím, spolupráci na projektech, stážím i zakázkám — webu, softwaru, hardwaru i 3D tisku."
-        data-en="I'm open to hackathons, competitions, project collaborations, internships and freelance work — web, software, hardware and 3D printing.">Jsem otevřený hackathonům, soutěžím, spolupráci na projektech, stážím i zakázkám — webu, softwaru, hardwaru i 3D tisku.</p>
+        data-cs="Beru menší zakázky a rád se přidám do týmu na hackathon nebo projekt."
+        data-en="I take on smaller commissions and I'm happy to join a team for a hackathon or a project.">Beru menší zakázky a rád se přidám do týmu na hackathon nebo projekt.</p>
     </div>
     <a class="btn btn-primary" href="#kontakt" data-cs="Kontakt" data-en="Contact">Kontakt</a>
   </div>
@@ -219,13 +256,13 @@
 
     <div class="entry rule-top">
       <div class="entry__head">
-        <h4>Unitree Go2 — SLAM navigace s hlasovým ovládáním</h4>
+        <h4>Unitree Go2: SLAM navigace s hlasovým ovládáním</h4>
         <p class="entry__meta">TechTower / SitPort</p>
       </div>
       <div class="entry__body">
         <p
-          data-cs="Indoor SLAM navigace na Unitree Go2 EDU s hlasovými příkazy (sedni, přijď ke mně, jdi po schodech, vejdi do budovy, vyfoť, vrať se). Škálováno podle obtížnosti a času."
-          data-en="Indoor SLAM navigation on a Unitree Go2 EDU driven by voice commands (sit, come to me, climb the stairs, enter the building, take a photo, return). Scoped by difficulty and time available.">Indoor SLAM navigace na Unitree Go2 EDU s hlasovými příkazy (sedni, přijď ke mně, jdi po schodech, vejdi do budovy, vyfoť, vrať se). Škálováno podle obtížnosti a času.</p>
+          data-cs="Čtyřnohý robot Unitree Go2 EDU se má v budově orientovat pomocí SLAM a poslouchat hlasové povely: sedni, přijď ke mně, jdi po schodech, vejdi do budovy, vyfoť, vrať se. Začínám od nejjednodušších povelů a další přidávám, jak to čas dovolí."
+          data-en="A Unitree Go2 EDU quadruped should find its way around a building using SLAM and follow voice commands: sit, come to me, climb the stairs, enter the building, take a photo, return. I'm starting with the simplest commands and adding more as time allows.">Čtyřnohý robot Unitree Go2 EDU se má v budově orientovat pomocí SLAM a poslouchat hlasové povely: sedni, přijď ke mně, jdi po schodech, vejdi do budovy, vyfoť, vrať se. Začínám od nejjednodušších povelů a další přidávám, jak to čas dovolí.</p>
         <div class="stack">
           <span class="tag tag-neutral"><svg class="icon" style="color:#7A8395" aria-hidden="true"><use href="#i-ros"></use></svg>ROS2 Foxy</span>
           <span class="tag tag-neutral"><svg class="icon" style="color:#4787B8" aria-hidden="true"><use href="#i-cplusplus"></use></svg>C++</span>
@@ -263,8 +300,8 @@
       </div>
       <div class="entry__body">
         <p
-          data-cs="Domácí automatizace nad Loxone a Philips Hue, rozšířená o vlastní uzly na ESP32 a Raspberry Pi — RGB pásky, PIR detektor pohybu a kapacitní tlačítko. Zatím je to spíš série prototypů než hotový systém a vývoj je momentálně pozastavený. V plánu je MCP server, aby šlo celé prostředí ovládat jazykovým modelem."
-          data-en="Home automation over Loxone and Philips Hue, extended with custom ESP32 and Raspberry Pi nodes — RGB strips, a PIR motion detector and a capacitive button. Still closer to a series of prototypes than a finished system, and development is paused for now. An MCP server is planned so the whole setup can be driven by a language model.">Domácí automatizace nad Loxone a Philips Hue, rozšířená o vlastní uzly na ESP32 a Raspberry Pi — RGB pásky, PIR detektor pohybu a kapacitní tlačítko. Zatím je to spíš série prototypů než hotový systém a vývoj je momentálně pozastavený. V plánu je MCP server, aby šlo celé prostředí ovládat jazykovým modelem.</p>
+          data-cs="Domácí automatizace nad Loxone a Philips Hue, rozšířená o vlastní uzly na ESP32 a Raspberry Pi (RGB pásky, PIR detektor pohybu, kapacitní tlačítko). Zatím je to spíš série prototypů než hotový systém a vývoj je momentálně pozastavený. V plánu je MCP server, aby šlo celé prostředí ovládat jazykovým modelem."
+          data-en="Home automation over Loxone and Philips Hue, extended with custom ESP32 and Raspberry Pi nodes (RGB strips, a PIR motion detector, a capacitive button). Still closer to a series of prototypes than a finished system, and development is paused for now. An MCP server is planned so the whole setup can be driven by a language model.">Domácí automatizace nad Loxone a Philips Hue, rozšířená o vlastní uzly na ESP32 a Raspberry Pi (RGB pásky, PIR detektor pohybu, kapacitní tlačítko). Zatím je to spíš série prototypů než hotový systém a vývoj je momentálně pozastavený. V plánu je MCP server, aby šlo celé prostředí ovládat jazykovým modelem.</p>
         <div class="stack">
           <span class="tag tag-neutral"><svg class="icon" style="color:#8DC63F" aria-hidden="true"><use href="#i-loxone"></use></svg>Loxone</span>
           <span class="tag tag-neutral"><svg class="icon" style="color:#0065D3" aria-hidden="true"><use href="#i-philipshue"></use></svg>Philips Hue</span>
@@ -316,8 +353,8 @@
       </div>
       <div class="entry__body">
         <p
-          data-cs="Závodní hra s formulí propojená s NextMind headsetem pro trénink soustředění. Výsledky tréninku nebyly přesvědčivé, hra byla dodělána."
-          data-en="A formula racing game wired to a NextMind headset for focus training. The training results were not convincing; the game was finished anyway.">Závodní hra s formulí propojená s NextMind headsetem pro trénink soustředění. Výsledky tréninku nebyly přesvědčivé, hra byla dodělána.</p>
+          data-cs="Závodní hra s formulí propojená s NextMind headsetem pro trénink soustředění. Že hra soustředění opravdu trénuje, se nám prokázat nepodařilo, samotnou hru jsme ale dodělali."
+          data-en="A formula racing game wired to a NextMind headset for focus training. We couldn't show that it really trains focus, but the game itself is finished.">Závodní hra s formulí propojená s NextMind headsetem pro trénink soustředění. Že hra soustředění opravdu trénuje, se nám prokázat nepodařilo, samotnou hru jsme ale dodělali.</p>
         <div class="entry__aside">
           <div class="stack">
             <span class="tag tag-neutral"><svg class="icon" style="color:#FFFFFF" aria-hidden="true"><use href="#i-unity"></use></svg>Unity</span>
@@ -376,8 +413,8 @@
     <div>
       <h2 class="section-title" data-cs="O mně" data-en="About">O mně</h2>
       <p
-        data-cs="Studuji na Mikulášském gymnáziu v Plzni. Většina mých projektů spojuje software s hardwarem — počítačové vidění, robotika, mikrokontrolery. S roboty pracuji díky SitPortu, v prostorách TechToweru. Mimo to mě baví cyklistika a začínám s fotografováním."
-        data-en="I study at Mikulášské gymnázium in Plzeň. Most of my projects put software next to hardware — computer vision, robotics, microcontrollers. I get to work with robots thanks to SitPort, in the TechTower space. Outside of that I enjoy cycling and I'm getting into photography.">Studuji na Mikulášském gymnáziu v Plzni. Většina mých projektů spojuje software s hardwarem — počítačové vidění, robotika, mikrokontrolery. S roboty pracuji díky SitPortu, v prostorách TechToweru. Mimo to mě baví cyklistika a začínám s fotografováním.</p>
+        data-cs="K robotům jsem se dostal přes SitPort. V TechToweru teď učím psa Unitree Go2 chodit po budově podle hlasových povelů. Doma mám rozdělanou robotickou ruku a pár ESP32 na chytrou domácnost. Kromě programování jezdím na kole a začínám fotit."
+        data-en="I got into robots through SitPort. At TechTower I'm currently teaching a Unitree Go2 robot dog to move around a building on voice commands. At home there's a half-built robotic arm and a few ESP32 boards for the smart home. Outside of programming I ride a bike and I'm getting into photography.">K robotům jsem se dostal přes SitPort. V TechToweru teď učím psa Unitree Go2 chodit po budově podle hlasových povelů. Doma mám rozdělanou robotickou ruku a pár ESP32 na chytrou domácnost. Kromě programování jezdím na kole a začínám fotit.</p>
     </div>
     <figure class="about__figure">
       <div class="lighten portrait">
@@ -403,27 +440,25 @@
       <p class="row__title row__head">SitPort / TechTower</p>
       <div class="row__body">
         <p
-          data-cs="Robotika — SLAM navigace a hlasové ovládání na Unitree Go2 EDU."
-          data-en="Robotics — SLAM navigation and voice control on a Unitree Go2 EDU.">Robotika — SLAM navigace a hlasové ovládání na Unitree Go2 EDU.</p>
+          data-cs="SLAM navigace a hlasové ovládání robota Unitree Go2 EDU."
+          data-en="SLAM navigation and voice control for a Unitree Go2 EDU.">SLAM navigace a hlasové ovládání robota Unitree Go2 EDU.</p>
       </div>
     </div>
 
     <div class="row rule-both">
-      <p class="row__title row__head">FAV ZČU — VR &amp; AR Headset</p>
+      <p class="row__title row__head">FAV ZČU · VR &amp; AR Headset</p>
       <div class="row__body">
         <p
-          data-cs="Tým: OptiForge. Headset na Raspberry Pi 5 — AR v Pythonu, VR přes SteamVR."
-          data-en="Team: OptiForge. A headset on a Raspberry Pi 5 — AR in Python, VR through SteamVR.">Tým: OptiForge. Headset na Raspberry Pi 5 — AR v Pythonu, VR přes SteamVR.</p>
+          data-cs="Tým OptiForge. Headset na Raspberry Pi 5, AR část v Pythonu, VR přes SteamVR."
+          data-en="Team OptiForge. A headset on a Raspberry Pi 5, AR side in Python, VR through SteamVR.">Tým OptiForge. Headset na Raspberry Pi 5, AR část v Pythonu, VR přes SteamVR.</p>
       </div>
     </div>
 
     <h3 class="group-title group-title--spaced" data-cs="Tech stack" data-en="Tech stack">Tech stack</h3>
     <p class="group-lede"
-      data-cs="Jazyk volím podle úlohy: hardware a roboti — C++ a Python, desktopové aplikace — C#, počítačové vidění a AI — Python, hry v Unity — C#. V soutěžích s algoritmy sahám po C++, v ostatních programovacích soutěžích střídám Python, C++ i C# podle toho, co jde napsat nejrychleji."
-      data-en="The language depends on the task: hardware and robots — C++ and Python, desktop apps — C#, computer vision and AI — Python, Unity games — C#. Algorithm contests are almost always C++; in other programming contests I switch between Python, C++ and C# depending on what's fastest to write.">Jazyk volím podle úlohy: hardware a roboti — C++ a Python, desktopové aplikace — C#, počítačové vidění a AI — Python, hry v Unity — C#. V soutěžích s algoritmy sahám po C++, v ostatních programovacích soutěžích střídám Python, C++ i C# podle toho, co jde napsat nejrychleji.</p>
+      data-cs="Na roboty a hardware píšu v C++ a Pythonu, desktopové aplikace a hry v Unity v C#, počítačové vidění a AI v Pythonu. V algoritmických soutěžích používám C++, jinak to, v čem danou úlohu napíšu nejrychleji."
+      data-en="For robots and hardware I write C++ and Python, desktop apps and Unity games in C#, computer vision and AI in Python. In algorithm contests I use C++, otherwise whatever gets the task written fastest.">Na roboty a hardware píšu v C++ a Pythonu, desktopové aplikace a hry v Unity v C#, počítačové vidění a AI v Pythonu. V algoritmických soutěžích používám C++, jinak to, v čem danou úlohu napíšu nejrychleji.</p>
 
-    <!-- Grouped by area, not rated by level: skill bars and percentages are
-         invented numbers. -->
     <div class="stackgroups">
 
       <div class="stackgroups__grid">
@@ -504,34 +539,100 @@
   <section id="uspechy">
     <h2 class="section-title" data-cs="Úspěchy" data-en="Achievements">Úspěchy</h2>
 
-    <h3 class="group-title" data-cs="Hackathony" data-en="Hackathons">Hackathony</h3>
+    <h3 class="group-title" data-cs="Hackathony a týmové soutěže" data-en="Hackathons and team competitions">Hackathony a týmové soutěže</h3>
 
-    <!-- The win. Carried by a display numeral and the page's own rules rather
-         than by a card, so it reads as an editorial feature, not a component. -->
-    <div class="award rule-both">
+    <div class="award award--link rule-both">
       <p class="award__place">
         <span class="award__num">1.</span>
         <span class="award__place-label" data-cs="místo" data-en="place">místo</span>
       </p>
       <div class="award__head">
         <p class="award__title"><img class="complogo complogo--award" src="assets/competitions/aimtec.webp" alt="" width="96" height="96" loading="lazy">Aimtec Hackathon 2026</p>
-        <p class="award__date">20.–22. 3. 2026</p>
+        <p class="award__date">20. - 22. 3. 2026</p>
       </div>
       <div class="award__body">
         <p
-          data-cs="Vítězný tým. Projekt „Dveře se zavírají“ — výsledek je nasazený a veřejně dostupný."
-          data-en="Winning team. The project “Dveře se zavírají” shipped and is publicly available.">Vítězný tým. Projekt „Dveře se zavírají“ — výsledek je nasazený a veřejně dostupný.</p>
-        <a class="award__link" href="https://dveresezaviraji.cz/" target="_blank" rel="noopener">dveresezaviraji.cz ↗</a>
+          data-cs="Vyhráli jsme první místo i cenu publika. Udělali jsme hru „Dveře se zavírají“ na zastávce Sady Pětatřicátníků, která pracuje s živými daty Plzně: tramvaje jezdí podle skutečného jízdního řádu a auta podle webkamery. Za víkend jsme stihli i druhou hru, Czech City Wars."
+          data-en="We took first place and the audience award. We made “Dveře se zavírají”, a game at the Sady Pětatřicátníků tram stop that runs on Plzeň's live data: trams follow the real timetable and cars come from a webcam. Over the weekend we also made a second game, Czech City Wars.">Vyhráli jsme první místo i cenu publika. Udělali jsme hru „Dveře se zavírají“ na zastávce Sady Pětatřicátníků, která pracuje s živými daty Plzně: tramvaje jezdí podle skutečného jízdního řádu a auta podle webkamery. Za víkend jsme stihli i druhou hru, Czech City Wars.</p>
+        <div class="stack award__stack"><span class="tag tag-neutral">Phaser 3</span><span class="tag tag-neutral"><svg class="icon" style="color:#F7DF1E" aria-hidden="true"><use href="#i-javascript"></use></svg>JavaScript</span><span class="tag tag-neutral">Vite</span><span class="tag tag-neutral"><svg class="icon" style="color:#2496ED" aria-hidden="true"><use href="#i-docker"></use></svg>Docker</span><span class="tag tag-neutral"><svg class="icon" style="color:#4F86B5" aria-hidden="true"><use href="#i-python"></use></svg>Python</span><span class="tag tag-neutral">YOLO</span><span class="tag tag-neutral">FastAPI</span><span class="tag tag-neutral"><svg class="icon" aria-hidden="true"><use href="#i-gemini-color"></use></svg>Gemini API</span></div>
+        <a class="award__link award__stretch" href="projects/aimtec-hackathon-2026/" data-cs="Detail projektu →" data-en="Project details →">Detail projektu →</a>
+        <a class="award__link" href="https://dveresezaviraji.cz/" target="_blank" rel="noopener" data-cs="Zahrát si ↗" data-en="Play it ↗">Zahrát si ↗</a>
+      </div>
+    </div>
+
+    <div class="award rule-both">
+      <p class="award__place">
+        <span class="award__num">2.</span>
+        <span class="award__place-label" data-cs="místo" data-en="place">místo</span>
+      </p>
+      <div class="award__head">
+        <p class="award__title"><img class="complogo complogo--award" src="assets/competitions/sitport.png" alt="" width="64" height="64" loading="lazy">EPIC Tower Hackathon 2026</p>
+        <p class="award__date">13. - 14. 11. 2026</p>
+      </div>
+      <div class="award__body">
+        <p
+          data-cs="Hackathon SIT Portu v plzeňském TechToweru na téma „TechTower v historické podobě“. Skončil nakonec jen jeden den, takže to bylo hodně intenzivní. Napsali jsme hru, ve které se projíždí Plzní roku 1926 až do Světovaru, kde dnes TechTower stojí. Postavená je v Three.js."
+          data-en="A SIT Port hackathon at TechTower in Plzeň, themed “TechTower as it used to be”. It ended up lasting just one day, so it was very intense. We wrote a game where you ride through Plzeň in 1926 all the way to Světovar, where TechTower stands today. Built with Three.js.">Hackathon SIT Portu v plzeňském TechToweru na téma „TechTower v historické podobě“. Skončil nakonec jen jeden den, takže to bylo hodně intenzivní. Napsali jsme hru, ve které se projíždí Plzní roku 1926 až do Světovaru, kde dnes TechTower stojí. Postavená je v Three.js.</p>
+        <div class="stack award__stack"><span class="tag tag-neutral">Three.js</span><span class="tag tag-neutral"><svg class="icon" style="color:#F7DF1E" aria-hidden="true"><use href="#i-javascript"></use></svg>JavaScript</span></div>
+        <a class="award__link" href="https://svetovar.fun/" target="_blank" rel="noopener">svetovar.fun ↗</a>
+      </div>
+    </div>
+
+    <div class="award rule-both">
+      <p class="award__place">
+        <span class="award__num">2.</span>
+        <span class="award__place-label" data-cs="místo" data-en="place">místo</span>
+      </p>
+      <div class="award__head">
+        <p class="award__title">Technika má zlaté dno</p>
+        <p class="award__date">6. 10. 2026</p>
+      </div>
+      <div class="award__body">
+        <p
+          data-cs="Týmová soutěž Plzeňského kraje, 2. místo v kategorii gymnázií. Za čtyři hodiny jsme měli postavit funkční X-Y zapisovač ze stavebnic Merkur a Boffin. Technických problémů bylo hodně, i tak to vyšlo na stříbro."
+          data-en="A Plzeň Region team contest, 2nd place in the grammar school category. We had four hours to build a working X-Y plotter from Merkur and Boffin kits. Plenty of technical problems, but it was still enough for silver.">Týmová soutěž Plzeňského kraje, 2. místo v kategorii gymnázií. Za čtyři hodiny jsme měli postavit funkční X-Y zapisovač ze stavebnic Merkur a Boffin. Technických problémů bylo hodně, i tak to vyšlo na stříbro.</p>
+        <div class="stack award__stack"><span class="tag tag-neutral">Merkur</span><span class="tag tag-neutral">Boffin</span><span class="tag tag-neutral"><svg class="icon" style="color:#E9453D" aria-hidden="true"><use href="#i-espressif"></use></svg>ESP32</span><span class="tag tag-neutral">Android Studio</span><span class="tag tag-neutral">Kotlin</span></div>
+      </div>
+    </div>
+
+    <div class="award rule-both">
+      <p class="award__place">
+        <span class="award__num">3.</span>
+        <span class="award__place-label" data-cs="místo" data-en="place">místo</span>
+      </p>
+      <div class="award__head">
+        <p class="award__title"><img class="complogo complogo--award" src="assets/competitions/technickaolympiada-zcu.svg" alt="" width="96" height="96" loading="lazy">Technická olympiáda</p>
+        <p class="award__date">2025/26</p>
+      </div>
+      <div class="award__body">
+        <p
+          data-cs="S týmem HiFocus jsme udělali závodní hru NeuroRace ovládanou soustředěním přes NextMind headset."
+          data-en="With team HiFocus we built NeuroRace, a racing game controlled by focus through a NextMind headset.">S týmem HiFocus jsme udělali závodní hru NeuroRace ovládanou soustředěním přes NextMind headset.</p>
+        <div class="stack award__stack"><span class="tag tag-neutral"><svg class="icon" style="color:#FFFFFF" aria-hidden="true"><use href="#i-unity"></use></svg>Unity</span><span class="tag tag-neutral"><svg class="icon" style="color:#896FE2" aria-hidden="true"><use href="#i-csharp"></use></svg>C#</span><span class="tag tag-neutral"><svg class="icon" style="color:#2FE8C0" aria-hidden="true"><use href="#i-nextmind"></use></svg>NextMind</span><span class="tag tag-neutral"><svg class="icon" style="color:#E87D0D" aria-hidden="true"><use href="#i-blender"></use></svg>Blender</span><span class="tag tag-neutral">Xbox</span></div>
+      </div>
+    </div>
+
+    <div class="row row--baseline rule-both">
+      <div class="row__head">
+        <p class="row__title row__title--logo"><img class="complogo complogo--row" src="assets/competitions/robo2026.svg" alt="" width="96" height="96" loading="lazy">ROBO2026, Techmania Plzeň</p>
+        <p class="row__date">4. 11. 2026</p>
+      </div>
+      <div class="row__body">
+        <p
+          data-cs="Soutěž autonomních robotických vozítek, 38 týmů z celé republiky, třeba i z Prahy. Vozítko mělo co nejrychleji projet dráhu a nevylít přitom kelímek s vodou. Na stavbu jsme měli málo času, ale za design jsme skončili třináctí. Teď už víme, co nás čeká, a na příští rok plánujeme začít mnohem dřív a hodně věcí vylepšit."
+          data-en="A contest for autonomous robot vehicles, 38 teams from all over the country, Prague included. The vehicle had to cover the course as fast as possible without spilling a cup of water. We had little time to build, but we came 13th for design. Now we know what to expect, and for next year we plan to start much earlier and improve a lot.">Soutěž autonomních robotických vozítek, 38 týmů z celé republiky, třeba i z Prahy. Vozítko mělo co nejrychleji projet dráhu a nevylít přitom kelímek s vodou. Na stavbu jsme měli málo času, ale za design jsme skončili třináctí. Teď už víme, co nás čeká, a na příští rok plánujeme začít mnohem dřív a hodně věcí vylepšit.</p>
+        <div class="stack award__stack"><span class="tag tag-neutral"><svg class="icon" style="color:#E9453D" aria-hidden="true"><use href="#i-espressif"></use></svg>ESP32</span><span class="tag tag-neutral"><svg class="icon" style="color:#4787B8" aria-hidden="true"><use href="#i-cplusplus"></use></svg>C++</span><span class="tag tag-neutral">PlatformIO</span><span class="tag tag-neutral"><svg class="icon" style="color:#FF6A00" aria-hidden="true"><use href="#i-fusion"></use></svg>Fusion 360</span><span class="tag tag-neutral">PrusaSlicer</span><span class="tag tag-neutral">Bambu Studio</span></div>
       </div>
     </div>
 
     <div class="row row--baseline rule-both">
       <div class="row__head">
         <p class="row__title row__title--logo"><img class="complogo complogo--row" src="assets/competitions/campfire.webp" alt="" width="96" height="96" loading="lazy">Campfire GameJam</p>
-        <p class="row__date">28. 2.–1. 3. 2026</p>
+        <p class="row__date">28. 2. - 1. 3. 2026</p>
       </div>
       <div class="row__body">
         <p data-cs="Bez umístění." data-en="No placement.">Bez umístění.</p>
+        <div class="stack award__stack"><span class="tag tag-neutral"><svg class="icon" style="color:#478CBF" aria-hidden="true"><use href="#i-godotengine"></use></svg>Godot</span></div>
       </div>
     </div>
 
@@ -560,12 +661,11 @@
             <th data-cs="Soutěž" data-en="Competition">Soutěž</th>
             <th data-cs="Rok" data-en="Year">Rok</th>
             <th data-cs="Kategorie" data-en="Category">Kategorie</th>
-            <th data-cs="Kolo" data-en="Round">Kolo</th>
-            <th data-cs="Výsledek" data-en="Result">Výsledek</th>
+            <th data-cs="Výsledky" data-en="Results">Výsledky</th>
           </tr>
         </thead>
         <tbody id="competitions-body">
-          <!-- Static fallback for no-JS/crawlers — mirrors js/portfolio.js
+          <!-- Static fallback for no-JS/crawlers, mirrors js/portfolio.js
                renderCompetitions() output for the full COMPETITIONS array
                (unfiltered). JS replaces this on load and re-renders it on
                every filter change; keep both in sync when editing data. -->
@@ -573,141 +673,79 @@
             <td><span class="compcell"><img class="complogo" src="assets/competitions/programujsi.webp" alt="" width="96" height="96" loading="lazy">Programuj.si</span></td>
             <td>2025/26</td>
             <td>žáci</td>
-            <td>krajské kolo</td>
-            <td>1.</td>
-          </tr>
-          <tr>
-            <td><span class="compcell"><img class="complogo" src="assets/competitions/programujsi.webp" alt="" width="96" height="96" loading="lazy">Programuj.si</span></td>
-            <td>2025/26</td>
-            <td>žáci</td>
-            <td>ústřední kolo</td>
-            <td>13.</td>
+            <td><span class="res"><span class="res__round">krajské kolo</span><b>1.</b></span><span class="res"><span class="res__round">ústřední kolo</span><b>13.</b></span></td>
           </tr>
           <tr>
             <td><span class="compcell"><img class="complogo" src="assets/competitions/aiolympiada.webp" alt="" width="96" height="96" loading="lazy">AI olympiáda</span></td>
             <td>2025/26</td>
             <td>AI tech</td>
-            <td>krajské kolo</td>
-            <td>2.</td>
-          </tr>
-          <tr>
-            <td><span class="compcell"><img class="complogo" src="assets/competitions/technickaolympiada-zcu.svg" alt="" width="96" height="96" loading="lazy">Technická olympiáda</span></td>
-            <td>2025/26</td>
-            <td>NeuroRace</td>
-            <td>—</td>
-            <td>3. místo ve skupině</td>
+            <td><span class="res"><span class="res__round">krajské kolo</span><b>2.</b></span></td>
           </tr>
           <tr>
             <td><span class="compcell"><img class="complogo" src="assets/competitions/naboj.svg" alt="" width="96" height="96" loading="lazy">Náboj Junior</span></td>
             <td>2025/26</td>
-            <td>—</td>
-            <td>kraj</td>
-            <td>1.</td>
-          </tr>
-          <tr>
-            <td><span class="compcell"><img class="complogo" src="assets/competitions/naboj.svg" alt="" width="96" height="96" loading="lazy">Náboj Junior</span></td>
-            <td>2025/26</td>
-            <td>—</td>
-            <td>celorepublikově</td>
-            <td>7.</td>
-          </tr>
-          <tr>
-            <td><span class="compcell"><img class="complogo" src="assets/competitions/naboj.svg" alt="" width="96" height="96" loading="lazy">Náboj Junior</span></td>
-            <td>2025/26</td>
-            <td>—</td>
-            <td>mezinárodně</td>
-            <td>18.</td>
+            <td></td>
+            <td><span class="res"><span class="res__round">kraj</span><b>1.</b></span><span class="res"><span class="res__round">celorepublikově</span><b>7.</b></span><span class="res"><span class="res__round">mezinárodně</span><b>18.</b></span></td>
           </tr>
           <tr>
             <td><span class="compcell"><img class="complogo" src="assets/competitions/maso.webp" alt="" width="96" height="96" loading="lazy">MaSO</span></td>
             <td>2025/26</td>
-            <td>—</td>
-            <td>jaro, kraj</td>
-            <td>1.</td>
-          </tr>
-          <tr>
-            <td><span class="compcell"><img class="complogo" src="assets/competitions/maso.webp" alt="" width="96" height="96" loading="lazy">MaSO</span></td>
-            <td>2025/26</td>
-            <td>—</td>
-            <td>jaro, celostátně</td>
-            <td>31.</td>
+            <td></td>
+            <td><span class="res"><span class="res__round">jaro, kraj</span><b>1.</b></span><span class="res"><span class="res__round">jaro, celostátně</span><b>31.</b></span></td>
           </tr>
           <tr>
             <td><span class="compcell"><img class="complogo" src="assets/competitions/matematickaolympiada.svg" alt="" width="96" height="96" loading="lazy">Matematická olympiáda</span></td>
             <td>2025/26</td>
             <td>P</td>
-            <td>krajské kolo</td>
-            <td>2.–3.</td>
+            <td><span class="res"><span class="res__round">krajské kolo</span><b>2.–3.</b></span></td>
           </tr>
           <tr>
             <td><span class="compcell"><img class="complogo" src="assets/competitions/matematickaolympiada.svg" alt="" width="96" height="96" loading="lazy">Matematická olympiáda</span></td>
             <td>2025/26</td>
             <td>Z9</td>
-            <td>okresní kolo</td>
-            <td>3.</td>
-          </tr>
-          <tr>
-            <td><span class="compcell"><img class="complogo" src="assets/competitions/matematickaolympiada.svg" alt="" width="96" height="96" loading="lazy">Matematická olympiáda</span></td>
-            <td>2025/26</td>
-            <td>Z9</td>
-            <td>krajské kolo</td>
-            <td>10.–13.</td>
+            <td><span class="res"><span class="res__round">okresní kolo</span><b>3.</b></span><span class="res"><span class="res__round">krajské kolo</span><b>10.–13.</b></span></td>
           </tr>
           <tr>
             <td><span class="compcell"><img class="complogo complogo--fo" src="assets/competitions/fyzikalniolympiada-galaxy.webp" alt="" width="96" height="96" loading="lazy">Fyzikální olympiáda</span></td>
             <td>2025/26</td>
             <td>E</td>
-            <td>okresní kolo</td>
-            <td>2.</td>
-          </tr>
-          <tr>
-            <td><span class="compcell"><img class="complogo complogo--fo" src="assets/competitions/fyzikalniolympiada-galaxy.webp" alt="" width="96" height="96" loading="lazy">Fyzikální olympiáda</span></td>
-            <td>2025/26</td>
-            <td>E</td>
-            <td>krajské kolo</td>
-            <td>12.</td>
+            <td><span class="res"><span class="res__round">okresní kolo</span><b>2.</b></span><span class="res"><span class="res__round">krajské kolo</span><b>12.</b></span></td>
           </tr>
           <tr>
             <td><span class="compcell"><img class="complogo" src="assets/competitions/maso.webp" alt="" width="96" height="96" loading="lazy">MaSO</span></td>
             <td>2024/25</td>
-            <td>—</td>
-            <td>jaro, kraj</td>
-            <td>6.</td>
+            <td></td>
+            <td><span class="res"><span class="res__round">jaro, kraj</span><b>6.</b></span></td>
           </tr>
           <tr>
             <td><span class="compcell"><img class="complogo" src="assets/competitions/matematickaolympiada.svg" alt="" width="96" height="96" loading="lazy">Matematická olympiáda</span></td>
             <td>2024/25</td>
             <td>Z8</td>
-            <td>okresní kolo</td>
-            <td>3.–6.</td>
+            <td><span class="res"><span class="res__round">okresní kolo</span><b>3.–6.</b></span></td>
           </tr>
           <tr>
             <td><span class="compcell"><img class="complogo complogo--fo" src="assets/competitions/fyzikalniolympiada-galaxy.webp" alt="" width="96" height="96" loading="lazy">Fyzikální olympiáda</span></td>
             <td>2024/25</td>
             <td>F</td>
-            <td>okresní kolo</td>
-            <td>5.</td>
+            <td><span class="res"><span class="res__round">okresní kolo</span><b>5.</b></span></td>
           </tr>
           <tr>
             <td><span class="compcell"><img class="complogo" src="assets/competitions/matematickaolympiada.svg" alt="" width="96" height="96" loading="lazy">Matematická olympiáda</span></td>
             <td>2023/24</td>
             <td>Z7</td>
-            <td>okresní kolo</td>
-            <td>2.</td>
+            <td><span class="res"><span class="res__round">okresní kolo</span><b>2.</b></span></td>
           </tr>
           <tr>
             <td><span class="compcell"><img class="complogo complogo--fo" src="assets/competitions/fyzikalniolympiada-galaxy.webp" alt="" width="96" height="96" loading="lazy">Fyzikální olympiáda</span></td>
             <td>2023/24</td>
             <td>G</td>
-            <td>okresní kolo</td>
-            <td>3.</td>
+            <td><span class="res"><span class="res__round">okresní kolo</span><b>3.</b></span></td>
           </tr>
           <tr>
             <td><span class="compcell"><img class="complogo" src="assets/competitions/matematickaolympiada.svg" alt="" width="96" height="96" loading="lazy">Matematická olympiáda</span></td>
             <td>2022/23</td>
             <td>Z6</td>
-            <td>okresní kolo</td>
-            <td>3.</td>
+            <td><span class="res"><span class="res__round">okresní kolo</span><b>3.</b></span></td>
           </tr>
         </tbody>
       </table>
@@ -726,8 +764,8 @@
     <h2 class="section-title" data-cs="Kontakt" data-en="Contact">Kontakt</h2>
     <p class="statement statement--contact" data-cs="Napište mi." data-en="Get in touch.">Napište mi.</p>
     <p class="contact__lede"
-      data-cs="Otevřený hackathonům, soutěžím, spolupráci na projektech, stážím i zakázkám — 3D tisk, web, software i hardware."
-      data-en="Open to hackathons, competitions, project collaborations, internships and freelance work — 3D printing, web, software and hardware.">Otevřený hackathonům, soutěžím, spolupráci na projektech, stážím i zakázkám — 3D tisk, web, software i hardware.</p>
+      data-cs="Stačí napsat, co potřebujete, a kdy to má být hotové. Ozvu se zpravidla do pár dní. Nabídky ke spolupráci v týmu jsou taky vítané."
+      data-en="Just tell me what you need and when it should be done. I usually reply within a few days. Offers to team up are welcome too.">Stačí napsat, co potřebujete, a kdy to má být hotové. Ozvu se zpravidla do pár dní. Nabídky ke spolupráci v týmu jsou taky vítané.</p>
       <div class="contact__grid">
         <div class="contact__item">
           <svg class="icon contact__icon" aria-hidden="true"><use href="#i-mail"></use></svg>
