@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="cs" class="page-robo">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-cs="Vrchní | ROBO2026 | Tomáš Krůta" data-en="Vrchní | ROBO2026 | Tomáš Krůta">Vrchní | ROBO2026 | Tomáš Krůta</title>
+<meta name="description" content="Vrchní: autonomní vozítko na soutěž ROBO2026 v Techmanii Plzeň, které sleduje čáru a veze kelímek s vodou. Kryt ve tvaru číšníka, ESP32-S3, Fusion 360. 13. místo za design.">
+<link rel="canonical" href="https://tomaskruta.dev/projects/robo2026/">
+<meta name="author" content="Tomáš Krůta">
+
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../../assets/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<meta name="theme-color" content="#161826">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tomaskruta.dev/projects/robo2026/">
+<meta property="og:site_name" content="Tomáš Krůta">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:title" content="Vrchní | ROBO2026">
+<meta property="og:description" content="Autonomní vozítko ve tvaru číšníka, které sleduje čáru a veze kelímek s vodou. ROBO2026, Techmania Plzeň, 13. místo za design.">
+<meta property="og:image" content="https://tomaskruta.dev/projects/robo2026/gallery/render-iso.png">
+
+<link rel="stylesheet" href="../../css/fonts.css">
+<link rel="stylesheet" href="../../css/nocturne.css">
+<link rel="stylesheet" href="../../css/portfolio.css">
+<link rel="stylesheet" href="../../css/project.css">
+<link rel="stylesheet" href="../../css/track-bg.css">
+<link rel="stylesheet" href="../../css/diagrams.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="../../"><img class="nav-brand__icon" src="../../assets/favicon.svg" alt="" width="24" height="24">Tomáš Krůta</a>
+    <div class="nav-links">
+      <a href="../../#projekty" data-cs="Projekty" data-en="Work">Projekty</a>
+      <a href="../../#o-mne" data-cs="O mně" data-en="About">O mně</a>
+      <a href="../../#cv" data-cs="Zkušenosti" data-en="Experience">Zkušenosti</a>
+      <a href="../../#uspechy" data-cs="Úspěchy" data-en="Achievements">Úspěchy</a>
+      <a href="../../#kontakt" data-cs="Kontakt" data-en="Contact">Kontakt</a>
+    </div>
+    <button type="button" class="btn btn-secondary" id="lang-toggle" aria-label="Switch to English">EN</button>
+  </div>
+  <div class="nav__progress" aria-hidden="true"><span id="nav-progress"></span></div>
+</nav>
+
+<main class="container project">
+  <a class="project__back" href="../../#uspechy" data-cs="← Zpět na úspěchy" data-en="← Back to achievements">← Zpět na úspěchy</a>
+
+  <header class="project__header" data-s3d="hero">
+    <p class="project__event" data-cs="ROBO2026, Techmania Plzeň" data-en="ROBO2026, Techmania Plzeň">ROBO2026, Techmania Plzeň</p>
+    <h1>Vrchní</h1>
+    <ul class="project__awards">
+      <li class="project__award project__award--main" data-cs="13. místo za design" data-en="13th place for design">13. místo za design</li>
+    </ul>
+    <p class="project__lede"
+      data-cs="Autonomní vozítko, které sleduje čáru a veze kelímek se 70 ml vody. Kryt jsme navrhli jako číšníka s očima z RGB LED, knírem a motýlkem."
+      data-en="An autonomous vehicle that follows a line while carrying a cup with 70 ml of water. We designed the cover as a waiter with RGB LED eyes, a moustache and a bow tie.">Autonomní vozítko, které sleduje čáru a veze kelímek se 70 ml vody. Kryt jsme navrhli jako číšníka s očima z RGB LED, knírem a motýlkem.</p>
+  </header>
+
+  <div class="s3d" id="model-3d">
+    <div class="s3d__stage" aria-hidden="true">
+      <img class="s3d__fallback" src="gallery/render-iso.png" alt="" width="1055" height="1112">
+      <div class="s3d__labels"></div>
+      <div class="s3d__loading" data-cs="Načítám 3D model" data-en="Loading 3D model">Načítám 3D model</div>
+    </div>
+  </div>
+
+  <dl class="project__facts">
+    <div><dt data-cs="Akce" data-en="Event">Akce</dt><dd>ROBO2026, Techmania Plzeň</dd></div>
+    <div><dt data-cs="Datum" data-en="Date">Datum</dt><dd data-cs="4. 11. 2026" data-en="4 Nov 2026">4. 11. 2026</dd></div>
+    <div><dt data-cs="Tým" data-en="Team">Tým</dt><dd>Tomáš Krůta, Mikuláš Vaněček</dd></div>
+  </dl>
+
+  <section class="project__section" data-s3d="soutez">
+    <h2 data-cs="Soutěž" data-en="The competition">Soutěž</h2>
+    <p
+      data-cs="ROBO2026 pořádal Plzeňský kraj spolu se ZČU, SOUE Plzeň a Techmanií. Přijelo 38 týmů z celé republiky, třeba i z Prahy. Úkolem bylo postavit autonomní robotické vozítko, které co nejrychleji projede vyznačenou trať a poveze přitom kelímek s vodou, aniž by ho vylilo. Porota kromě jízdy hodnotila i design a prezentaci."
+      data-en="ROBO2026 was organised by the Plzeň Region together with the University of West Bohemia, SOUE Plzeň and Techmania. 38 teams came from all over Czechia, including Prague. The task was to build an autonomous robotic vehicle that drives a marked course as fast as possible while carrying a cup of water without spilling it. Besides the ride, the jury also judged design and presentation.">ROBO2026 pořádal Plzeňský kraj spolu se ZČU, SOUE Plzeň a Techmanií. Přijelo 38 týmů z celé republiky, třeba i z Prahy. Úkolem bylo postavit autonomní robotické vozítko, které co nejrychleji projede vyznačenou trať a poveze přitom kelímek s vodou, aniž by ho vylilo. Porota kromě jízdy hodnotila i design a prezentaci.</p>
+    <p
+      data-cs="Na stavbu jsme měli málo času. Teď už víme, co čekat, takže příští rok začneme mnohem dřív."
+      data-en="We had little time to build it. Now we know what to expect, so next year we will start much earlier.">Na stavbu jsme měli málo času. Teď už víme, co čekat, takže příští rok začneme mnohem dřív.</p>
+  </section>
+
+  <section class="project__section" data-s3d="fusion">
+    <h2 data-cs="Návrh ve Fusion 360" data-en="Design in Fusion 360">Návrh ve Fusion 360</h2>
+    <p
+      data-cs="Vozítko je složené po patrech. Dole je základová deska s motory, senzorem čáry a baterií, nad ní na sloupcích deska s elektronikou, nahoře podnos na kelímek a přes všechno kryt."
+      data-en="The vehicle is built in layers. At the bottom is the base plate with the motors, the line sensor and the battery, above it the electronics deck on pillars, on top a tray for the cup, and a cover over everything.">Vozítko je složené po patrech. Dole je základová deska s motory, senzorem čáry a baterií, nad ní na sloupcích deska s elektronikou, nahoře podnos na kelímek a přes všechno kryt.</p>
+    <p
+      data-cs="Hodně jsme řešili rozložení váhy. Baterie leží co nejníž mezi koly a kelímek stojí přímo nad osou kol. Když se vozítko otáčí na místě, kelímek se jen pootočí a voda nedostane boční ráz."
+      data-en="We spent a lot of time on weight distribution. The battery sits as low as possible between the wheels and the cup stands right above the wheel axle. When the vehicle turns on the spot, the cup only rotates and the water gets no sideways jolt.">Hodně jsme řešili rozložení váhy. Baterie leží co nejníž mezi koly a kelímek stojí přímo nad osou kol. Když se vozítko otáčí na místě, kelímek se jen pootočí a voda nedostane boční ráz.</p>
+    <p
+      data-cs="Model je parametrický, takže třeba výška desky s elektronikou se dopočítá z výšky baterie a BMS. Kolize mezi díly jsme kontrolovali skriptem přes Fusion API."
+      data-en="The model is parametric, so for example the height of the electronics deck is calculated from the height of the battery and BMS. We checked collisions between parts with a script using the Fusion API.">Model je parametrický, takže třeba výška desky s elektronikou se dopočítá z výšky baterie a BMS. Kolize mezi díly jsme kontrolovali skriptem přes Fusion API.</p>
+    <p
+      data-cs="Celý kryt by se i s podporami tiskl 8 h 37 min. Rozdělili jsme ho na stěny (2 h) a střechu s očima a displejem (5 h), které se tiskly zároveň na dvou tiskárnách. Díly drží pohromadě šrouby M3 v zatavených mosazných insertech. Tiskli jsme z PLA na Prusa Core One+, Prusa XL 5T a Bambu Lab X1E."
+      data-en="Printing the whole cover with supports would take 8 h 37 min. We split it into the walls (2 h) and the roof with the eyes and display (5 h), printed at the same time on two printers. The parts are held together by M3 screws in heat-set brass inserts. We printed in PLA on a Prusa Core One+, Prusa XL 5T and Bambu Lab X1E.">Celý kryt by se i s podporami tiskl 8 h 37 min. Rozdělili jsme ho na stěny (2 h) a střechu s očima a displejem (5 h), které se tiskly zároveň na dvou tiskárnách. Díly drží pohromadě šrouby M3 v zatavených mosazných insertech. Tiskli jsme z PLA na Prusa Core One+, Prusa XL 5T a Bambu Lab X1E.</p>
+  </section>
+
+  <section class="project__section" data-s3d="elektronika">
+    <h2 data-cs="Elektronika a zapojení" data-en="Electronics and wiring">Elektronika a zapojení</h2>
+    <p
+      data-cs="Elektronika je na dvou univerzálních deskách. Na hlavní jsou ESP32-S3 a driver motorů DRV8833 v paticích a periferie se připojují přes konektory JST XH. Menší deska se stará o napájení."
+      data-en="The electronics sit on two perfboards. The main one holds the ESP32-S3 and the DRV8833 motor driver in sockets, with peripherals connected via JST XH connectors. The smaller board handles power.">Elektronika je na dvou univerzálních deskách. Na hlavní jsou ESP32-S3 a driver motorů DRV8833 v paticích a periferie se připojují přes konektory JST XH. Menší deska se stará o napájení.</p>
+    <p
+      data-cs="Napájení jsme rozdělili do samostatných větví. Motory jdou přímo z baterie, 5 V napájí ESP32 a oči a 3,3 V jen analogový senzor a displej. Rušení od motorů a LED se tak nedostane do měření čáry."
+      data-en="We split power into separate branches. The motors run straight from the battery, 5 V powers the ESP32 and the eyes, and 3.3 V only the analog sensor and the display. That way noise from the motors and LEDs does not get into the line measurement.">Napájení jsme rozdělili do samostatných větví. Motory jdou přímo z baterie, 5 V napájí ESP32 a oči a 3,3 V jen analogový senzor a displej. Rušení od motorů a LED se tak nedostane do měření čáry.</p>
+    <ul>
+      <li data-cs="2× 18650 (2S, 6 až 8,4 V) → BMS 2S 20 A → svorky WAGO (nabíječka IP2369 přes USB-C, XT60)" data-en="2× 18650 (2S, 6 to 8.4 V) → 2S 20 A BMS → WAGO terminals (IP2369 USB-C charger, XT60)">2× 18650 (2S, 6 až 8,4 V) → BMS 2S 20 A → svorky WAGO (nabíječka IP2369 přes USB-C, XT60)</li>
+      <li data-cs="vypínač KCD1 → motory přes DRV8833" data-en="KCD1 switch → motors via DRV8833">vypínač KCD1 → motory přes DRV8833</li>
+      <li data-cs="step-down 5 V → ESP32 a oči (přes diodu 1N5819)" data-en="5 V step-down → ESP32 and eyes (via a 1N5819 diode)">step-down 5 V → ESP32 a oči (přes diodu 1N5819)</li>
+      <li data-cs="step-down 3,3 V → senzor QTR-8A a OLED" data-en="3.3 V step-down → QTR-8A sensor and OLED">step-down 3,3 V → senzor QTR-8A a OLED</li>
+    </ul>
+    <p
+      data-cs="Rozvržení vodičů na deskách nám vygeneroval a zkontroloval vlastní skript v Pythonu. Hlídá zakázané piny, sítě a kolize."
+      data-en="The wire layout on the boards was generated and checked by our own Python script. It watches for forbidden pins, nets and collisions.">Rozvržení vodičů na deskách nám vygeneroval a zkontroloval vlastní skript v Pythonu. Hlídá zakázané piny, sítě a kolize.</p>
+    <div class="dg">
+      <figure class="dg-card">
+        <figcaption class="dg-cap" data-cs="Blokové schéma" data-en="Block diagram">Blokové schéma</figcaption>
+        <svg class="dg-svg dg-svg--wide" viewBox="0 0 820 500" role="img" aria-label="Blokové schéma elektroniky vozítka: baterie, BMS, svorky WAGO, vypínač, driver DRV8833 s motory, step-down měniče 5 V a 3,3 V, ESP32-S3 a periferie." xmlns="http://www.w3.org/2000/svg"><defs><marker id="dg-a-vbat-d" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="dg-mk dg-mk--vbat" d="M0 0L10 5 0 10z"/></marker><marker id="dg-a-v5-d" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="dg-mk dg-mk--v5" d="M0 0L10 5 0 10z"/></marker><marker id="dg-a-v33-d" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="dg-mk dg-mk--v33" d="M0 0L10 5 0 10z"/></marker><marker id="dg-a-sig-d" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="dg-mk dg-mk--sig" d="M0 0L10 5 0 10z"/></marker></defs>
+<rect class="dg-box dg-box--vbat" x="0" y="44" width="150" height="60" rx="8"/>
+<text x="75" y="69" class="dg-title" text-anchor="middle" data-cs="2× 18650 (2S)" data-en="2× 18650 (2S)">2× 18650 (2S)</text>
+<text x="75" y="88" class="dg-sub" text-anchor="middle" data-cs="6–8,4 V" data-en="6–8.4 V">6–8,4 V</text>
+<rect class="dg-box dg-box--vbat" x="180" y="44" width="120" height="60" rx="8"/>
+<text x="240" y="69" class="dg-title" text-anchor="middle" data-cs="BMS 2S 20 A" data-en="2S 20 A BMS">BMS 2S 20 A</text>
+<text x="240" y="88" class="dg-sub" text-anchor="middle" data-cs="ochrana článků" data-en="cell protection">ochrana článků</text>
+<rect class="dg-box dg-box--vbat" x="330" y="44" width="130" height="60" rx="8"/>
+<text x="395" y="69" class="dg-title" text-anchor="middle" data-cs="Svorky WAGO" data-en="WAGO terminals">Svorky WAGO</text>
+<text x="395" y="88" class="dg-sub" text-anchor="middle" data-cs="rozvod + a −" data-en="distribution + / −">rozvod + a −</text>
+<rect class="dg-box dg-box--vbat" x="490" y="44" width="130" height="60" rx="8"/>
+<text x="555" y="69" class="dg-title" text-anchor="middle" data-cs="Vypínač KCD1" data-en="KCD1 switch">Vypínač KCD1</text>
+<text x="555" y="88" class="dg-sub" text-anchor="middle" data-cs="VBAT_SW" data-en="VBAT_SW">VBAT_SW</text>
+<path class="dg-w dg-w--vbat" d="M150 74H180" marker-end="url(#dg-a-vbat-d)"/>
+<path class="dg-w dg-w--vbat" d="M300 74H330" marker-end="url(#dg-a-vbat-d)"/>
+<path class="dg-w dg-w--vbat" d="M460 74H490" marker-end="url(#dg-a-vbat-d)"/>
+<rect class="dg-box dg-box--chip" x="290" y="0" width="100" height="28" rx="8"/>
+<text x="340" y="19" class="dg-chip" text-anchor="middle">IP2369 USB-C</text>
+<rect class="dg-box dg-box--chip" x="400" y="0" width="60" height="28" rx="8"/>
+<text x="430" y="19" class="dg-chip" text-anchor="middle">XT60</text>
+<path class="dg-w dg-w--vbat" d="M340 28V42" marker-end="url(#dg-a-vbat-d)"/>
+<path class="dg-w dg-w--vbat" d="M430 28V42" marker-end="url(#dg-a-vbat-d)"/>
+<path class="dg-w dg-w--vbat" d="M620 74H790V140"/>
+<path class="dg-w dg-w--vbat" d="M75 140H790"/>
+<text x="300" y="130" class="dg-rail dg-rail--vbat" data-cs="VBAT_SW · 6–8,4 V" data-en="VBAT_SW · 6–8.4 V">VBAT_SW · 6–8,4 V</text>
+<path class="dg-w dg-w--vbat" d="M75 140V188" marker-end="url(#dg-a-vbat-d)"/>
+<path class="dg-w dg-w--vbat" d="M575 140V188" marker-end="url(#dg-a-vbat-d)"/>
+<path class="dg-w dg-w--vbat" d="M745 140V188" marker-end="url(#dg-a-vbat-d)"/>
+<circle class="dg-dot dg-dot--vbat" cx="575" cy="140" r="3.5"/>
+<circle class="dg-dot dg-dot--vbat" cx="745" cy="140" r="3.5"/>
+<circle class="dg-dot dg-dot--vbat" cx="75" cy="140" r="3.5"/>
+<rect class="dg-box dg-box--vbat" x="0" y="190" width="150" height="80" rx="8"/>
+<text x="75" y="215" class="dg-title" text-anchor="middle">DRV8833</text>
+<text x="75" y="234" class="dg-sub" text-anchor="middle">VM = VBAT</text>
+<text x="75" y="251" class="dg-pin" text-anchor="middle">PWM GPIO 38–41</text>
+<rect class="dg-box dg-box--esp" x="190" y="190" width="260" height="80" rx="8"/>
+<text x="320" y="215" class="dg-title" text-anchor="middle">ESP32-S3 N8R8</text>
+<text x="320" y="236" class="dg-sub" text-anchor="middle" data-cs="240 MHz · 2 jádra · 8 MB PSRAM" data-en="240 MHz · 2 cores · 8 MB PSRAM">240 MHz · 2 jádra · 8 MB PSRAM</text>
+<text x="320" y="254" class="dg-sub" text-anchor="middle" data-cs="řídicí jednotka" data-en="controller">řídicí jednotka</text>
+<rect class="dg-box dg-box--v5" x="500" y="190" width="150" height="80" rx="8"/>
+<text x="575" y="215" class="dg-title" text-anchor="middle" data-cs="Step-down 5 V" data-en="5 V step-down">Step-down 5 V</text>
+<text x="575" y="234" class="dg-sub" text-anchor="middle" data-cs="z VBAT_SW" data-en="from VBAT_SW">z VBAT_SW</text>
+<rect class="dg-box dg-box--v33" x="670" y="190" width="150" height="80" rx="8"/>
+<text x="745" y="215" class="dg-title" text-anchor="middle" data-cs="Step-down 3,3 V" data-en="3.3 V step-down">Step-down 3,3 V</text>
+<text x="745" y="234" class="dg-sub" text-anchor="middle" data-cs="z VBAT_SW" data-en="from VBAT_SW">z VBAT_SW</text>
+<path class="dg-w dg-w--v5" d="M500 230H452" marker-end="url(#dg-a-v5-d)"/>
+<polygon class="dg-part dg-part--fill" points="482,224 482,236 470,230"/><path class="dg-part" d="M470 224V236"/>
+<text x="476" y="216" class="dg-lbl dg-lbl--sm" text-anchor="middle">1N5819</text>
+<path class="dg-w dg-w--sig" d="M190 230H152" marker-end="url(#dg-a-sig-d)"/>
+<text x="171" y="222" class="dg-pin dg-pin--sm" text-anchor="middle">PWM</text>
+<path class="dg-w dg-w--vbat" d="M75 270V418" marker-end="url(#dg-a-vbat-d)"/>
+<text x="83" y="350" class="dg-lbl dg-lbl--sm">OUT1–4</text>
+<path class="dg-w dg-w--sig" d="M320 270V350"/>
+<path class="dg-w dg-w--sig" d="M240 350H700"/>
+<path class="dg-w dg-w--sig" d="M240 350V418" marker-end="url(#dg-a-sig-d)"/>
+<path class="dg-w dg-w--sig" d="M360 350V418" marker-end="url(#dg-a-sig-d)"/>
+<path class="dg-w dg-w--sig" d="M520 350V418" marker-end="url(#dg-a-sig-d)"/>
+<path class="dg-w dg-w--sig" d="M700 350V418" marker-end="url(#dg-a-sig-d)"/>
+<circle class="dg-dot dg-dot--sig" cx="320" cy="350" r="3.5"/>
+<path class="dg-w dg-w--v5" d="M575 270V310H410V380"/>
+<path class="dg-w dg-w--v5" d="M410 396V418" marker-end="url(#dg-a-v5-d)"/>
+<polygon class="dg-part dg-part--fill" points="404,382 416,382 410,394"/><path class="dg-part" d="M404 394H416"/>
+<text x="422" y="392" class="dg-lbl dg-lbl--sm">1N5819</text>
+<path class="dg-w dg-w--v33" d="M780 270V418" marker-end="url(#dg-a-v33-d)"/>
+<path class="dg-w dg-w--v33" d="M780 330H600V418" marker-end="url(#dg-a-v33-d)"/>
+<circle class="dg-dot dg-dot--v33" cx="780" cy="330" r="3.5"/>
+<rect class="dg-box dg-box--vbat" x="0" y="420" width="150" height="76" rx="8"/>
+<text x="75" y="445" class="dg-title" text-anchor="middle">2× Pololu HPCB</text>
+<text x="75" y="464" class="dg-sub" text-anchor="middle" data-cs="30:1 · levý, pravý" data-en="30:1 · left, right">30:1 · levý, pravý</text>
+<rect class="dg-box" x="190" y="420" width="100" height="76" rx="8"/>
+<text x="240" y="445" class="dg-title" text-anchor="middle" data-cs="Tlačítka" data-en="Buttons">Tlačítka</text>
+<text x="240" y="464" class="dg-sub" text-anchor="middle">B1 B2 B3 START</text>
+<text x="240" y="481" class="dg-pin" text-anchor="middle">GPIO 11–14</text>
+<rect class="dg-box dg-box--v5" x="310" y="420" width="140" height="76" rx="8"/>
+<text x="380" y="445" class="dg-title" text-anchor="middle" data-cs="Oči WS2812" data-en="WS2812 eyes">Oči WS2812</text>
+<text x="380" y="464" class="dg-sub" text-anchor="middle" data-cs="2 kroužky · 5 V" data-en="2 rings · 5 V">2 kroužky · 5 V</text>
+<text x="380" y="481" class="dg-pin" text-anchor="middle">GPIO 17 · 330 Ω</text>
+<rect class="dg-box dg-box--v33" x="470" y="420" width="170" height="76" rx="8"/>
+<text x="555" y="445" class="dg-title" text-anchor="middle">QTR-8A</text>
+<text x="555" y="464" class="dg-sub" text-anchor="middle" data-cs="8× analog · 3,3 V" data-en="8× analog · 3.3 V">8× analog · 3,3 V</text>
+<text x="555" y="481" class="dg-pin" text-anchor="middle">ADC1 3–10 · LEDON 18</text>
+<rect class="dg-box dg-box--v33" x="660" y="420" width="160" height="76" rx="8"/>
+<text x="740" y="445" class="dg-title" text-anchor="middle">OLED SH1106</text>
+<text x="740" y="464" class="dg-sub" text-anchor="middle" data-cs="I2C 0x3C · 3,3 V" data-en="I2C 0x3C · 3.3 V">I2C 0x3C · 3,3 V</text>
+<text x="740" y="481" class="dg-pin" text-anchor="middle">SDA 16 · SCL 15</text></svg>
+        <svg class="dg-svg dg-svg--narrow" viewBox="0 0 372 690" role="img" aria-label="Blokové schéma elektroniky vozítka ve svislém uspořádání." xmlns="http://www.w3.org/2000/svg"><defs><marker id="dg-a-vbat-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="dg-mk dg-mk--vbat" d="M0 0L10 5 0 10z"/></marker><marker id="dg-a-v5-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="dg-mk dg-mk--v5" d="M0 0L10 5 0 10z"/></marker><marker id="dg-a-v33-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="dg-mk dg-mk--v33" d="M0 0L10 5 0 10z"/></marker><marker id="dg-a-sig-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="dg-mk dg-mk--sig" d="M0 0L10 5 0 10z"/></marker></defs>
+<rect class="dg-box dg-box--vbat" x="0" y="0" width="170" height="52" rx="8"/>
+<text x="85" y="25" class="dg-title" text-anchor="middle">2× 18650 (2S)</text>
+<text x="85" y="44" class="dg-sub" text-anchor="middle" data-cs="6–8,4 V" data-en="6–8.4 V">6–8,4 V</text>
+<rect class="dg-box dg-box--vbat" x="202" y="0" width="170" height="52" rx="8"/>
+<text x="287" y="25" class="dg-title" text-anchor="middle" data-cs="BMS 2S 20 A" data-en="2S 20 A BMS">BMS 2S 20 A</text>
+<text x="287" y="44" class="dg-sub" text-anchor="middle" data-cs="ochrana článků" data-en="cell protection">ochrana článků</text>
+<path class="dg-w dg-w--vbat" d="M170 26H200" marker-end="url(#dg-a-vbat-m)"/>
+<path class="dg-w dg-w--vbat" d="M287 52V76" marker-end="url(#dg-a-vbat-m)"/>
+<rect class="dg-box dg-box--vbat" x="202" y="78" width="170" height="52" rx="8"/>
+<text x="287" y="103" class="dg-title" text-anchor="middle" data-cs="Svorky WAGO" data-en="WAGO terminals">Svorky WAGO</text>
+<text x="287" y="122" class="dg-sub" text-anchor="middle" data-cs="rozvod + a −" data-en="distribution + / −">rozvod + a −</text>
+<rect class="dg-box dg-box--vbat" x="0" y="78" width="170" height="52" rx="8"/>
+<text x="85" y="103" class="dg-title" text-anchor="middle" data-cs="Vypínač KCD1" data-en="KCD1 switch">Vypínač KCD1</text>
+<text x="85" y="122" class="dg-sub" text-anchor="middle">VBAT_SW</text>
+<path class="dg-w dg-w--vbat" d="M202 104H172" marker-end="url(#dg-a-vbat-m)"/>
+<rect class="dg-box dg-box--chip" x="202" y="158" width="82" height="26" rx="8"/>
+<text x="243" y="175" class="dg-chip" text-anchor="middle">IP2369</text>
+<rect class="dg-box dg-box--chip" x="292" y="158" width="80" height="26" rx="8"/>
+<text x="332" y="175" class="dg-chip" text-anchor="middle">XT60</text>
+<path class="dg-w dg-w--vbat" d="M243 158V132" marker-end="url(#dg-a-vbat-m)"/>
+<path class="dg-w dg-w--vbat" d="M332 158V132" marker-end="url(#dg-a-vbat-m)"/>
+<text x="190" y="175" class="dg-lbl dg-lbl--sm" text-anchor="end" data-cs="nabíjení USB-C" data-en="USB-C charging">nabíjení USB-C</text>
+<path class="dg-w dg-w--vbat" d="M85 130V214"/>
+<path class="dg-w dg-w--vbat" d="M54 214H318"/>
+<text x="100" y="206" class="dg-rail dg-rail--vbat" data-cs="VBAT_SW · 6–8,4 V" data-en="VBAT_SW · 6–8.4 V">VBAT_SW · 6–8,4 V</text>
+<path class="dg-w dg-w--vbat" d="M54 214V234" marker-end="url(#dg-a-vbat-m)"/>
+<path class="dg-w dg-w--vbat" d="M186 214V234" marker-end="url(#dg-a-vbat-m)"/>
+<path class="dg-w dg-w--vbat" d="M318 214V234" marker-end="url(#dg-a-vbat-m)"/>
+<circle class="dg-dot dg-dot--vbat" cx="85" cy="214" r="3.5"/>
+<rect class="dg-box dg-box--vbat" x="0" y="236" width="108" height="70" rx="8"/>
+<text x="54" y="261" class="dg-title dg-title--s" text-anchor="middle">DRV8833</text>
+<text x="54" y="280" class="dg-sub" text-anchor="middle">VM = VBAT</text>
+<text x="54" y="297" class="dg-pin" text-anchor="middle">PWM 38–41</text>
+<rect class="dg-box dg-box--v5" x="132" y="236" width="108" height="70" rx="8"/>
+<text x="186" y="261" class="dg-title dg-title--s" text-anchor="middle">Step-down</text>
+<text x="186" y="280" class="dg-sub" text-anchor="middle">5 V</text>
+<rect class="dg-box dg-box--v33" x="264" y="236" width="108" height="70" rx="8"/>
+<text x="318" y="261" class="dg-title dg-title--s" text-anchor="middle">Step-down</text>
+<text x="318" y="280" class="dg-sub" text-anchor="middle" data-cs="3,3 V" data-en="3.3 V">3,3 V</text>
+<rect class="dg-box dg-box--vbat" x="0" y="338" width="108" height="70" rx="8"/>
+<text x="54" y="363" class="dg-title dg-title--s" text-anchor="middle">2× HPCB 30:1</text>
+<text x="54" y="382" class="dg-sub" text-anchor="middle" data-cs="Pololu · L, P" data-en="Pololu · L, R">Pololu · L, P</text>
+<path class="dg-w dg-w--vbat" d="M54 306V336" marker-end="url(#dg-a-vbat-m)"/>
+<rect class="dg-box dg-box--esp" x="132" y="338" width="198" height="70" rx="8"/>
+<text x="231" y="362" class="dg-title" text-anchor="middle">ESP32-S3 N8R8</text>
+<text x="231" y="382" class="dg-sub" text-anchor="middle" data-cs="240 MHz · 2 jádra · 8 MB" data-en="240 MHz · 2 cores · 8 MB">240 MHz · 2 jádra · 8 MB</text>
+<text x="231" y="398" class="dg-sub" text-anchor="middle">PSRAM</text>
+<path class="dg-w dg-w--v5" d="M186 306V338"/>
+<polygon class="dg-part dg-part--fill" points="180,318 192,318 186,330"/><path class="dg-part" d="M180 330H192"/>
+<text x="198" y="328" class="dg-lbl dg-lbl--sm">1N5819</text>
+<path class="dg-w dg-w--sig" d="M132 372H120V272H110" marker-end="url(#dg-a-sig-m)"/>
+<path class="dg-w dg-w--v5" d="M186 312H362V592H332" marker-end="url(#dg-a-v5-m)"/>
+<path class="dg-w dg-w--v33" d="M346 306V532"/>
+<path class="dg-w dg-w--sig" d="M170 408V428H10V652"/>
+<path class="dg-w dg-w--sig" d="M10 472H22" marker-end="url(#dg-a-sig-m)"/>
+<path class="dg-w dg-w--sig" d="M10 532H22" marker-end="url(#dg-a-sig-m)"/>
+<path class="dg-w dg-w--sig" d="M10 592H22" marker-end="url(#dg-a-sig-m)"/>
+<path class="dg-w dg-w--sig" d="M10 652H22" marker-end="url(#dg-a-sig-m)"/>
+<rect class="dg-box dg-box--v33" x="24" y="448" width="306" height="48" rx="8"/>
+<text x="36" y="468" class="dg-title dg-title--s">QTR-8A</text>
+<text x="36" y="486" class="dg-sub" data-cs="8× analog · 3,3 V" data-en="8× analog · 3.3 V">8× analog · 3,3 V</text>
+<text x="318" y="486" class="dg-pin" text-anchor="end">ADC1 3–10 · LEDON 18</text>
+<rect class="dg-box dg-box--v33" x="24" y="508" width="306" height="48" rx="8"/>
+<text x="36" y="528" class="dg-title dg-title--s">OLED SH1106</text>
+<text x="36" y="546" class="dg-sub" data-cs="I2C 0x3C · 3,3 V" data-en="I2C 0x3C · 3.3 V">I2C 0x3C · 3,3 V</text>
+<text x="318" y="546" class="dg-pin" text-anchor="end">SDA 16 · SCL 15</text>
+<rect class="dg-box dg-box--v5" x="24" y="568" width="306" height="48" rx="8"/>
+<text x="36" y="588" class="dg-title dg-title--s" data-cs="Oči WS2812" data-en="WS2812 eyes">Oči WS2812</text>
+<text x="36" y="606" class="dg-sub" data-cs="2 kroužky · 5 V · 1N5819" data-en="2 rings · 5 V · 1N5819">2 kroužky · 5 V · 1N5819</text>
+<text x="318" y="606" class="dg-pin" text-anchor="end">GPIO 17 · 330 Ω</text>
+<rect class="dg-box" x="24" y="628" width="306" height="48" rx="8"/>
+<text x="36" y="648" class="dg-title dg-title--s" data-cs="Tlačítka" data-en="Buttons">Tlačítka</text>
+<text x="36" y="666" class="dg-sub">B1 B2 B3 START</text>
+<text x="318" y="666" class="dg-pin" text-anchor="end">GPIO 11–14</text>
+<path class="dg-w dg-w--v33" d="M346 472H332" marker-end="url(#dg-a-v33-m)"/>
+<path class="dg-w dg-w--v33" d="M346 532H332" marker-end="url(#dg-a-v33-m)"/>
+<circle class="dg-dot dg-dot--v33" cx="346" cy="472" r="3.5"/>
+<polygon class="dg-part dg-part--fill" points="356,534 368,534 362,546"/><path class="dg-part" d="M356 546H368"/></svg>
+        <ul class="dg-legend"><li><span class="dg-sw dg-sw--vbat"></span><span data-cs="Baterie (VBAT, 6–8,4 V)" data-en="Battery (VBAT, 6–8.4 V)">Baterie (VBAT, 6–8,4 V)</span></li><li><span class="dg-sw dg-sw--v5"></span><span>5 V</span></li><li><span class="dg-sw dg-sw--v33"></span><span data-cs="3,3 V" data-en="3.3 V">3,3 V</span></li><li><span class="dg-sw dg-sw--sig"></span><span data-cs="Signál z ESP32-S3" data-en="Signal from ESP32-S3">Signál z ESP32-S3</span></li></ul>
+      </figure>
+      <figure class="dg-card">
+        <figcaption class="dg-cap" data-cs="Schéma napájení" data-en="Power schematic">Schéma napájení</figcaption>
+        <p class="dg-hint" data-cs="Schéma se dá posouvat do stran." data-en="Swipe the schematic sideways.">Schéma se dá posouvat do stran.</p>
+        <div class="dg-scroll" tabindex="0" role="group" aria-label="Schéma napájení"><svg class="dg-svg dg-svg--power" viewBox="0 0 820 710" role="img" aria-label="Schéma napájení: napájecí deska se dvěma step-down měniči a kondenzátory a napájecí část hlavní desky s diodami 1N5819, kondenzátory 470 µF a 100 nF a rezistorem 330 Ω." xmlns="http://www.w3.org/2000/svg"><defs><marker id="dg-a-vbat-p" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="dg-mk dg-mk--vbat" d="M0 0L10 5 0 10z"/></marker><marker id="dg-a-v5-p" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="dg-mk dg-mk--v5" d="M0 0L10 5 0 10z"/></marker><marker id="dg-a-v33-p" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="dg-mk dg-mk--v33" d="M0 0L10 5 0 10z"/></marker><marker id="dg-a-sig-p" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="dg-mk dg-mk--sig" d="M0 0L10 5 0 10z"/></marker></defs>
+<text x="0" y="14" class="dg-sect" data-cs="NAPÁJECÍ DESKA" data-en="POWER BOARD">NAPÁJECÍ DESKA</text>
+<rect class="dg-box" x="0" y="100" width="94" height="76" rx="8"/>
+<text x="47" y="122" class="dg-title" text-anchor="middle">J_IN</text>
+<text x="47" y="139" class="dg-sub" text-anchor="middle" data-cs="svorkovnice" data-en="terminal block">svorkovnice</text>
+<text x="12" y="163" class="dg-pin dg-pin--sm">− GND</text>
+<path class="dg-w dg-w--vbat" d="M94 130H160"/>
+<text x="98" y="122" class="dg-rail dg-rail--vbat">VBAT_SW</text>
+<path class="dg-w dg-w--vbat" d="M160 52V236"/>
+<circle class="dg-dot dg-dot--vbat" cx="160" cy="130" r="3.5"/>
+<path class="dg-w dg-w--vbat" d="M160 52H598" marker-end="url(#dg-a-vbat-p)"/>
+<text x="176" y="44" class="dg-rail dg-rail--vbat">VBAT</text>
+<rect class="dg-box dg-box--vbat" x="600" y="28" width="220" height="48" rx="8"/>
+<text x="710" y="49" class="dg-title" text-anchor="middle">J_OUTP</text>
+<text x="710" y="66" class="dg-sub" text-anchor="middle" data-cs="VBAT, GND (20 AWG) → hlavní deska" data-en="VBAT, GND (20 AWG) → main board">VBAT, GND (20 AWG) → hlavní deska</text>
+<path class="dg-w dg-w--vbat" d="M160 130H258" marker-end="url(#dg-a-vbat-p)"/>
+<path class="dg-w dg-w--vbat" d="M160 236H258" marker-end="url(#dg-a-vbat-p)"/>
+<circle class="dg-dot dg-dot--vbat" cx="160" cy="236" r="3.5"/>
+<rect class="dg-box dg-box--v5" x="260" y="110" width="140" height="72" rx="8"/>
+<text x="330" y="134" class="dg-title" text-anchor="middle">U5</text>
+<text x="330" y="152" class="dg-sub" text-anchor="middle" data-cs="step-down 5 V" data-en="5 V step-down">step-down 5 V</text>
+<path class="dg-gnd" d="M321 190H339M324 194H336M327 198H333"/>
+<rect class="dg-box dg-box--v33" x="260" y="216" width="140" height="72" rx="8"/>
+<text x="330" y="240" class="dg-title" text-anchor="middle">U6</text>
+<text x="330" y="258" class="dg-sub" text-anchor="middle" data-cs="step-down 3,3 V" data-en="3.3 V step-down">step-down 3,3 V</text>
+<path class="dg-gnd" d="M321 296H339M324 300H336M327 304H333"/>
+<path class="dg-w dg-w--v5" d="M400 130H618" marker-end="url(#dg-a-v5-p)"/>
+<path class="dg-w dg-w--v33" d="M400 236H618" marker-end="url(#dg-a-v33-p)"/>
+<text x="560" y="122" class="dg-rail dg-rail--v5" text-anchor="middle">5V_BUS</text>
+<text x="560" y="228" class="dg-rail dg-rail--v33" text-anchor="middle">3V3_S</text>
+<circle class="dg-dot dg-dot--v5" cx="500" cy="130" r="3.5"/>
+<circle class="dg-dot dg-dot--v33" cx="500" cy="236" r="3.5"/>
+<path class="dg-w dg-w--v5" d="M500 130V152"/>
+<path class="dg-part" d="M491 152H509M491 158H509"/>
+<path class="dg-w dg-w--gnd" d="M500 158V168"/>
+<path class="dg-gnd" d="M491 168H509M494 172H506M497 176H503"/>
+<text x="512" y="159" class="dg-lbl">C3 220 µF</text>
+<path class="dg-w dg-w--v33" d="M500 236V258"/>
+<path class="dg-part" d="M491 258H509M491 264H509"/>
+<path class="dg-w dg-w--gnd" d="M500 264V274"/>
+<path class="dg-gnd" d="M491 274H509M494 278H506M497 282H503"/>
+<text x="512" y="265" class="dg-lbl">C4 220 µF</text>
+<rect class="dg-box" x="620" y="100" width="200" height="190" rx="8"/>
+<text x="720" y="124" class="dg-title" text-anchor="middle">Porty XH</text>
+<text x="720" y="150" class="dg-sub" text-anchor="middle">P1: 5 V · GND · 3V3</text>
+<text x="720" y="168" class="dg-sub" text-anchor="middle" data-cs="→ hlavní deska J_PWR" data-en="→ main board J_PWR">→ hlavní deska J_PWR</text>
+<text x="720" y="200" class="dg-sub" text-anchor="middle">P2, P3A/B, P5A/B:</text>
+<text x="720" y="218" class="dg-sub" text-anchor="middle" data-cs="rezerva" data-en="spare">rezerva</text>
+<text x="0" y="328" class="dg-note" data-cs="Vstup měničů 6,0–8,4 V po vypínači. Měnič 5 V potřebuje na vstupu aspoň 6 V." data-en="Converter input is 6.0–8.4 V after the switch. The 5 V converter needs at least 6 V at its input.">Vstup měničů 6,0–8,4 V po vypínači. Měnič 5 V potřebuje na vstupu aspoň 6 V.</text>
+<path class="dg-divider" d="M0 350H820"/>
+<text x="0" y="376" class="dg-sect" data-cs="HLAVNÍ DESKA: NAPÁJENÍ A PASIVNÍ SOUČÁSTKY" data-en="MAIN BOARD: POWER AND PASSIVES">HLAVNÍ DESKA: NAPÁJENÍ A PASIVNÍ SOUČÁSTKY</text>
+<rect class="dg-box dg-box--vbat" x="0" y="406" width="100" height="44" rx="8"/>
+<text x="50" y="433" class="dg-title" text-anchor="middle">J_BAT</text>
+<path class="dg-w dg-w--vbat" d="M100 428H298" marker-end="url(#dg-a-vbat-p)"/>
+<circle class="dg-dot dg-dot--vbat" cx="210" cy="428" r="3.5"/>
+<path class="dg-w dg-w--vbat" d="M210 428V450"/>
+<path class="dg-part" d="M201 450H219M201 456H219"/>
+<path class="dg-w dg-w--gnd" d="M210 456V466"/>
+<path class="dg-gnd" d="M201 466H219M204 470H216M207 474H213"/>
+<text x="222" y="457" class="dg-lbl">C1 470 µF</text>
+<rect class="dg-box dg-box--vbat" x="300" y="398" width="150" height="60" rx="8"/>
+<text x="375" y="422" class="dg-title" text-anchor="middle">DRV8833</text>
+<text x="375" y="440" class="dg-sub" text-anchor="middle" data-cs="napájení VM = VBAT" data-en="supply VM = VBAT">napájení VM = VBAT</text>
+<path class="dg-w dg-w--vbat" d="M450 416H598"/>
+<path class="dg-w dg-w--vbat" d="M450 440H598"/>
+<text x="462" y="410" class="dg-lbl dg-lbl--sm">OUT1–4</text>
+<path class="dg-w dg-w--vbat" d="M540 416V425"/>
+<path class="dg-w dg-w--vbat" d="M540 440V431"/>
+<path class="dg-part" d="M532 425H548M532 431H548"/>
+<circle class="dg-dot dg-dot--vbat" cx="540" cy="416" r="3.5"/>
+<circle class="dg-dot dg-dot--vbat" cx="540" cy="440" r="3.5"/>
+<text x="552" y="432" class="dg-lbl">100 nF</text>
+<rect class="dg-box dg-box--vbat" x="600" y="398" width="150" height="60" rx="8"/>
+<text x="675" y="422" class="dg-title" text-anchor="middle">J_ML, J_MR</text>
+<text x="675" y="440" class="dg-sub" text-anchor="middle" data-cs="motory" data-en="motors">motory</text>
+<rect class="dg-box" x="0" y="474" width="100" height="208" rx="8"/>
+<text x="50" y="494" class="dg-title" text-anchor="middle">J_PWR</text>
+<text x="50" y="512" class="dg-sub dg-sub--sm" text-anchor="middle" data-cs="z napájecí desky" data-en="from power board">z napájecí desky</text>
+<path class="dg-w dg-w--v5" d="M100 500H150"/>
+<path class="dg-w dg-w--v5" d="M150 500V552"/>
+<circle class="dg-dot dg-dot--v5" cx="150" cy="500" r="3.5"/>
+<text x="108" y="492" class="dg-rail dg-rail--v5">5V</text>
+<path class="dg-w dg-w--v5" d="M150 500H418" marker-end="url(#dg-a-v5-p)"/>
+<polygon class="dg-part dg-part--fill" points="264,494 264,506 276,500"/><path class="dg-part" d="M276 494V506"/>
+<text x="270" y="486" class="dg-lbl dg-lbl--sm" text-anchor="middle">1N5819</text>
+<rect class="dg-box dg-box--esp" x="420" y="476" width="150" height="48" rx="8"/>
+<text x="495" y="497" class="dg-title" text-anchor="middle">ESP32-S3</text>
+<text x="495" y="514" class="dg-sub" text-anchor="middle" data-cs="pin 5V" data-en="5V pin">pin 5V</text>
+<path class="dg-w dg-w--v5" d="M150 552H598" marker-end="url(#dg-a-v5-p)"/>
+<polygon class="dg-part dg-part--fill" points="264,546 264,558 276,552"/><path class="dg-part" d="M276 546V558"/>
+<text x="270" y="538" class="dg-lbl dg-lbl--sm" text-anchor="middle">1N5819</text>
+<rect class="dg-box dg-box--v5" x="600" y="526" width="170" height="104" rx="8"/>
+<text x="685" y="546" class="dg-title" text-anchor="middle">J_LED</text>
+<text x="685" y="564" class="dg-sub" text-anchor="middle" data-cs="oči WS2812 ×2" data-en="WS2812 eyes ×2">oči WS2812 ×2</text>
+<text x="612" y="608" class="dg-pin dg-pin--sm">DIN</text>
+<rect class="dg-box" x="180" y="588" width="140" height="32" rx="8"/>
+<text x="250" y="609" class="dg-title dg-title--s" text-anchor="middle">ESP32-S3 GPIO 17</text>
+<path class="dg-w dg-w--sig" d="M320 604H598" marker-end="url(#dg-a-sig-p)"/>
+<rect class="dg-part" x="436" y="599" width="28" height="10" rx="1.5"/>
+<text x="450" y="590" class="dg-lbl dg-lbl--sm" text-anchor="middle">330 Ω</text>
+<path class="dg-w dg-w--v33" d="M100 656H418" marker-end="url(#dg-a-v33-p)"/>
+<text x="108" y="648" class="dg-rail dg-rail--v33">3V3</text>
+<rect class="dg-box dg-box--v33" x="420" y="634" width="220" height="44" rx="8"/>
+<text x="530" y="661" class="dg-title dg-title--s" text-anchor="middle">J_QTR (VCC) · J_OLED (3V3)</text>
+<text x="0" y="700" class="dg-note" data-cs="GND je společná pro všechny větve." data-en="GND is common to all branches.">GND je společná pro všechny větve.</text></svg></div>
+        <ul class="dg-legend"><li><span class="dg-sw dg-sw--vbat"></span><span data-cs="Baterie (VBAT, 6–8,4 V)" data-en="Battery (VBAT, 6–8.4 V)">Baterie (VBAT, 6–8,4 V)</span></li><li><span class="dg-sw dg-sw--v5"></span><span>5 V</span></li><li><span class="dg-sw dg-sw--v33"></span><span data-cs="3,3 V" data-en="3.3 V">3,3 V</span></li><li><span class="dg-sw dg-sw--sig"></span><span data-cs="Signál z ESP32-S3" data-en="Signal from ESP32-S3">Signál z ESP32-S3</span></li></ul>
+      </figure>
+    </div>
+    <h3 data-cs="Součástky" data-en="Components">Součástky</h3>
+    <div class="project__table-wrap">
+    <table class="project__table">
+      <thead>
+        <tr>
+          <th data-cs="Součástka" data-en="Component">Součástka</th>
+          <th data-cs="Počet" data-en="Qty">Počet</th>
+          <th data-cs="K čemu slouží" data-en="Purpose">K čemu slouží</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Waveshare ESP32-S3 DevKit N8R8</td><td>1</td><td data-cs="Řízení vozítka" data-en="Vehicle control">Řízení vozítka</td></tr>
+        <tr><td>DRV8833</td><td>1</td><td data-cs="Driver motorů" data-en="Motor driver">Driver motorů</td></tr>
+        <tr><td>Pololu HPCB 30:1 6 V</td><td>2</td><td data-cs="Motory s převodovkou" data-en="Gear motors">Motory s převodovkou</td></tr>
+        <tr><td data-cs="Kola Pololu 32 × 7 mm" data-en="Pololu wheels 32 × 7 mm">Kola Pololu 32 × 7 mm</td><td>2</td><td data-cs="Pohon" data-en="Drive">Pohon</td></tr>
+        <tr><td data-cs="Držáky motorů Pololu" data-en="Pololu motor brackets">Držáky motorů Pololu</td><td>2</td><td data-cs="Uchycení motorů" data-en="Motor mounting">Uchycení motorů</td></tr>
+        <tr><td data-cs="Opěrné kolečko" data-en="Caster">Opěrné kolečko</td><td>1</td><td data-cs="Třetí bod opory" data-en="Third support point">Třetí bod opory</td></tr>
+        <tr><td>Pololu QTR-8A</td><td>1</td><td data-cs="Senzor čáry" data-en="Line sensor">Senzor čáry</td></tr>
+        <tr><td data-cs="Článek 18650 2000 mAh" data-en="18650 cell 2000 mAh">Článek 18650 2000 mAh</td><td>2</td><td data-cs="Baterie 2S" data-en="2S battery">Baterie 2S</td></tr>
+        <tr><td>BMS 2S 20 A</td><td>1</td><td data-cs="Ochrana baterie" data-en="Battery protection">Ochrana baterie</td></tr>
+        <tr><td>IP2369</td><td>1</td><td data-cs="Nabíjení přes USB-C" data-en="USB-C charging">Nabíjení přes USB-C</td></tr>
+        <tr><td data-cs="Vypínač KCD1, XT60, 2× WAGO" data-en="KCD1 switch, XT60, 2× WAGO">Vypínač KCD1, XT60, 2× WAGO</td><td>1</td><td data-cs="Rozvod napájení" data-en="Power distribution">Rozvod napájení</td></tr>
+        <tr><td data-cs="Mini step-down 5 V a 3,3 V" data-en="Mini step-down 5 V and 3.3 V">Mini step-down 5 V a 3,3 V</td><td>2</td><td data-cs="Napájecí větve" data-en="Power branches">Napájecí větve</td></tr>
+        <tr><td>OLED 1,3" SH1106 I2C</td><td>1</td><td data-cs="Displej" data-en="Display">Displej</td></tr>
+        <tr><td data-cs="Kroužek WS2812" data-en="WS2812 ring">Kroužek WS2812</td><td>2</td><td data-cs="Oči" data-en="Eyes">Oči</td></tr>
+        <tr><td data-cs="Tlačítka" data-en="Buttons">Tlačítka</td><td>4</td><td data-cs="Ovládání" data-en="Controls">Ovládání</td></tr>
+        <tr><td data-cs="Pasivní součástky" data-en="Passives">Pasivní součástky</td><td>-</td><td>1N5819, 330 Ω, 470 µF, 2× 220 µF, 100 nF</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <section class="project__section" data-s3d="firmware">
+    <h2 data-cs="Firmware" data-en="Firmware">Firmware</h2>
+    <p
+      data-cs="Program je v C++ (Arduino framework) v PlatformIO. Běží na FreeRTOS a je rozdělený mezi obě jádra ESP32-S3. Na jádře 1 běží s nejvyšší prioritou řídicí smyčka, kterou každou milisekundu probouzí hardwarový časovač. Na jádře 0 běží USB konzole, LED a displej."
+      data-en="The program is written in C++ (Arduino framework) in PlatformIO. It runs on FreeRTOS and is split across both cores of the ESP32-S3. Core 1 runs the control loop at the highest priority, woken every millisecond by a hardware timer. Core 0 runs the USB console, the LEDs and the display.">Program je v C++ (Arduino framework) v PlatformIO. Běží na FreeRTOS a je rozdělený mezi obě jádra ESP32-S3. Na jádře 1 běží s nejvyšší prioritou řídicí smyčka, kterou každou milisekundu probouzí hardwarový časovač. Na jádře 0 běží USB konzole, LED a displej.</p>
+    <p
+      data-cs="Všechny nastavitelné parametry (piny, směry motorů, Kp, Kd, střídy, časování úseků trati) jsou v jedné tabulce. Přes konzoli je jde číst, měnit a ukládat do NVS, takže se nemusí znovu nahrávat program."
+      data-en="All tunable parameters (pins, motor directions, Kp, Kd, duty cycles, track segment timings) live in one table. They can be read, changed and saved to NVS from the console, so the program does not have to be reflashed.">Všechny nastavitelné parametry (piny, směry motorů, Kp, Kd, střídy, časování úseků trati) jsou v jedné tabulce. Přes konzoli je jde číst, měnit a ukládat do NVS, takže se nemusí znovu nahrávat program.</p>
+    <p
+      data-cs="Piny kontroluje už překladač: žádný GPIO dvakrát, žádné piny pro USB, flash a PSRAM a senzor jen na ADC1. Stejné kontroly proběhnou i při změně pinu za běhu. Průběh jízdy se ukládá do PSRAM a jde vyexportovat jako CSV. Na OLED se zobrazuje osm hodnot ze senzoru jako sloupce a oči hrají duhovou animaci."
+      data-en="Pins are checked at compile time: no GPIO used twice, no USB, flash or PSRAM pins, and the sensor only on ADC1. The same checks run when a pin is changed at runtime. The ride is logged to PSRAM and can be exported as CSV. The OLED shows the eight sensor values as bars and the eyes play a rainbow animation.">Piny kontroluje už překladač: žádný GPIO dvakrát, žádné piny pro USB, flash a PSRAM a senzor jen na ADC1. Stejné kontroly proběhnou i při změně pinu za běhu. Průběh jízdy se ukládá do PSRAM a jde vyexportovat jako CSV. Na OLED se zobrazuje osm hodnot ze senzoru jako sloupce a oči hrají duhovou animaci.</p>
+    <p
+      data-cs="Řízení jsme navrhli takto. Z normalizovaných hodnot senzorů se spočítá poloha čáry jako vážený průměr, kde xᵢ je poloha i-tého senzoru:"
+      data-en="We designed the control like this. The line position is calculated from normalized sensor values as a weighted average, where xᵢ is the position of the i-th sensor:">Řízení jsme navrhli takto. Z normalizovaných hodnot senzorů se spočítá poloha čáry jako vážený průměr, kde xᵢ je poloha i-tého senzoru:</p>
+    <p><code>p = Σ nᵢ·xᵢ / Σ nᵢ</code>, <code>xᵢ = (i − 3,5) · 9,525 mm</code></p>
+    <p
+      data-cs="Na polohu reaguje PD regulátor s filtrovanou derivací a rozjezdovou rampou. Motory jsou na 6 V, ale baterie má až 8,4 V, proto je střída omezená podle aktuálního napětí:"
+      data-en="A PD controller with a filtered derivative and a start ramp reacts to the position. The motors are rated for 6 V but the battery reaches 8.4 V, so the duty cycle is capped by the current voltage:">Na polohu reaguje PD regulátor s filtrovanou derivací a rozjezdovou rampou. Motory jsou na 6 V, ale baterie má až 8,4 V, proto je střída omezená podle aktuálního napětí:</p>
+    <p><code>u = Kp·p + Kd·ṗ</code>, <code>duty = min(u, 6 V) / U_bat</code></p>
+    <p
+      data-cs="Trať je rozdělená na úseky: mezera, křižovatka, roh s otočkou na místě, cíl a ztráta čáry, kdy vozítko zastaví."
+      data-en="The course is split into segments: gap, crossing, corner with a turn on the spot, finish, and line lost, when the vehicle stops.">Trať je rozdělená na úseky: mezera, křižovatka, roh s otočkou na místě, cíl a ztráta čáry, kdy vozítko zastaví.</p>
+  </section>
+
+  <section class="project__section" data-s3d="tezke">
+    <h2 data-cs="Co bylo těžké" data-en="What was hard">Co bylo těžké</h2>
+    <ul>
+      <li data-cs="Díly jsme objednali asi deset dní před soutěží a poslední balík s driverem přišel jen 2 dny před ní, takže na přeměření a úpravu modelu zbylo málo času." data-en="We ordered the parts about ten days before the contest and the last package, with the driver, arrived only 2 days before it, so there was little time to measure the parts and fix the model.">Díly jsme objednali asi deset dní před soutěží a poslední balík s driverem přišel jen 2 dny před ní, takže na přeměření a úpravu modelu zbylo málo času.</li>
+      <li data-cs="Rozložení pinů jsme několikrát měnili. Příští rok použijeme Teensy 4.1, abychom měli víc pinů." data-en="We changed the pin layout several times. Next year we will use a Teensy 4.1 so we have more pins.">Rozložení pinů jsme několikrát měnili. Příští rok použijeme Teensy 4.1, abychom měli víc pinů.</li>
+      <li data-cs="Špatně jsem navrhl držák opěrného kolečka, takže jsem ho musel řezat a vrtat, aby bylo kolečko ve správné výšce. Motýlek a knír navíc nedržely, tak jsem je musel k sobě přitavit filamentem páječkou." data-en="I designed the caster holder wrong, so I had to cut and drill it to get the caster at the right height. The bow tie and moustache did not hold either, so I had to join them with filament melted by a soldering iron.">Špatně jsem navrhl držák opěrného kolečka, takže jsem ho musel řezat a vrtat, aby bylo kolečko ve správné výšce. Motýlek a knír navíc nedržely, tak jsem je musel k sobě přitavit filamentem páječkou.</li>
+      <li data-cs="Nejtěžší bylo všechno stihnout a nakonec jsme to nestihli. Potom jsem nějak odpálil regulátor v ESP a neuměl jsem krimpovat konektory." data-en="The hardest part was finishing in time, and in the end we did not. Then I somehow burned out the regulator on the ESP, and I did not know how to crimp connectors.">Nejtěžší bylo všechno stihnout a nakonec jsme to nestihli. Potom jsem nějak odpálil regulátor v ESP a neuměl jsem krimpovat konektory.</li>
+    </ul>
+  </section>
+
+  <section class="project__section" data-s3d="face">
+    <h2 data-cs="Galerie" data-en="Gallery">Galerie</h2>
+    <div class="gallery gallery--two">
+      <figure class="gallery__item gallery__item--contain">
+        <a href="gallery/draha.png">
+          <img src="gallery/draha.png" loading="lazy" width="2000" height="975" alt="Půdorys soutěžní dráhy ROBO2026">
+        </a>
+        <figcaption data-cs="Soutěžní dráha 1950 × 4000 mm" data-en="The course, 1950 × 4000 mm">Soutěžní dráha 1950 × 4000 mm</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <a href="gallery/robo-soutez-5.jpg">
+          <img src="gallery/robo-soutez-5.jpg" loading="lazy" width="2000" height="1125" alt="Soutěžní dráha v hale Techmanie s Vrchním a startovní bránou">
+        </a>
+        <figcaption data-cs="Dráha v hale Techmanie" data-en="The course in the Techmania hall">Dráha v hale Techmanie</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <a href="gallery/robo-soutez-4.jpg">
+          <img src="gallery/robo-soutez-4.jpg" loading="lazy" width="2000" height="1500" alt="Vrchní na dráze vedle startovní brány se zeleným světlem">
+        </a>
+        <figcaption data-cs="Na dráze u brány" data-en="On the course next to the gate">Na dráze u brány</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <a href="gallery/robo-soutez-2.jpg">
+          <img src="gallery/robo-soutez-2.jpg" loading="lazy" width="2000" height="1500" alt="Vrchní na čáře mezi dvěma stojany brány">
+        </a>
+        <figcaption data-cs="Mezi stojany brány" data-en="Between the gate posts">Mezi stojany brány</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <a href="gallery/robo-soutez-1.jpg">
+          <img src="gallery/robo-soutez-1.jpg" loading="lazy" width="2000" height="1500" alt="Vrchní zepředu s modrým kelímkem na dráze">
+        </a>
+        <figcaption data-cs="Zepředu na dráze" data-en="Front view on the course">Zepředu na dráze</figcaption>
+      </figure>
+      <figure class="gallery__item gallery__item--contain">
+        <a href="gallery/robo-soutez-3.jpg">
+          <img src="gallery/robo-soutez-3.jpg" loading="lazy" width="1500" height="2000" alt="Vrchní z výšky na dráze u brány">
+        </a>
+        <figcaption data-cs="Pohled shora" data-en="View from above">Pohled shora</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <a href="gallery/robo-soutez-6.jpg">
+          <img src="gallery/robo-soutez-6.jpg" loading="lazy" width="2000" height="1500" alt="Vrchní se startovním číslem 21 a technickou zprávou">
+        </a>
+        <figcaption data-cs="Se startovním číslem 21" data-en="With start number 21">Se startovním číslem 21</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <a href="gallery/robo-soutez-7.jpg">
+          <img src="gallery/robo-soutez-7.jpg" loading="lazy" width="2000" height="1500" alt="Vrchní vedle technické zprávy">
+        </a>
+        <figcaption data-cs="S technickou zprávou" data-en="With the technical report">S technickou zprávou</figcaption>
+      </figure>
+      <figure class="gallery__item gallery__item--contain">
+        <a href="gallery/render-predek.png">
+          <img src="gallery/render-predek.png" loading="lazy" width="800" height="867" alt="Vrchní zepředu s očima, displejem, knírem a motýlkem">
+        </a>
+        <figcaption data-cs="Zepředu" data-en="Front view">Zepředu</figcaption>
+      </figure>
+      <figure class="gallery__item gallery__item--contain">
+        <a href="gallery/render-bok.png">
+          <img src="gallery/render-bok.png" loading="lazy" width="862" height="784" alt="Vrchní z boku s kelímkem na podnosu">
+        </a>
+        <figcaption data-cs="Z boku s kelímkem" data-en="Side view with the cup">Z boku s kelímkem</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="project__section" data-s3d="end">
+    <h2 data-cs="Plánujeme dál" data-en="What's next">Plánujeme dál</h2>
+    <ul>
+      <li data-cs="Začít mnohem dřív." data-en="Start much earlier.">Začít mnohem dřív.</li>
+      <li data-cs="Přejít na Teensy 4.1, abychom měli víc pinů." data-en="Move to a Teensy 4.1 so we have more pins.">Přejít na Teensy 4.1, abychom měli víc pinů.</li>
+      <li data-cs="Možná koupit druhý senzor, abychom jich měli 16." data-en="Maybe buy a second sensor so we have 16 channels.">Možná koupit druhý senzor, abychom jich měli 16.</li>
+      <li data-cs="Využít enkodéry, které už máme nainstalované." data-en="Use the encoders we already have installed.">Využít enkodéry, které už máme nainstalované.</li>
+      <li data-cs="Udělat paměť trati." data-en="Add a track memory.">Udělat paměť trati.</li>
+      <li data-cs="Zkusit dát kelímek níž a postavit ho na gimbal." data-en="Try to put the cup lower and mount it on a gimbal.">Zkusit dát kelímek níž a postavit ho na gimbal.</li>
+      <li data-cs="Navrhnout vlastní PCB, abychom měli méně pájení, menší riziko zkratu a spojení obvodů a vozítko bylo kompaktnější." data-en="Design our own PCB for less soldering, a lower risk of shorts and wrongly connected circuits, and a more compact vehicle.">Navrhnout vlastní PCB, abychom měli méně pájení, menší riziko zkratu a spojení obvodů a vozítko bylo kompaktnější.</li>
+      <li data-cs="Déle ladit a mít víc verzí všeho: 3D modelu, PCB i softwaru." data-en="Tune for longer and keep more versions of everything: the 3D model, the PCB and the software.">Déle ladit a mít víc verzí všeho: 3D modelu, PCB i softwaru.</li>
+      <li data-cs="Udělat si webové rozhraní jako nejlepší týmy." data-en="Build a web interface like the best teams have.">Udělat si webové rozhraní jako nejlepší týmy.</li>
+    </ul>
+  </section>
+
+  <section class="project__section" data-s3d="end">
+    <h2 data-cs="Technologie" data-en="Tech">Technologie</h2>
+    <div class="stack">
+      <span class="tag tag-neutral"><svg class="icon" style="color:#E9453D" aria-hidden="true"><use href="../../assets/icons/sprite.svg#i-espressif"></use></svg>ESP32-S3</span>
+      <span class="tag tag-neutral"><svg class="icon" style="color:#4787B8" aria-hidden="true"><use href="../../assets/icons/sprite.svg#i-cplusplus"></use></svg>C++</span>
+      <span class="tag tag-neutral"><svg class="icon" style="color:#F5822A" aria-hidden="true"><use href="../../assets/icons/sprite.svg#i-platformio"></use></svg>PlatformIO</span>
+      <span class="tag tag-neutral">FreeRTOS</span>
+      <span class="tag tag-neutral"><svg class="icon" style="color:#FF6A00" aria-hidden="true"><use href="../../assets/icons/sprite.svg#i-fusion"></use></svg>Fusion 360</span>
+      <span class="tag tag-neutral"><svg class="icon" style="color:#3776AB" aria-hidden="true"><use href="../../assets/icons/sprite.svg#i-python"></use></svg>Python</span>
+      <span class="tag tag-neutral"><svg class="icon" style="color:#FA6831" aria-hidden="true"><use href="../../assets/icons/sprite.svg#i-printer3d"></use></svg>PrusaSlicer</span>
+      <span class="tag tag-neutral"><svg class="icon" style="color:#00AE42" aria-hidden="true"><use href="../../assets/icons/sprite.svg#i-bambulab"></use></svg>Bambu Studio</span>
+    </div>
+  </section>
+
+  <section class="project__section" data-s3d="end">
+    <h2 data-cs="Odkazy" data-en="Links">Odkazy</h2>
+    <ul class="project__links">
+      <li><a href="docs/ROBO2026_dokumentace_tym21.docx" download>
+        <svg class="project__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg>
+        <span class="project__link-text"><span class="project__link-title" data-cs="Technická dokumentace" data-en="Technical documentation">Technická dokumentace</span><span class="project__host">DOCX · 1,5 MB</span></span>
+        <span class="project__arrow" aria-hidden="true">↗</span></a></li>
+      <li><a href="https://www.plzensky-kraj.cz/Framework/Document.ashx?ID=377524" target="_blank" rel="noopener">
+        <svg class="project__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg>
+        <span class="project__link-text"><span class="project__link-title" data-cs="Výsledková listina ROBO 2026" data-en="ROBO 2026 results list">Výsledková listina ROBO 2026</span><span class="project__host">plzensky-kraj.cz · PDF</span></span>
+        <span class="project__arrow" aria-hidden="true">↗</span></a></li>
+      <li><a href="https://robovehicle.cz/" target="_blank" rel="noopener">
+        <svg class="project__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8v5a4 4 0 0 1-8 0z"/><path d="M8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4"/><path d="M12 13v4M8.5 20h7M10 17h4v3h-4z"/></svg>
+        <span class="project__link-text"><span class="project__link-title" data-cs="Stránka soutěže" data-en="Competition page">Stránka soutěže</span><span class="project__host">robovehicle.cz</span></span>
+        <span class="project__arrow" aria-hidden="true">↗</span></a></li>
+    </ul>
+  </section>
+
+  <footer class="footer">
+    <span>Tomáš Krůta - Plzeň</span>
+    <span>2026</span>
+  </footer>
+</main>
+
+<script src="../../js/project.js"></script>
+<link rel="stylesheet" href="../../css/scroll3d.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.187.0/build/three.module.min.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.187.0/examples/jsm/"}}</script>
+<script type="module">
+  import { lazyMount } from '../../js/scroll3d.js';
+  lazyMount(document.getElementById('model-3d'), () => import('../../js/scenes/robo.js').then((m) => m.default));
+</script>
+</body>
+</html>

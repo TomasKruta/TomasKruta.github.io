@@ -1,0 +1,17 @@
+/* ROBO2026 page: the competition course as a big orange line drawing in the right margin.
+   Fixed layer, panned with the scroll where supported, faded out towards the text column. */
+html.page-robo::before {
+  content: "";
+  position: absolute; z-index: -1; pointer-events: none;
+  top: 56px; right: 0;
+  width: min(1000px, calc(100vw - 480px));
+  aspect-ratio: 4000 / 1950;
+  background: url("../projects/robo2026/draha.svg") no-repeat 100% 0 / contain;
+  opacity: 0.8;
+}
+@media (max-width: 1099px) {
+  html.page-robo::before { width: 110vw; right: -5vw; opacity: 0.25; }
+}
+
+html.page-robo { background: var(--color-bg, #161826); }
+html.page-robo body { background: transparent; }

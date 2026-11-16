@@ -1,0 +1,131 @@
+/* Electronics diagrams (ROBO2026): inline SVG block diagram and power
+   schematic, plus the perfboard layout cards. Colours come from nocturne
+   tokens; the three rail colours are local to the diagrams. */
+
+.dg {
+  --dg-bg: var(--color-bg);
+  --dg-card: var(--color-section);
+  --dg-box: #1b1e2f;
+  --dg-vbat: var(--color-accent);
+  --dg-v5: #ff7b8f;
+  --dg-v33: #4fd1c5;
+  --dg-sig: #93a6ff;
+  margin-top: 24px;
+  display: grid;
+  gap: 20px;
+}
+
+.dg-card {
+  margin: 0;
+  padding: 16px;
+  background: var(--dg-card);
+  border: 1px solid var(--color-divider);
+  border-radius: var(--radius-md);
+  min-width: 0;
+}
+.dg-cap {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-neutral-400);
+  margin-bottom: 12px;
+}
+
+.dg-svg { display: block; width: 100%; height: auto; }
+.dg-svg--narrow { display: none; max-width: 420px; margin: 0 auto; }
+
+/* ---- shapes ---- */
+.dg-box { fill: var(--dg-box); stroke: var(--color-divider); stroke-width: 1.5; }
+.dg-box--vbat { stroke: var(--dg-vbat); }
+.dg-box--v5 { stroke: var(--dg-v5); }
+.dg-box--v33 { stroke: var(--dg-v33); }
+.dg-box--esp { stroke: var(--color-text); stroke-width: 2; }
+.dg-box--chip { fill: none; stroke: var(--color-neutral-400); stroke-dasharray: 3 3; }
+
+.dg-w { fill: none; stroke-width: 2.2; stroke-linejoin: round; stroke-linecap: butt; }
+.dg-w--vbat { stroke: var(--dg-vbat); }
+.dg-w--v5 { stroke: var(--dg-v5); }
+.dg-w--v33 { stroke: var(--dg-v33); }
+.dg-w--sig { stroke: var(--dg-sig); stroke-dasharray: 6 4; stroke-width: 1.8; }
+.dg-w--gnd { stroke: var(--color-neutral-400); stroke-width: 1.6; }
+.dg-mk--vbat { fill: var(--dg-vbat); }
+.dg-mk--v5 { fill: var(--dg-v5); }
+.dg-mk--v33 { fill: var(--dg-v33); }
+.dg-mk--sig { fill: var(--dg-sig); }
+.dg-dot--vbat { fill: var(--dg-vbat); }
+.dg-dot--v5 { fill: var(--dg-v5); }
+.dg-dot--v33 { fill: var(--dg-v33); }
+.dg-dot--sig { fill: var(--dg-sig); }
+
+.dg-part { fill: none; stroke: var(--color-neutral-300); stroke-width: 1.8; }
+.dg-part--fill { fill: var(--dg-card); }
+.dg-gnd { fill: none; stroke: var(--color-neutral-400); stroke-width: 1.6; }
+.dg-divider { stroke: var(--color-divider); stroke-width: 1; fill: none; }
+
+/* ---- text ---- */
+.dg-svg text { font-family: var(--font-body); }
+.dg-title { fill: var(--color-text); font-family: var(--font-heading); font-weight: 600; font-size: 14.5px; }
+.dg-title--s { font-size: 13px; }
+.dg-sub { fill: var(--color-neutral-300); font-size: 11.5px; }
+.dg-sub--sm { font-size: 10.5px; }
+.dg-pin { fill: var(--dg-sig); font-family: var(--font-mono); font-weight: 500; font-size: 10.5px; }
+.dg-pin--sm { font-size: 10px; }
+.dg-lbl { fill: var(--color-neutral-300); font-family: var(--font-mono); font-size: 11px; }
+.dg-lbl--sm { font-size: 10px; fill: var(--color-neutral-400); }
+.dg-chip { fill: var(--color-neutral-300); font-family: var(--font-mono); font-size: 11px; }
+.dg-rail { font-family: var(--font-mono); font-weight: 500; font-size: 11.5px; }
+.dg-rail--vbat { fill: var(--dg-vbat); }
+.dg-rail--v5 { fill: var(--dg-v5); }
+.dg-rail--v33 { fill: var(--dg-v33); }
+.dg-sect { fill: var(--color-neutral-400); font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; }
+.dg-note { fill: var(--color-neutral-400); font-size: 11.5px; }
+
+/* ---- legend ---- */
+.dg-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+  font-size: 13px;
+  color: var(--color-neutral-300);
+}
+.dg-legend li { display: flex; align-items: center; gap: 8px; }
+.dg-sw { display: inline-block; width: 26px; height: 0; border-top: 3px solid; }
+.dg-sw--vbat { border-color: var(--dg-vbat); }
+.dg-sw--v5 { border-color: var(--dg-v5); }
+.dg-sw--v33 { border-color: var(--dg-v33); }
+.dg-sw--sig { border-top: 2px dashed var(--dg-sig); }
+
+/* ---- scrollable power schematic ---- */
+.dg-scroll { overflow-x: auto; border-radius: var(--radius-sm); }
+.dg-scroll:focus-visible { outline: 2px solid var(--color-accent-300); outline-offset: 2px; }
+.dg-svg--power { min-width: 560px; }
+.dg-hint { display: none; margin: 0 0 8px; font-size: 12.5px; color: var(--color-neutral-400); }
+.dg-hint::before { content: "\2194\00a0"; }
+
+/* ---- perfboard layouts ---- */
+.dg-boards {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 14px;
+  align-items: start;
+}
+.dg-board { box-sizing: border-box; margin: 0; min-width: 0; background: var(--dg-card); border: 1px solid var(--color-divider); border-radius: var(--radius-md); padding: 12px; }
+.dg-board a { aspect-ratio: auto; border-radius: var(--radius-sm); }
+.dg-board img { height: auto; object-fit: contain; }
+.dg-board a:hover img { transform: none; opacity: 0.92; }
+.dg-board figcaption { margin-top: 10px; }
+
+@media (max-width: 640px) {
+  .dg-hint { display: block; }
+}
+@media (max-width: 640px) {
+  .dg-svg--wide { display: none; }
+  .dg-svg--narrow { display: block; }
+  .dg-card { padding: 12px; }
+  .dg-boards { grid-template-columns: 1fr; }
+  .dg-board--power { max-width: 320px; justify-self: center; width: 100%; }
+}

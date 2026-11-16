@@ -1,0 +1,114 @@
+/* Page-wide 3D model (js/scroll3d.js). Desktop: fixed on the right while the article column sits on the left.
+   Below 1100px: a hero block at the top of the article. */
+.s3d { position: relative; margin: 20px 0 0; overflow-x: clip; }
+
+.s3d__stage {
+  position: relative;
+  height: 60vh;
+  min-height: 320px;
+  /* no box: the model floats on the page background */
+  background: none;
+  isolation: isolate;
+}
+.s3d__canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+
+.s3d__fallback {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: contain; padding: 24px; box-sizing: border-box; opacity: 0.9;
+}
+.s3d--ready .s3d__fallback { display: none; }
+
+.s3d__loading {
+  position: absolute; left: 50%; bottom: 28px; transform: translateX(-50%);
+  font: 500 12px/1 var(--font-mono); letter-spacing: 0.06em; color: var(--color-neutral-300);
+  background: rgba(17, 19, 31, 0.8); border: 1px solid var(--color-divider);
+  padding: 8px 12px; border-radius: 999px; white-space: nowrap;
+}
+.s3d__loading::before {
+  content: ''; display: inline-block; width: 8px; height: 8px; margin-right: 8px; border-radius: 50%;
+  background: var(--color-accent); animation: s3d-pulse 1s ease-in-out infinite alternate;
+}
+@keyframes s3d-pulse { from { opacity: 0.25; } to { opacity: 1; } }
+
+/* labels projected from 3D */
+.s3d__labels { position: absolute; inset: 0; pointer-events: none; z-index: 2; }
+.s3d__label { position: absolute; left: 0; top: 0; opacity: 0; transition: opacity 0.35s ease; will-change: transform; }
+.s3d__label.is-on { opacity: 1; }
+.s3d__dot {
+  position: absolute; left: -5px; top: -5px; width: 10px; height: 10px; border-radius: 50%;
+  background: var(--color-accent); box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-accent) 30%, transparent), 0 0 18px var(--color-accent);
+}
+.s3d__line { position: absolute; top: 0; height: 1px; width: 34px; background: var(--color-accent-300); opacity: 0.8; }
+.s3d__tag {
+  position: absolute; top: -18px; display: flex; flex-direction: column; gap: 2px; white-space: nowrap;
+  padding: 7px 11px; border-radius: 10px;
+  background: rgba(17, 19, 31, 0.86); border: 1px solid color-mix(in srgb, var(--color-accent) 45%, var(--color-divider));
+}
+.s3d__tag b { font: 600 13px/1.2 var(--font-heading); color: var(--color-text); }
+.s3d__tag small { font: 400 11px/1.25 var(--font-mono); color: var(--color-neutral-400); }
+.s3d__label--right .s3d__line { left: 5px; }
+.s3d__label--right .s3d__tag { left: 40px; }
+.s3d__label--left .s3d__line { right: 5px; }
+.s3d__label--left .s3d__tag { right: 40px; text-align: right; align-items: flex-end; }
+
+@media (min-width: 1100px) {
+  :root { --s3d-gutter: clamp(24px, 9vw, 200px); --s3d-col: min(720px, 50vw); }
+  main.container.project { max-width: var(--s3d-col); margin-left: var(--s3d-gutter); margin-right: auto; padding-left: 0; padding-right: 0; }
+  .s3d { position: static; margin: 0; overflow: visible; }
+  .s3d__stage {
+    position: fixed; z-index: 1; pointer-events: none;
+    top: 64px; bottom: 0; right: 0; height: auto; min-height: 0;
+    width: calc(100vw - var(--s3d-gutter) - var(--s3d-col) - 24px);
+  }
+}
+
+@media (max-width: 1099px) {
+  .s3d__tag { padding: 5px 8px; }
+  .s3d__tag b { font-size: 12px; }
+  .s3d__tag small { display: none; }
+  .s3d__line { width: 18px; }
+  .s3d__label--right .s3d__tag { left: 24px; }
+  .s3d__label--left .s3d__tag { right: 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .s3d__label { transition: none; }
+  .s3d__loading::before { animation: none; }
+}
+
+/* open-in-viewer button + full-page viewer */
+.s3d__open {
+  position: absolute; right: 16px; bottom: 16px; z-index: 3; pointer-events: auto; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 8px;
+  font: 600 14px/1 var(--font-heading); letter-spacing: 0.02em; color: #1a1206;
+  background: var(--color-accent); border: 0; border-radius: 999px; padding: 13px 20px;
+  box-shadow: 0 6px 24px color-mix(in srgb, var(--color-accent) 40%, transparent);
+  transition: transform 160ms ease, background 160ms ease;
+}
+.s3d__open::before { content: "⤢"; font-size: 17px; line-height: 1; }
+.s3d__open:hover, .s3d__open:focus-visible { background: var(--color-accent-300); transform: translateY(-2px); }
+.s3d-viewer { position: fixed; inset: 0; z-index: 200; background: radial-gradient(120% 90% at 50% 40%, #1d2036, #0f1019); }
+.s3d-viewer[hidden] { display: none; }
+.s3d-viewer__wrap { position: absolute; inset: 0 0 64px 0; touch-action: none; }
+.s3d-viewer__wrap .s3d__canvas { cursor: grab; }
+.s3d-viewer__wrap .s3d__canvas:active { cursor: grabbing; }
+.s3d-viewer__wrap .s3d__labels { z-index: 2; }
+.s3d-viewer__bar {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 64px; display: flex; align-items: center; justify-content: center; gap: 36px;
+  padding: 0 clamp(16px, 4vw, 48px); border-top: 1px solid var(--color-divider); background: rgba(17, 19, 31, 0.92);
+  font: 500 13px/1.2 var(--font-body); color: var(--color-neutral-300);
+}
+.s3d-viewer__ctl { display: flex; align-items: center; gap: 12px; }
+.s3d-viewer__ctl[hidden] { display: none; }
+.s3d-viewer__ctl input[type=range] { width: min(320px, 40vw); accent-color: var(--color-accent); }
+.s3d-viewer__chk input { accent-color: var(--color-accent); width: 16px; height: 16px; }
+.s3d-viewer__hint { position: absolute; right: clamp(16px, 4vw, 48px); font: 400 12px/1.3 var(--font-mono); color: var(--color-neutral-400); }
+.s3d-viewer__close {
+  position: absolute; top: 14px; right: 14px; z-index: 3; width: 42px; height: 42px; border-radius: 50%; cursor: pointer;
+  font-size: 24px; line-height: 1; color: var(--color-text); background: rgba(17, 19, 31, 0.85); border: 1px solid var(--color-divider);
+}
+.s3d-viewer__close:hover, .s3d-viewer__close:focus-visible { border-color: var(--color-accent-300); color: var(--color-accent-200); }
+@media (max-width: 700px) {
+  .s3d-viewer__hint { display: none; }
+  .s3d-viewer__bar { gap: 16px; }
+}
