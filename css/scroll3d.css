@@ -58,7 +58,7 @@
   .s3d__stage {
     position: fixed; z-index: 1; pointer-events: none;
     top: 64px; bottom: 0; right: 0; height: auto; min-height: 0;
-    width: calc(100vw - var(--s3d-gutter) - var(--s3d-col) - 24px);
+    width: calc(100vw - var(--s3d-gutter) - var(--s3d-col) - 64px);
   }
 }
 
