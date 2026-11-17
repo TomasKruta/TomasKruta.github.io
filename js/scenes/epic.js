@@ -44,11 +44,11 @@ export default {
     { id: 'varna', anchor: [-6, 16.5, -18], side: 'right', cs: 'Varna', en: 'Brewhouse' },
     { id: 'chimney', anchor: [65.2, 47, -51], side: 'left', cs: 'Komín', en: 'Chimney' },
     { id: 'malt', anchor: [20, 12, -83], side: 'left', cs: 'Sladovna', en: 'Malt house' },
-    { id: 'l1', anchor: [65.2, 2, 20.5], side: 'right', cs: 'Level 1', en: 'Level 1' },
-    { id: 'l2', anchor: [-38, 9, 32], side: 'left', cs: 'Level 2', en: 'Level 2' },
-    { id: 'l3', anchor: [-2, 16, -30], side: 'right', cs: 'Level 3', en: 'Level 3' },
-    { id: 'l4', anchor: [-19.8, 28.5, 18], side: 'left', cs: 'Level 4', en: 'Level 4' },
-    { id: 'l5', anchor: [14, 11, 27], side: 'right', cs: 'Level 5', en: 'Level 5' },
+    { id: 'l1', anchor: [65.2, 2, 20.5], side: 'right', cs: '1 · Jízda do Světovaru', en: '1 · Ride to Světovar' },
+    { id: 'l2', anchor: [-38, 9, 32], side: 'left', cs: '2 · Sklep', en: '2 · Cellar' },
+    { id: 'l3', anchor: [-2, 16, -30], side: 'right', cs: '3 · Gangsteři', en: '3 · Gangsters' },
+    { id: 'l4', anchor: [-19.8, 28.5, 18], side: 'left', cs: '4 · Varna', en: '4 · Brewhouse' },
+    { id: 'l5', anchor: [14, 11, 27], side: 'right', cs: '5 · Stáčírna', en: '5 · Bottling' },
   ],
 
   async setup({ THREE, scene, loader, renderer }) {

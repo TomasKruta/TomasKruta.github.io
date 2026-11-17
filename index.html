@@ -179,9 +179,9 @@
     <span class="nav-brand"><img class="nav-brand__icon" src="assets/favicon.svg" alt="" width="24" height="24">Tomáš Krůta</span>
     <div class="nav-links">
       <a href="#projekty" data-cs="Projekty" data-en="Work">Projekty</a>
+      <a href="#uspechy" data-cs="Úspěchy" data-en="Achievements">Úspěchy</a>
       <a href="#o-mne" data-cs="O mně" data-en="About">O mně</a>
       <a href="#cv" data-cs="Zkušenosti" data-en="Experience">Zkušenosti</a>
-      <a href="#uspechy" data-cs="Úspěchy" data-en="Achievements">Úspěchy</a>
       <a href="#kontakt" data-cs="Kontakt" data-en="Contact">Kontakt</a>
     </div>
     <button type="button" class="btn btn-secondary" id="lang-toggle" aria-label="Switch to English">EN</button>
@@ -190,14 +190,12 @@
 </nav>
 
 <main>
-<!-- ==================== hero ====================
-     Full-bleed: the drafting grid and the bloom run edge to edge, so the
-     section is NOT inside .container; hero__inner holds the measure. -->
+<!-- ==================== hero ==================== -->
 <section class="hero">
   <div class="hero__inner">
     <div class="hero__main">
       <div class="hero__titlewrap">
-        <img id="hero-photo" class="hero-photo" src="assets/Portrait.webp" srcset="assets/Portrait-300.webp 300w, assets/Portrait-600.webp 600w, assets/Portrait.webp 861w" sizes="210px" alt="Tomáš Krůta" width="861" height="861" fetchpriority="high">
+        <img class="hero-photo" src="assets/Portrait.webp" srcset="assets/Portrait-300.webp 300w, assets/Portrait-600.webp 600w, assets/Portrait.webp 861w" sizes="(max-width: 700px) 96px, 172px" alt="Tomáš Krůta" width="861" height="861" fetchpriority="high">
         <div class="hero__heading">
           <h1 class="hero__name">Tomáš Krůta</h1>
           <p id="hero-h1" class="hero__cycler"><span class="sr-only"
@@ -205,12 +203,16 @@
             data-en="I build robots, games and tools. I build websites. I model parts for 3D printing. I connect hardware and software.">Programuji roboty, hry a nástroje. Tvořím weby. Modeluji díly pro 3D tisk. Propojuji hardware se softwarem.</span><span data-hero-text aria-hidden="true">Programuji roboty.</span><span class="hero__caret" aria-hidden="true"></span></p>
         </div>
       </div>
-      <p
+      <p class="hero__intro"
         data-cs="Studuji na Mikulášském gymnáziu v Plzni. Nejvíc mě baví projekty, kde se software potkává s hardwarem: SLAM navigace na čtyřnohém robotovi nebo robotická ruka, kterou jsem si sám navrhl."
         data-en="I'm a student at Mikulášské gymnázium in Plzeň. I like projects where software meets hardware most: SLAM navigation on a quadruped robot, or a robotic arm I designed myself.">Studuji na Mikulášském gymnáziu v Plzni. Nejvíc mě baví projekty, kde se software potkává s hardwarem: SLAM navigace na čtyřnohém robotovi nebo robotická ruka, kterou jsem si sám navrhl.</p>
+      <p class="hero__note"
+        data-cs="Beru menší zakázky na weby, aplikace a 3D modely. Rád se přidám i do týmu na hackathon nebo projekt."
+        data-en="I take on small website, app and 3D modeling commissions. I'm also happy to join a team for a hackathon or project.">Beru menší zakázky na weby, aplikace a 3D modely. Rád se přidám i do týmu na hackathon nebo projekt.</p>
       <div class="hero__actions">
         <a class="btn btn-primary" href="#projekty" data-cs="Projekty" data-en="See the work">Projekty</a>
         <a class="btn btn-secondary" href="https://github.com/tomaskruta" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-secondary" href="#kontakt" data-cs="Kontakt" data-en="Contact">Kontakt</a>
       </div>
     </div>
 
@@ -256,15 +258,6 @@
     </aside>
   </div>
 
-  <div class="hero__pitch">
-    <div class="hero__pitch-text">
-      <p class="hero__pitch-lead" data-cs="Udělám vám web, aplikaci nebo 3D model." data-en="I can build you a website, an app or a 3D model.">Udělám vám web, aplikaci nebo 3D model.</p>
-      <p
-        data-cs="Beru menší zakázky a rád se přidám do týmu na hackathon nebo projekt."
-        data-en="I take on smaller commissions and I'm happy to join a team for a hackathon or a project.">Beru menší zakázky a rád se přidám do týmu na hackathon nebo projekt.</p>
-    </div>
-    <a class="btn btn-primary" href="#kontakt" data-cs="Kontakt" data-en="Contact">Kontakt</a>
-  </div>
 </section>
 
 <div class="container">
@@ -425,133 +418,6 @@
           <span class="tag tag-neutral"><svg class="icon" style="color:#0078D4" aria-hidden="true"><use href="#i-windows"></use></svg>WinUI</span>
           <span class="tag tag-neutral"><svg class="icon" style="color:#896FE2" aria-hidden="true"><use href="#i-csharp"></use></svg>C#</span>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== about ==================== -->
-  <section id="o-mne">
-    <div>
-      <h2 class="section-title" data-cs="O mně" data-en="About">O mně</h2>
-      <p
-        data-cs="K robotům jsem se dostal přes SitPort. V TechToweru teď učím psa Unitree Go2 chodit po budově podle hlasových povelů. Doma mám rozdělanou robotickou ruku a pár ESP32 na chytrou domácnost. Kromě programování jezdím na kole a začínám fotit."
-        data-en="I got into robots through SitPort. At TechTower I'm currently teaching a Unitree Go2 robot dog to move around a building on voice commands. At home there's a half-built robotic arm and a few ESP32 boards for the smart home. Outside of programming I ride a bike and I'm getting into photography.">K robotům jsem se dostal přes SitPort. V TechToweru teď učím psa Unitree Go2 chodit po budově podle hlasových povelů. Doma mám rozdělanou robotickou ruku a pár ESP32 na chytrou domácnost. Kromě programování jezdím na kole a začínám fotit.</p>
-    </div>
-    <figure class="about__figure">
-      <div class="lighten portrait">
-        <img src="assets/Portrait.webp" srcset="assets/Portrait-300.webp 300w, assets/Portrait-600.webp 600w, assets/Portrait.webp 861w" sizes="(max-width: 700px) 90vw, 380px" alt="Tomáš Krůta" width="861" height="861">
-      </div>
-    </figure>
-  </section>
-
-  <!-- ==================== experience ==================== -->
-  <section id="cv">
-    <h2 class="section-title" data-cs="Zkušenosti" data-en="Experience">Zkušenosti</h2>
-
-    <h3 class="group-title" data-cs="Vzdělání a spolupráce" data-en="Education and collaborations">Vzdělání a spolupráce</h3>
-
-    <div class="row rule-top">
-      <p class="row__title row__head">Mikulášské gymnázium, Plzeň</p>
-      <div class="row__body">
-        <p data-cs="Student." data-en="Student.">Student.</p>
-      </div>
-    </div>
-
-    <div class="row rule-top">
-      <p class="row__title row__head">SitPort / TechTower</p>
-      <div class="row__body">
-        <p
-          data-cs="SLAM navigace a hlasové ovládání robota Unitree Go2 EDU."
-          data-en="SLAM navigation and voice control for a Unitree Go2 EDU.">SLAM navigace a hlasové ovládání robota Unitree Go2 EDU.</p>
-      </div>
-    </div>
-
-    <div class="row rule-both">
-      <p class="row__title row__head">FAV ZČU · VR &amp; AR Headset</p>
-      <div class="row__body">
-        <p
-          data-cs="Tým OptiForge. Headset na Raspberry Pi 5, AR část v Pythonu, VR přes SteamVR."
-          data-en="Team OptiForge. A headset on a Raspberry Pi 5, AR side in Python, VR through SteamVR.">Tým OptiForge. Headset na Raspberry Pi 5, AR část v Pythonu, VR přes SteamVR.</p>
-      </div>
-    </div>
-
-    <h3 class="group-title group-title--spaced" data-cs="Tech stack" data-en="Tech stack">Tech stack</h3>
-    <p class="group-lede"
-      data-cs="Na roboty a hardware píšu v C++ a Pythonu, desktopové aplikace a hry v Unity v C#, počítačové vidění a AI v Pythonu. V algoritmických soutěžích používám C++, jinak to, v čem danou úlohu napíšu nejrychleji."
-      data-en="For robots and hardware I write C++ and Python, desktop apps and Unity games in C#, computer vision and AI in Python. In algorithm contests I use C++, otherwise whatever gets the task written fastest.">Na roboty a hardware píšu v C++ a Pythonu, desktopové aplikace a hry v Unity v C#, počítačové vidění a AI v Pythonu. V algoritmických soutěžích používám C++, jinak to, v čem danou úlohu napíšu nejrychleji.</p>
-
-    <div class="stackgroups">
-
-      <div class="stackgroups__grid">
-        <details class="stackgroup">
-          <summary class="stackgroup__label" data-cs="Jazyky" data-en="Languages">Jazyky</summary>
-          <div class="stackgroup__panel"><ul class="stacklist">
-            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#896FE2" aria-hidden="true"><use href="#i-csharp"></use></svg><span>C#</span></li>
-            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#4F86B5" aria-hidden="true"><use href="#i-python"></use></svg><span>Python</span></li>
-            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#4787B8" aria-hidden="true"><use href="#i-cplusplus"></use></svg><span>C++</span></li>
-            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#4686CC" aria-hidden="true"><use href="#i-typescript"></use></svg><span>TypeScript</span></li>
-            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#F7DF1E" aria-hidden="true"><use href="#i-javascript"></use></svg><span>JavaScript</span></li>
-          </ul></div>
-        </details>
-
-        <details class="stackgroup">
-          <summary class="stackgroup__label" data-cs="Robotika a hardware" data-en="Robotics and hardware">Robotika a hardware</summary>
-          <div class="stackgroup__panel"><ul class="stacklist">
-            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#7A8395" aria-hidden="true"><use href="#i-ros"></use></svg><span>ROS2</span></li>
-            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#E9453D" aria-hidden="true"><use href="#i-espressif"></use></svg><span>ESP32</span></li>
-            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#BE687E" aria-hidden="true"><use href="#i-raspberrypi"></use></svg><span>Raspberry Pi</span></li>
-            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#FF6A00" aria-hidden="true"><use href="#i-fusion"></use></svg><span>Fusion 360</span></li>
-          </ul></div>
-        </details>
-
-        <details class="stackgroup">
-          <summary class="stackgroup__label" data-cs="Počítačové vidění" data-en="Computer vision">Počítačové vidění</summary>
-          <div class="stackgroup__panel"><ul class="stacklist">
-            <li class="stackitem"><svg class="icon stackitem__icon" aria-hidden="true"><use href="#i-opencv-color"></use></svg><span>OpenCV</span></li>
-            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#0097A7" aria-hidden="true"><use href="#i-mediapipe"></use></svg><span>MediaPipe</span></li>
-          </ul></div>
-        </details>
-
-        <details class="stackgroup">
-          <summary class="stackgroup__label" data-cs="AI" data-en="AI">AI</summary>
-          <div class="stackgroup__panel"><ul class="stacklist">
-            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#EE4C2C" aria-hidden="true"><use href="#i-pytorch"></use></svg><span>PyTorch</span></li>
-            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#FFD21E" aria-hidden="true"><use href="#i-huggingface"></use></svg><span>Hugging Face</span></li>
-            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#ECEEF5" aria-hidden="true"><use href="#i-ollama"></use></svg><span>Ollama</span></li>
-            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#ECEEF5" aria-hidden="true"><use href="#i-lmstudio"></use></svg><span>LM Studio</span></li>
-            <li class="stackitem"><svg class="icon stackitem__icon" aria-hidden="true"><use href="#i-gemini-color"></use></svg><span>Gemini API</span></li>
-          </ul></div>
-        </details>
-
-        <details class="stackgroup">
-          <summary class="stackgroup__label" data-cs="Web dev" data-en="Web dev">Web dev</summary>
-          <div class="stackgroup__panel"><ul class="stacklist">
-            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#E34F26" aria-hidden="true"><use href="#i-html5"></use></svg><span>HTML</span></li>
-            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#3A89C2" aria-hidden="true"><use href="#i-css3"></use></svg><span>CSS</span></li>
-            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#61DAFB" aria-hidden="true"><use href="#i-react"></use></svg><span>React</span></li>
-            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#ECEEF5" aria-hidden="true"><use href="#i-nextdotjs"></use></svg><span>Next.js</span></li>
-            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#3BABC3" aria-hidden="true"><use href="#i-flask"></use></svg><span>Flask</span></li>
-          </ul></div>
-        </details>
-
-        <details class="stackgroup">
-          <summary class="stackgroup__label" data-cs="Aplikace a hry" data-en="Apps and games">Aplikace a hry</summary>
-          <div class="stackgroup__panel"><ul class="stacklist">
-            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#896FE2" aria-hidden="true"><use href="#i-dotnet"></use></svg><span>.NET</span></li>
-            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#FFFFFF" aria-hidden="true"><use href="#i-unity"></use></svg><span>Unity</span></li>
-            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#478CBF" aria-hidden="true"><use href="#i-godotengine"></use></svg><span>Godot</span></li>
-            <li class="stackitem"><img class="stackitem__icon stackitem__icon--img" src="assets/icons/pygame.webp" alt="" width="60" height="60"><span>PyGame</span></li>
-            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#E87D0D" aria-hidden="true"><use href="#i-blender"></use></svg><span>Blender</span></li>
-          </ul></div>
-        </details>
-
-        <details class="stackgroup">
-          <summary class="stackgroup__label" data-cs="Systémy a nástroje" data-en="Systems and tools">Systémy a nástroje</summary>
-          <div class="stackgroup__panel"><ul class="stacklist">
-            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#FCC624" aria-hidden="true"><use href="#i-linux"></use></svg><span>Linux</span></li>
-            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#2496ED" aria-hidden="true"><use href="#i-docker"></use></svg><span>Docker</span></li>
-          </ul></div>
-        </details>
       </div>
     </div>
   </section>
@@ -779,6 +645,139 @@
     <p class="table-count" id="competitions-count" aria-live="polite"></p>
   </section>
 
+  <!-- ==================== about ==================== -->
+  <section id="o-mne">
+    <div>
+      <h2 class="section-title" data-cs="O mně" data-en="About">O mně</h2>
+      <p
+        data-cs="Studuji na Mikulášském gymnáziu v Plzni. Nejvíc mě baví místo, kde se software potkává s hardwarem: robotika, počítačové vidění, embedded systémy a edge AI. Matematika a fyzika mě zajímají o to víc, že vysvětlují, jak roboti a senzory vlastně fungují."
+        data-en="I study at Mikulášské gymnázium in Plzeň. What I enjoy most is where software meets hardware: robotics, computer vision, embedded systems and edge AI. Maths and physics interest me all the more because they explain how robots and sensors actually work.">Studuji na Mikulášském gymnáziu v Plzni. Nejvíc mě baví místo, kde se software potkává s hardwarem: robotika, počítačové vidění, embedded systémy a edge AI. Matematika a fyzika mě zajímají o to víc, že vysvětlují, jak roboti a senzory vlastně fungují.</p>
+      <p
+        data-cs="Stavím věci od mechaniky po kód. Pájím a programuju na ESP32, ovládám kurzor gesty ruky přes webkameru (MediaPipe) a pracuju na vlastní robotické ruce. V plánu mám naučit čtyřnohého robota Unitree Go2 poslouchat hlasové povely. Programuju v C++, C# (.NET a Unity), Pythonu a ve webových technologiích."
+        data-en="I build things from mechanics to code. I solder and program ESP32 boards, control a cursor with hand gestures through a webcam (MediaPipe) and am working on my own robotic arm. Next I plan to teach a Unitree Go2 quadruped robot to follow voice commands. I program in C++, C# (.NET and Unity), Python and web technologies.">Stavím věci od mechaniky po kód. Pájím a programuju na ESP32, ovládám kurzor gesty ruky přes webkameru (MediaPipe) a pracuju na vlastní robotické ruce. V plánu mám naučit čtyřnohého robota Unitree Go2 poslouchat hlasové povely. Programuju v C++, C# (.NET a Unity), Pythonu a ve webových technologiích.</p>
+      <p
+        data-cs="Často se účastním soutěží a hackathonů. Mimo techniku jezdím na kole a fotím."
+        data-en="I often take part in competitions and hackathons. Away from tech I ride a bike and take photos.">Často se účastním soutěží a hackathonů. Mimo techniku jezdím na kole a fotím.</p>
+    </div>
+    <figure class="about__figure">
+      <div class="portrait">
+        <img src="assets/Portrait.webp" srcset="assets/Portrait-300.webp 300w, assets/Portrait-600.webp 600w, assets/Portrait.webp 861w" sizes="(max-width: 700px) 90vw, 380px" alt="Tomáš Krůta" width="861" height="861">
+      </div>
+    </figure>
+  </section>
+
+  <!-- ==================== experience ==================== -->
+  <section id="cv">
+    <h2 class="section-title" data-cs="Zkušenosti" data-en="Experience">Zkušenosti</h2>
+
+    <h3 class="group-title" data-cs="Vzdělání a spolupráce" data-en="Education and collaborations">Vzdělání a spolupráce</h3>
+
+    <div class="row rule-top">
+      <p class="row__title row__head">Mikulášské gymnázium, Plzeň</p>
+      <div class="row__body">
+        <p data-cs="Student." data-en="Student.">Student.</p>
+      </div>
+    </div>
+
+    <div class="row rule-top">
+      <p class="row__title row__head">SitPort / TechTower</p>
+      <div class="row__body">
+        <p
+          data-cs="SLAM navigace a hlasové ovládání robota Unitree Go2 EDU."
+          data-en="SLAM navigation and voice control for a Unitree Go2 EDU.">SLAM navigace a hlasové ovládání robota Unitree Go2 EDU.</p>
+      </div>
+    </div>
+
+    <div class="row rule-both">
+      <p class="row__title row__head">FAV ZČU · VR &amp; AR Headset</p>
+      <div class="row__body">
+        <p
+          data-cs="Tým OptiForge. Headset na Raspberry Pi 5, AR část v Pythonu, VR přes SteamVR."
+          data-en="Team OptiForge. A headset on a Raspberry Pi 5, AR side in Python, VR through SteamVR.">Tým OptiForge. Headset na Raspberry Pi 5, AR část v Pythonu, VR přes SteamVR.</p>
+      </div>
+    </div>
+
+    <h3 class="group-title group-title--spaced" data-cs="Tech stack" data-en="Tech stack">Tech stack</h3>
+    <p class="group-lede"
+      data-cs="Na roboty a hardware píšu v C++ a Pythonu, desktopové aplikace a hry v Unity v C#, počítačové vidění a AI v Pythonu. V algoritmických soutěžích používám C++, jinak to, v čem danou úlohu napíšu nejrychleji."
+      data-en="For robots and hardware I write C++ and Python, desktop apps and Unity games in C#, computer vision and AI in Python. In algorithm contests I use C++, otherwise whatever gets the task written fastest.">Na roboty a hardware píšu v C++ a Pythonu, desktopové aplikace a hry v Unity v C#, počítačové vidění a AI v Pythonu. V algoritmických soutěžích používám C++, jinak to, v čem danou úlohu napíšu nejrychleji.</p>
+
+    <div class="stackgroups">
+
+      <div class="stackgroups__grid">
+        <details class="stackgroup">
+          <summary class="stackgroup__label" data-cs="Jazyky" data-en="Languages">Jazyky</summary>
+          <div class="stackgroup__panel"><ul class="stacklist">
+            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#896FE2" aria-hidden="true"><use href="#i-csharp"></use></svg><span>C#</span></li>
+            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#4F86B5" aria-hidden="true"><use href="#i-python"></use></svg><span>Python</span></li>
+            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#4787B8" aria-hidden="true"><use href="#i-cplusplus"></use></svg><span>C++</span></li>
+            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#4686CC" aria-hidden="true"><use href="#i-typescript"></use></svg><span>TypeScript</span></li>
+            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#F7DF1E" aria-hidden="true"><use href="#i-javascript"></use></svg><span>JavaScript</span></li>
+          </ul></div>
+        </details>
+
+        <details class="stackgroup">
+          <summary class="stackgroup__label" data-cs="Robotika a hardware" data-en="Robotics and hardware">Robotika a hardware</summary>
+          <div class="stackgroup__panel"><ul class="stacklist">
+            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#7A8395" aria-hidden="true"><use href="#i-ros"></use></svg><span>ROS2</span></li>
+            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#E9453D" aria-hidden="true"><use href="#i-espressif"></use></svg><span>ESP32</span></li>
+            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#BE687E" aria-hidden="true"><use href="#i-raspberrypi"></use></svg><span>Raspberry Pi</span></li>
+            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#FF6A00" aria-hidden="true"><use href="#i-fusion"></use></svg><span>Fusion 360</span></li>
+          </ul></div>
+        </details>
+
+        <details class="stackgroup">
+          <summary class="stackgroup__label" data-cs="Počítačové vidění" data-en="Computer vision">Počítačové vidění</summary>
+          <div class="stackgroup__panel"><ul class="stacklist">
+            <li class="stackitem"><svg class="icon stackitem__icon" aria-hidden="true"><use href="#i-opencv-color"></use></svg><span>OpenCV</span></li>
+            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#0097A7" aria-hidden="true"><use href="#i-mediapipe"></use></svg><span>MediaPipe</span></li>
+          </ul></div>
+        </details>
+
+        <details class="stackgroup">
+          <summary class="stackgroup__label" data-cs="AI" data-en="AI">AI</summary>
+          <div class="stackgroup__panel"><ul class="stacklist">
+            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#EE4C2C" aria-hidden="true"><use href="#i-pytorch"></use></svg><span>PyTorch</span></li>
+            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#FFD21E" aria-hidden="true"><use href="#i-huggingface"></use></svg><span>Hugging Face</span></li>
+            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#ECEEF5" aria-hidden="true"><use href="#i-ollama"></use></svg><span>Ollama</span></li>
+            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#ECEEF5" aria-hidden="true"><use href="#i-lmstudio"></use></svg><span>LM Studio</span></li>
+            <li class="stackitem"><svg class="icon stackitem__icon" aria-hidden="true"><use href="#i-gemini-color"></use></svg><span>Gemini API</span></li>
+          </ul></div>
+        </details>
+
+        <details class="stackgroup">
+          <summary class="stackgroup__label" data-cs="Web dev" data-en="Web dev">Web dev</summary>
+          <div class="stackgroup__panel"><ul class="stacklist">
+            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#E34F26" aria-hidden="true"><use href="#i-html5"></use></svg><span>HTML</span></li>
+            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#3A89C2" aria-hidden="true"><use href="#i-css3"></use></svg><span>CSS</span></li>
+            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#61DAFB" aria-hidden="true"><use href="#i-react"></use></svg><span>React</span></li>
+            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#ECEEF5" aria-hidden="true"><use href="#i-nextdotjs"></use></svg><span>Next.js</span></li>
+            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#3BABC3" aria-hidden="true"><use href="#i-flask"></use></svg><span>Flask</span></li>
+          </ul></div>
+        </details>
+
+        <details class="stackgroup">
+          <summary class="stackgroup__label" data-cs="Aplikace a hry" data-en="Apps and games">Aplikace a hry</summary>
+          <div class="stackgroup__panel"><ul class="stacklist">
+            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#896FE2" aria-hidden="true"><use href="#i-dotnet"></use></svg><span>.NET</span></li>
+            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#FFFFFF" aria-hidden="true"><use href="#i-unity"></use></svg><span>Unity</span></li>
+            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#478CBF" aria-hidden="true"><use href="#i-godotengine"></use></svg><span>Godot</span></li>
+            <li class="stackitem"><img class="stackitem__icon stackitem__icon--img" src="assets/icons/pygame.webp" alt="" width="60" height="60"><span>PyGame</span></li>
+            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#E87D0D" aria-hidden="true"><use href="#i-blender"></use></svg><span>Blender</span></li>
+          </ul></div>
+        </details>
+
+        <details class="stackgroup">
+          <summary class="stackgroup__label" data-cs="Systémy a nástroje" data-en="Systems and tools">Systémy a nástroje</summary>
+          <div class="stackgroup__panel"><ul class="stacklist">
+            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#FCC624" aria-hidden="true"><use href="#i-linux"></use></svg><span>Linux</span></li>
+            <li class="stackitem"><svg class="icon stackitem__icon" style="color:#2496ED" aria-hidden="true"><use href="#i-docker"></use></svg><span>Docker</span></li>
+          </ul></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
 </div>
 
 <!-- ==================== contact ==================== -->
@@ -786,9 +785,6 @@
   <div class="contact__inner">
     <h2 class="section-title" data-cs="Kontakt" data-en="Contact">Kontakt</h2>
     <p class="statement statement--contact"><span class="statement__a" data-cs="Napište" data-en="Get in">Napište</span> <span class="statement__b" data-cs="mi." data-en="touch.">mi.</span></p>
-    <p class="contact__lede"
-      data-cs="Stačí napsat, co potřebujete, a kdy to má být hotové. Ozvu se zpravidla do pár dní. Nabídky ke spolupráci v týmu jsou taky vítané."
-      data-en="Just tell me what you need and when it should be done. I usually reply within a few days. Offers to team up are welcome too.">Stačí napsat, co potřebujete, a kdy to má být hotové. Ozvu se zpravidla do pár dní. Nabídky ke spolupráci v týmu jsou taky vítané.</p>
       <div class="contact__grid">
         <div class="contact__item">
           <svg class="icon contact__icon" aria-hidden="true"><use href="#i-mail"></use></svg>
@@ -831,6 +827,12 @@
 </section>
 </main>
 
+<div class="container">
+  <footer class="footer">
+    <span>Tomáš Krůta - Plzeň</span>
+    <span>2026</span>
+  </footer>
+</div>
 
 <script src="js/portfolio.js"></script>
 </body>

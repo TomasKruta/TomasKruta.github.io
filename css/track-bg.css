@@ -10,7 +10,7 @@ html.page-robo::before {
   opacity: 0.8;
 }
 @media (max-width: 1099px) {
-  html.page-robo::before { width: 110vw; right: -5vw; opacity: 0.25; }
+  html.page-robo::before { width: 100%; right: 0; opacity: 0.25; }
 }
 
 html.page-robo { background: var(--color-bg, #161826); }

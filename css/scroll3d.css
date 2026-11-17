@@ -58,7 +58,7 @@
   .s3d__stage {
     position: fixed; z-index: 1; pointer-events: none;
     top: 64px; bottom: 0; right: 0; height: auto; min-height: 0;
-    width: calc(100vw - var(--s3d-gutter) - var(--s3d-col) - 64px);
+    width: calc(100vw - var(--s3d-gutter) - var(--s3d-col) - max(64px, calc(var(--s3d-gutter) / 2)));
   }
 }
 
@@ -110,5 +110,18 @@
 .s3d-viewer__close:hover, .s3d-viewer__close:focus-visible { border-color: var(--color-accent-300); color: var(--color-accent-200); }
 @media (max-width: 700px) {
   .s3d-viewer__hint { display: none; }
-  .s3d-viewer__bar { gap: 16px; }
+  .s3d__stage {
+    height: clamp(280px, 44vh, 380px);
+    height: clamp(280px, 44svh, 380px);
+    min-height: 280px;
+  }
+  .s3d-viewer__wrap { bottom: 88px; }
+  .s3d-viewer__bar {
+    box-sizing: border-box;
+    height: 88px;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 8px 16px;
+    padding: 8px 16px;
+  }
 }
