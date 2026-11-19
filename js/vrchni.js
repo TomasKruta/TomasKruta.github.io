@@ -5,19 +5,23 @@
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   const svg = `
-<svg viewBox="0 -14 124 121" aria-hidden="true">
-  <defs><clipPath id="vr-cup"><polygon points="37,-10 83,-10 73,36 47,36"/></clipPath></defs>
-  <g class="vr__wheel" style="transform-origin:36px 92px"><circle cx="36" cy="92" r="12" fill="#0e0e12" stroke="#34343f" stroke-width="2"/><path d="M36 81v22M25 92h22" stroke="#4a4a57" stroke-width="2.5"/></g>
-  <circle cx="92" cy="98" r="6" fill="#cfd2da"/>
+<svg viewBox="0 -14 132 126" style="overflow:visible" aria-hidden="true">
+  <defs><clipPath id="vr-cup"><path d="M27 -8H85L74 31Q73.5 34 70 34H42Q38.5 34 38 31Z"/></clipPath></defs>
+  <g class="vr__wheel" style="transform-origin:44px 96px"><circle cx="44" cy="96" r="11" fill="#0e0e12" stroke="#34343f" stroke-width="2"/><path d="M44 86v20M34 96h20" stroke="#4a4a57" stroke-width="2.5"/></g>
+  <circle cx="106" cy="100" r="5" fill="#9a9ca4"/>
   <g class="vr__body">
-    <polygon class="vr__cup" points="37,-10 83,-10 73,36 47,36"/>
-    <g clip-path="url(#vr-cup)"><g class="vr__water"><rect x="20" y="8" width="80" height="40" fill="#5b9af0" opacity=".6"/></g></g>
-    <rect x="32" y="34" width="56" height="7" rx="3" fill="#f2f2f2"/>
-    <rect x="12" y="40" width="98" height="54" rx="11" fill="#17171c" stroke="#2c2c36" stroke-width="1.5"/>
-    <circle cx="101" cy="52" r="10.5" fill="#f2f2f2"/>
-    <g class="vr__eye"><circle cx="104" cy="53" r="4.6" fill="#111"/></g>
-    <path d="M94 68c4 3 9 3 12-1c3 4 8 4 11 1" fill="none" stroke="#f2f2f2" stroke-width="3" stroke-linecap="round"/>
-    <path d="M101 75l7 4-7 4zM115 75l-7 4 7 4z" fill="#e0453a"/>
+    <path d="M27 -8H85L74 31Q73.5 34 70 34H42Q38.5 34 38 31Z" fill="#d8f0f7" opacity=".5"/>
+    <g clip-path="url(#vr-cup)"><g class="vr__water"><path d="M10 9Q22 5 34 9T58 9T82 9T106 9V50H10Z" fill="#4f8fe8" opacity=".75"/><path d="M10 9Q22 5 34 9T58 9T82 9T106 9" fill="none" stroke="#a9ccff" stroke-width="1.4"/></g><path d="M33 -4L39 26" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".55"/></g>
+    <path d="M27 -8H85L74 31Q73.5 34 70 34H42Q38.5 34 38 31Z" fill="none" stroke="#22313c" stroke-width="1.6" stroke-linejoin="round"/>
+    <rect x="24" y="-12" width="64" height="5" rx="2.5" fill="#eaf6fa" stroke="#22313c" stroke-width="1.4"/>
+    <rect x="20" y="34" width="72" height="5" rx="2" fill="#d6d6d6"/>
+    <path d="M8 47Q8 39 16 39H88L99 30H113Q122 30 122 39V88Q122 97 113 97H16Q8 97 8 89Z" fill="#17171c" stroke="#2c2c36" stroke-width="1.5"/>
+    <path d="M9 49H121" stroke="#2c2c36" stroke-width="1"/>
+    <circle cx="117" cy="32" r="16.5" fill="#1d1d22"/>
+    <circle cx="117" cy="32" r="13" fill="#ffffff"/>
+    <g class="vr__eye"><circle cx="121" cy="32.5" r="5.2" fill="#1d1d22"/></g>
+    <path transform="translate(114 66) scale(2.5) translate(-118 -62)" d="M108 60c4 4 9 4 13 0c3 3 6 3 8 0c-1 4-5 6-8 4c-5 3-10 3-13-4z" fill="#ffffff"/>
+    <g transform="translate(120 84) scale(2.6) translate(-123 -75)"><path d="M115 70l8 5-8 5zM131 70l-8 5 8 5z" fill="#b8322b"/><rect x="121" y="72.5" width="4" height="5" fill="#b8322b"/></g>
   </g>
 </svg>`;
 
@@ -46,7 +50,7 @@
     const nv = (t - x) * 6;                 // px/s, eased follow
     const acc = (nv - v) / Math.max(dt, 1e-3);
     v = nv; x += v * dt;
-    rot += (v * dt) / 12 * 57.3;            // wheel radius 12 svg px
+    rot += (v * dt) / 11 * 57.3;            // wheel radius 11 svg px
     tilt += (Math.max(-14, Math.min(14, -acc / 120)) - tilt) * Math.min(1, dt * 8);
     a.style.transform = `translateX(${x.toFixed(1)}px)`;
     for (const w of wheels) w.style.transform = `rotate(${rot.toFixed(1)}deg)`;
