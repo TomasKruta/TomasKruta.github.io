@@ -1,19 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://tomaskruta.dev/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-19</lastmod>
+    <image:image>
+      <image:loc>https://tomaskruta.dev/assets/Portrait.png</image:loc>
+      <image:caption>Tomáš Krůta</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://tomaskruta.dev/projects/aimtec-hackathon-2026/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-19</lastmod>
+    <image:image>
+      <image:loc>https://tomaskruta.dev/projects/aimtec-hackathon-2026/gallery/aimtec-2026-team.jpg</image:loc>
+      <image:caption>Tým po vyhlášení výsledků Aimtec Hackathonu 2026</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tomaskruta.dev/projects/aimtec-hackathon-2026/gallery/aimtec-2026-screenshot1.png</image:loc>
+      <image:caption>Snímek obrazovky ze hry Dveře se zavírají</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tomaskruta.dev/projects/aimtec-hackathon-2026/gallery/aimtec-2026-screenshot2.png</image:loc>
+      <image:caption>Tramvaj přijíždí na zastávku ve hře Dveře se zavírají</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://tomaskruta.dev/projects/epic-tower-hackathon-2026/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-19</lastmod>
+    <image:image>
+      <image:loc>https://tomaskruta.dev/projects/epic-tower-hackathon-2026/gallery/dobova-pohlednice-svetovar.webp</image:loc>
+      <image:caption>Dobová kolorovaná pohlednice pivovaru Světovar v Plzni</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tomaskruta.dev/projects/epic-tower-hackathon-2026/gallery/dobova-nakladni-auto.webp</image:loc>
+      <image:caption>Dobová fotografie nákladního auta Plzeňský Světovar se sudy</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tomaskruta.dev/projects/epic-tower-hackathon-2026/gallery/tym-epic-tower.jpg</image:loc>
+      <image:caption>Tým po vyhlášení výsledků s deštníky a šekem na 4 000 Kč</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://tomaskruta.dev/projects/robo2026/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-19</lastmod>
+    <image:image>
+      <image:loc>https://tomaskruta.dev/projects/robo2026/gallery/draha.png</image:loc>
+      <image:caption>Půdorys soutěžní dráhy ROBO2026</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tomaskruta.dev/projects/robo2026/gallery/robo-soutez-5.jpg</image:loc>
+      <image:caption>Soutěžní dráha v hale Techmanie s Vrchním a startovní bránou</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tomaskruta.dev/projects/robo2026/gallery/robo-soutez-8.jpg</image:loc>
+      <image:caption>Vrchní v ruce před oranžovým bannerem soutěže ROBO-VEHICLE Pilsen</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tomaskruta.dev/projects/robo2026/gallery/robo-soutez-4.jpg</image:loc>
+      <image:caption>Vrchní na dráze vedle startovní brány se zeleným světlem</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tomaskruta.dev/projects/robo2026/gallery/robo-soutez-2.jpg</image:loc>
+      <image:caption>Vrchní na čáře mezi dvěma stojany brány</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tomaskruta.dev/projects/robo2026/gallery/robo-soutez-1.jpg</image:loc>
+      <image:caption>Vrchní zepředu s modrým kelímkem na dráze</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tomaskruta.dev/projects/robo2026/gallery/robo-soutez-3.jpg</image:loc>
+      <image:caption>Vrchní z výšky na dráze u brány</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tomaskruta.dev/projects/robo2026/gallery/robo-soutez-6.jpg</image:loc>
+      <image:caption>Vrchní se startovním číslem 21 a technickou zprávou</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tomaskruta.dev/projects/robo2026/gallery/robo-soutez-7.jpg</image:loc>
+      <image:caption>Vrchní vedle technické zprávy</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tomaskruta.dev/projects/robo2026/gallery/robo-vyroba-1.jpg</image:loc>
+      <image:caption>Pájecí podložka s ESP32 na univerzální desce, vložkami, nářadím a růžovým podnosem s talířem ROBO</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tomaskruta.dev/projects/robo2026/gallery/robo-vyroba-2.jpg</image:loc>
+      <image:caption>Tisk růžového podvozku na tiskárně Bambu Lab</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tomaskruta.dev/projects/robo2026/gallery/robo-vyroba-3.jpg</image:loc>
+      <image:caption>Prusa Core One tiskne černý díl vozítka</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tomaskruta.dev/projects/robo2026/gallery/robo-vyroba-4.jpg</image:loc>
+      <image:caption>Zašmodrchané bílé vlákno po neúspěšném tisku na podložce</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tomaskruta.dev/projects/robo2026/gallery/robo-vyroba-5.jpg</image:loc>
+      <image:caption>Pájení napájení: BMS s držákem 18650, step-down měnič a svorky WAGO na pájecí podložce</image:caption>
+    </image:image>
   </url>
 </urlset>

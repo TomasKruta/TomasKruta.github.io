@@ -144,7 +144,9 @@ export async function mountScroll3D(section, config) {
     const spin = inFlow.matches && !reduced; // narrow layout: the hero model turns slowly on its own
     const ang = Math.sin(clock * 0.25) * orbit + (spin ? clock * 0.2 : 0);
     tmpT.set(...k.target);
+    if (inFlow.matches && config.narrowLift) tmpT.y -= config.narrowLift; // phone layout: lift the model into the middle of its box
     const off = new THREE.Vector3(...k.cam).sub(tmpT).applyAxisAngle(new THREE.Vector3(0, 1, 0), ang);
+    if (inFlow.matches && config.narrowZoom) off.multiplyScalar(config.narrowZoom); // phone layout: move closer (the fit below still prevents clipping)
     let fov = k.fov || camera.fov;
     if (config.fitRadius) {
       // never closer than needed to keep a sphere of fit radius fully inside the stage (width and height)

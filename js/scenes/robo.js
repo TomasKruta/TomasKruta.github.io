@@ -24,7 +24,9 @@ const all = (v, names) => Object.fromEntries(names.map((n) => [n, v]));
 
 export default {
   environment: 0.45,
-  fitRadius: 125, // mm that must stay visible horizontally (narrow stages widen the fov)
+  fitRadius: 125,
+  narrowLift: 100,
+  narrowZoom: 0.62, // mm that must stay visible horizontally (narrow stages widen the fov)
   exposure: 0.9,
   near: 5, far: 4000,
   // key names match the data-s3d attributes on the page (header + sections)

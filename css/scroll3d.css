@@ -63,6 +63,11 @@
 }
 
 @media (max-width: 1099px) {
+  /* stage height follows the width (the model is fitted to the width), button sits below it instead of covering the model */
+  .s3d { margin: 8px 0 0; }
+  .s3d__stage { height: clamp(260px, 62vw, 500px); min-height: 0; margin-bottom: 84px; }
+  .s3d .s3d__open { left: 50%; right: auto; bottom: -58px; transform: translateX(-50%); }
+  .s3d .s3d__open:hover, .s3d .s3d__open:focus-visible { transform: translateX(-50%) translateY(-2px); }
   .s3d__tag { padding: 5px 8px; }
   .s3d__tag b { font-size: 12px; }
   .s3d__tag small { display: none; }
@@ -110,11 +115,7 @@
 .s3d-viewer__close:hover, .s3d-viewer__close:focus-visible { border-color: var(--color-accent-300); color: var(--color-accent-200); }
 @media (max-width: 700px) {
   .s3d-viewer__hint { display: none; }
-  .s3d__stage {
-    height: clamp(280px, 44vh, 380px);
-    height: clamp(280px, 44svh, 380px);
-    min-height: 280px;
-  }
+  .s3d__stage { height: clamp(250px, 76vw, 380px); }
   .s3d-viewer__wrap { bottom: 88px; }
   .s3d-viewer__bar {
     box-sizing: border-box;
